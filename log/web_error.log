@@ -9,3 +9,6 @@
 [Sat Jun 21 10:05:44 2008] [warn] proxy: No protocol handler was valid for the URL /statuses/friends_timeline.xml. If you are using a DSO version of mod_proxy, make sure the proxy submodules are included in the configuration using LoadModule.
 [Sat Jun 21 10:05:44 2008] [warn] proxy: No protocol handler was valid for the URL /statuses/replies.xml. If you are using a DSO version of mod_proxy, make sure the proxy submodules are included in the configuration using LoadModule.
 [Sat Jun 21 10:06:03 2008] [warn] proxy: No protocol handler was valid for the URL /statuses/friends_timeline.xml. If you are using a DSO version of mod_proxy, make sure the proxy submodules are included in the configuration using LoadModule.
+[Sat Jun 21 11:30:04 2008] [error] (61)Connection refused: proxy: HTTP: attempt to connect to 127.0.0.1:3000 (127.0.0.1) failed
+[Sat Jun 21 11:30:04 2008] [error] ap_proxy_connect_backend disabling worker for (127.0.0.1)
+[Sat Jun 21 11:30:05 2008] [error] proxy: BALANCER: (balancer://twitter). All workers are in error state

@@ -4,13 +4,13 @@
   <status>
     <created_at><%= tweet.created_at.to_s(:db)%></created_at>
     <id><%= tweet.id %></id>
-    <text><%= tweet.tweet %></text>
-    <source><%= tweet.source %></source>
+    <text><%= h tweet.tweet %></text>
+    <source><%= h tweet.source %></source>
     <truncated>false</truncated>
     <user>
-      <id><%= tweet.user.username %></id>
-      <name><%= tweet.user.username %></name>
-      <screen_name><%= tweet.user.username %></screen_name>
+      <id><%= h tweet.user.username %></id>
+      <name><%= h tweet.user.username %></name>
+      <screen_name><%= h tweet.user.username %></screen_name>
       <location>Rails Camp</location>
       <description>Rails 33k</description>
       <profile_image_url>http://twitter.com/images/rails.png</profile_image_url>
