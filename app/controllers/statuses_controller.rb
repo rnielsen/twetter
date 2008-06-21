@@ -42,7 +42,11 @@ class StatusesController < ApplicationController
   def authenticate
     authenticate_or_request_with_http_basic do |user_name, password|
       @user = user_name
-      return true
+      if user_name.strip.blank?
+        return false
+      else
+        return true
+      end
     end
   end
 end
