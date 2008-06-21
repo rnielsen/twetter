@@ -12,6 +12,7 @@ class StatusesController < ApplicationController
     respond_to do |format|
       format.xml
       format.html
+      format.atom
     end
   end
   def show
