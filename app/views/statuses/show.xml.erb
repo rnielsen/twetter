@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<status>
+  <created_at><%= @tweet.created_at.to_s(:db)%></created_at>
+  <id><%= @tweet.id %></id>
+  <text><%= @tweet.tweet %></text>
+  <source><%= @tweet.source %></source>
+  <truncated>false</truncated>
+  <user>
+    <id><%= @tweet.user.username %></id>
+    <name><%= @tweet.user.username %></name>
+    <screen_name><%= @tweet.user.username %></screen_name>
+    <location>Rails Camp</location>
+    <description>Rails 33k</description>
+    <profile_image_url>http://twitter.com/images/rails.png</profile_image_url>
+    <url></url>
+    <protected>false</protected>
+  </user>
+</status>
