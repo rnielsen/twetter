@@ -1,5 +1,5 @@
 class StatusesController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticate, :except => [:show]
   @user = ""
   def replies
     @tweets = Tweet.find(:all,:order => "tweets.created_at DESC", :conditions => "tweets.tweet like '@#{@user}%'",:include => :user,:limit => 25)
@@ -19,6 +19,9 @@ class StatusesController < ApplicationController
     respond_to do |format|
       format.xml
       format.html
+      format.js {
+        @tweet.to_json
+      }
     end
   end
   def update
