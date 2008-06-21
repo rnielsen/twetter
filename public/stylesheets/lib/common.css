@@ -1,0 +1,68 @@
+/* -----------------------------------------------------------------------------
+   TABS (turn ul into horizontal list of links)
+-------------------------------------------------------------------------------- */
+
+ul.tabs               { margin: 0; padding: 0; }
+ul.tabs li            { float: left; list-style: none; margin: 0; padding: 0 10px 0 0; }
+ul.tabs li a          { float: left; display: block; }
+ul.tabs:after         { content:  "."; display: block; height: 0; clear: both; visibility: hidden; }
+ul.tabs               { zoom: 1;  } /* IE */
+ul.tabs li.selected   { font-weight: bold;}
+ul.tabs li.selected a { color: #333 !important;}
+
+
+/* -----------------------------------------------------------------------------
+   IMAGE REPLACEMENT
+-------------------------------------------------------------------------------- */
+.image-replace 				{ display: block; overflow: hidden; line-height: 1000px; background-color: transparent;	background-repeat: no-repeat;	background-position: 0 0; }
+
+/* -----------------------------------------------------------------------------
+   IMAGE REPLACEMENT
+-------------------------------------------------------------------------------- */
+fieldset 						{ border: 0; padding: 0; margin: 0;}
+legend							{ font-size: 1em; padding-bottom: 1.4em; line-height: 1.5; margin: 0;}
+form ol, form ul		{ list-style: none; margin: 0; padding: 0;}
+form li							{ margin: 0 0 .5em 0; padding: 0;}
+label								{ display: block; color: #333; }
+label input					{ width: auto; height: auto; position: relative; top: 0px; border: 0;}
+
+input								{ width: 160px; border: 1px solid #bbb; padding: 2px 4px;}
+select							{ width: 170px; border: 1px solid #bbb; }
+select option				{ padding: 2px 4px;}
+
+.radio legend,
+.check legend 			{ margin-right: 10px; width: 160px; font-size: 1em; padding-bottom: 0em; margin: 0;  }
+
+.radio li						{ margin: 0; }
+.check li 					{ margin: 0; }
+
+.radio label				{ display: inline; font-weight: normal; }
+.check label 				{ display: inline; font-weight: normal;}
+
+.form-stacked label 									{ display: block; clear: both; width: 510px;}
+.form-stacked .check legend,
+.form-stacked .radio legend						{ display: block; float: none; width: auto; margin-right: 10px;}
+
+.form-sidebyside label								{ float: left; margin-right: 10px; width: 160px; line-height: 1.8; }
+
+.form-sidebyside a.button,
+.form-sidebyside button								{ margin-left: 170px;}
+
+.form-sidebyside .check legend,
+.form-sidebyside .radio legend				{ display: inline; float: left; float: left; width: 160px; margin-right: 10px; }
+
+.form-sidebyside .check legend span,
+.form-sidebyside .radio legend span 	{ position: absolute; top: 0; left: 0; display: block; width: 160px;}
+
+.form-sidebyside .check ol,
+.form-sidebyside .radio ol						{ margin-left: 170px; width: 340px;}
+
+.form-sidebyside .check ol li,
+.form-sidebyside .radio ol li					{ display: block; width: auto; clear: both;}
+
+.form-sidebyside .check li label,
+.form-sidebyside .radio li label			{ width: auto;}
+
+.form-sidebyside .check label					{ margin-left: 170px;float: none; width: 100% !important;}
+
+.disabled														 	{ background-color: #ddd !important; border-color: #ccc !important; color: #666 !important;}

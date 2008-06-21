@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20080621003504) do
     t.string   "username"
     t.string   "tweet"
     t.string   "source"
-    t.integer  "user_id"
+    t.integer  "user_id",    :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
