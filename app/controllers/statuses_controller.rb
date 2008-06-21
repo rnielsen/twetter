@@ -26,11 +26,7 @@ class StatusesController < ApplicationController
   end
   def update
     u = User.find_or_create_by_username(@user)
-    @tweet = Tweet.new
-    @tweet.user = u
-    @tweet.tweet = params[:status]
-    @tweet.source
-    @tweet.save
+    @tweet = Tweet.create({:tweet => params[:status], :user => u, :source => params[:source]})
     respond_to do |format|
       format.xml
     end    
@@ -40,13 +36,10 @@ class StatusesController < ApplicationController
     return true
   end
   def authenticate
-    authenticate_or_request_with_http_basic do |user_name, password|
-      @user = user_name
-      if user_name.strip.blank?
-        return false
-      else
-        return true
-      end
+    if user = authenticate_with_http_basic { |u, p| !u.to_s.strip.blank?  }
+      @user = user
+    else
+      request_http_basic_authentication
     end
   end
 end
