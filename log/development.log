@@ -9646,3 +9646,1957 @@ SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
   [4;35;1mUser Load (0.000912)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1')) [0m
 Rendering statuses/replies
 Completed in 0.01574 (63 reqs/sec) | Rendering: 0.00164 (10%) | DB: 0.00188 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:35:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.007326)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001021)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.10656 (9 reqs/sec) | Rendering: 0.00443 (4%) | DB: 0.00835 (7%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:35:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001307)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000629)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01487 (67 reqs/sec) | Rendering: 0.00142 (9%) | DB: 0.00194 (13%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:36:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00029 (3390 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:36:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00041 (2421 reqs/sec) | Rendering: 0.00016 (39%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:36:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000948)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@philoye%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000598)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('4')) [0m
+Rendering statuses/replies
+Completed in 0.01305 (76 reqs/sec) | Rendering: 0.00103 (7%) | DB: 0.00155 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:36:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004009)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@philoye%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001036)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02225 (44 reqs/sec) | Rendering: 0.00456 (20%) | DB: 0.00504 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:37:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001299)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000633)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01357 (73 reqs/sec) | Rendering: 0.00103 (7%) | DB: 0.00193 (14%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:37:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004538)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001201)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02692 (37 reqs/sec) | Rendering: 0.00420 (15%) | DB: 0.00574 (21%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:37:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004148)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@bob%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001457)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02195 (45 reqs/sec) | Rendering: 0.00248 (11%) | DB: 0.00560 (25%) | 200 OK [http://twitter.com/]
+
+
+Processing StatusesController#replies (for 172.16.104.166 at 2008-06-21 11:37:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001023)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@drnic%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000675)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01343 (74 reqs/sec) | Rendering: 0.00107 (7%) | DB: 0.00170 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.166 at 2008-06-21 11:37:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004043)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@drnic%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001033)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02148 (46 reqs/sec) | Rendering: 0.00409 (19%) | DB: 0.00508 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#update (for ::1 at 2008-06-21 11:38:26) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"status"=>"watch out for the snitchy back channel #talk", "format"=>"xml", "action"=>"update", "controller"=>"statuses", "source"=>"twitterrific"}
+  [4;36;1mUser Load (0.000221)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'mattallen') LIMIT 1[0m
+  [4;35;1mTweet Create (0.000427)[0m   [0mINSERT INTO "tweets" ("updated_at", "username", "user_id", "source", "tweet", "created_at") VALUES('2008-06-21 01:38:26', NULL, 1, NULL, 'watch out for the snitchy back channel #talk', '2008-06-21 01:38:26')[0m
+Rendering statuses/update
+Completed in 0.01608 (62 reqs/sec) | Rendering: 0.00172 (10%) | DB: 0.00065 (4%) | 200 OK [http://twitter.com/statuses/update.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:38:29) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001009)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000688)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01338 (74 reqs/sec) | Rendering: 0.00105 (7%) | DB: 0.00170 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:38:29) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004641)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000924)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02303 (43 reqs/sec) | Rendering: 0.00427 (18%) | DB: 0.00556 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:38:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00029 (3437 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:38:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00035 (2882 reqs/sec) | Rendering: 0.00014 (40%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:38:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000828)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@snapperwolf%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00742 (134 reqs/sec) | Rendering: 0.00042 (5%) | DB: 0.00083 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:38:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004237)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@snapperwolf%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000937)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02284 (43 reqs/sec) | Rendering: 0.00433 (18%) | DB: 0.00517 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:38:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004128)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001197)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02192 (45 reqs/sec) | Rendering: 0.00416 (18%) | DB: 0.00533 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:38:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.000953)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000638)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01472 (67 reqs/sec) | Rendering: 0.00140 (9%) | DB: 0.00159 (10%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:39:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3387 reqs/sec) | Rendering: 0.00013 (42%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:39:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3344 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:39:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.000942)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@philoye%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000645)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('4')) [0m
+Rendering statuses/replies
+Completed in 0.01325 (75 reqs/sec) | Rendering: 0.00103 (7%) | DB: 0.00159 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:39:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004194)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@philoye%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001184)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.09571 (10 reqs/sec) | Rendering: 0.00444 (4%) | DB: 0.00538 (5%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.166 at 2008-06-21 11:39:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004687)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@drnic%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001012)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02059 (48 reqs/sec) | Rendering: 0.00146 (7%) | DB: 0.00570 (27%) | 200 OK [http://twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:39:29) [GET]
+  Session ID: c05021117b5013007ab731e505f9ba77
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00035 (2849 reqs/sec) | Rendering: 0.00019 (55%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:39:33) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004129)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@ryan%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001101)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.01944 (51 reqs/sec) | Rendering: 0.00153 (7%) | DB: 0.00523 (26%) | 200 OK [http://twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:39:49) [GET]
+  Session ID: aa3b87094187377974da4afeb3577020
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00041 (2438 reqs/sec) | Rendering: 0.00020 (48%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/]
+
+
+Processing ApplicationController#index (for 172.16.104.157 at 2008-06-21 11:39:53) [GET]
+  Session ID: 14aadd651005853703468b5b842d888f
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/twitter" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 172.16.104.157 at 2008-06-21 11:40:00) [GET]
+  Session ID: e39a97e75d82451cc5435fcf084afdb7
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/list" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 172.16.104.157 at 2008-06-21 11:40:04) [GET]
+  Session ID: 75066a6e44815cd09b89f1b573f73dc1
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/tweets" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing StatusesController#replies (for 172.16.104.186 at 2008-06-21 11:40:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001015)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@lachie%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000687)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1')) [0m
+Rendering statuses/replies
+Completed in 0.01329 (75 reqs/sec) | Rendering: 0.00102 (7%) | DB: 0.00170 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.186 at 2008-06-21 11:40:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004072)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@lachie%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000968)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.09630 (10 reqs/sec) | Rendering: 0.07859 (81%) | DB: 0.00504 (5%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:40:49) [GET]
+  Session ID: 04ba0ec19c4a6b4fb6e0f7e262049d78
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00036 (2748 reqs/sec) | Rendering: 0.00015 (41%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:41:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00029 (3472 reqs/sec) | Rendering: 0.00012 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:41:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00112 (892 reqs/sec) | Rendering: 0.00047 (41%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:41:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.000863)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@snapperwolf%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00721 (138 reqs/sec) | Rendering: 0.00037 (5%) | DB: 0.00086 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:41:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004426)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@snapperwolf%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000986)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02253 (44 reqs/sec) | Rendering: 0.00435 (19%) | DB: 0.00541 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:41:33) [GET]
+  Session ID: d657f901adac03b70d9f914486c4ea0e
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00034 (2922 reqs/sec) | Rendering: 0.00013 (37%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/]
+
+
+Processing StatusesController#index (for 172.16.104.157 at 2008-06-21 11:41:45) [GET]
+  Session ID: 5ca0bf2e1fc03bd21de5406447639c7c
+  Parameters: {"action"=>"index", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00029 (3446 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:41:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004115)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001201)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02347 (42 reqs/sec) | Rendering: 0.00466 (19%) | DB: 0.00532 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:41:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000979)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000634)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01509 (66 reqs/sec) | Rendering: 0.00143 (9%) | DB: 0.00161 (10%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.166 at 2008-06-21 11:41:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001004)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@drnic%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000665)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01390 (71 reqs/sec) | Rendering: 0.00131 (9%) | DB: 0.00167 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.166 at 2008-06-21 11:41:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004095)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@drnic%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000936)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02267 (44 reqs/sec) | Rendering: 0.00437 (19%) | DB: 0.00503 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:42:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00028 (3581 reqs/sec) | Rendering: 0.00012 (44%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:42:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00102 (982 reqs/sec) | Rendering: 0.00013 (12%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:42:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000959)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@philoye%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000610)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('4')) [0m
+Rendering statuses/replies
+Completed in 0.01313 (76 reqs/sec) | Rendering: 0.00101 (7%) | DB: 0.00157 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:42:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004139)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@philoye%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000959)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02195 (45 reqs/sec) | Rendering: 0.00428 (19%) | DB: 0.00510 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:42:15) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004486)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@bob%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001069)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02106 (47 reqs/sec) | Rendering: 0.00146 (6%) | DB: 0.00556 (26%) | 200 OK [http://twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.198 at 2008-06-21 11:43:00) [GET]
+  Session ID: 27bf260b064514da4253e8fa0a3a17fb
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00038 (2644 reqs/sec) | Rendering: 0.00016 (42%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.198 at 2008-06-21 11:43:00) [GET]
+  Session ID: e29fb1c5d6791f8eded6d6eac1559e7e
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00032 (3144 reqs/sec) | Rendering: 0.00013 (42%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.198 at 2008-06-21 11:43:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load Including Associations (0.000000)[0m   [0;1mSQLite3::SQLException: ambiguous column name: created_at: SELECT "tweets"."id" AS t0_r0, "tweets"."username" AS t0_r1, "tweets"."tweet" AS t0_r2, "tweets"."source" AS t0_r3, "tweets"."user_id" AS t0_r4, "tweets"."created_at" AS t0_r5, "tweets"."updated_at" AS t0_r6, "users"."id" AS t1_r0, "users"."username" AS t1_r1, "users"."created_at" AS t1_r2, "users"."updated_at" AS t1_r3 FROM "tweets" LEFT OUTER JOIN "users" ON "users".id = "tweets".user_id WHERE (tweet like '@quamen@gmail.com%') ORDER BY created_at DESC[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: ambiguous column name: created_at: SELECT "tweets"."id" AS t0_r0, "tweets"."username" AS t0_r1, "tweets"."tweet" AS t0_r2, "tweets"."source" AS t0_r3, "tweets"."user_id" AS t0_r4, "tweets"."created_at" AS t0_r5, "tweets"."updated_at" AS t0_r6, "users"."id" AS t1_r0, "users"."username" AS t1_r1, "users"."created_at" AS t1_r2, "users"."updated_at" AS t1_r3 FROM "tweets"  LEFT OUTER JOIN "users" ON "users".id = "tweets".user_id     WHERE (tweet like '@quamen@gmail.com%')  ORDER BY created_at DESC):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:360:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:263:in `select'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1417:in `select_all_rows'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1250:in `find_with_associations'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1248:in `catch'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1248:in `find_with_associations'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1339:in `find_every'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:536:in `find'
+    /app/controllers/statuses_controller.rb:5:in `replies'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.198 at 2008-06-21 11:43:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load Including Associations (0.000000)[0m   [0mSQLite3::SQLException: ambiguous column name: created_at: SELECT "tweets"."id" AS t0_r0, "tweets"."username" AS t0_r1, "tweets"."tweet" AS t0_r2, "tweets"."source" AS t0_r3, "tweets"."user_id" AS t0_r4, "tweets"."created_at" AS t0_r5, "tweets"."updated_at" AS t0_r6, "users"."id" AS t1_r0, "users"."username" AS t1_r1, "users"."created_at" AS t1_r2, "users"."updated_at" AS t1_r3 FROM "tweets" LEFT OUTER JOIN "users" ON "users".id = "tweets".user_id WHERE (tweet not like '@quamen@gmail.com%') ORDER BY created_at DESC[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: ambiguous column name: created_at: SELECT "tweets"."id" AS t0_r0, "tweets"."username" AS t0_r1, "tweets"."tweet" AS t0_r2, "tweets"."source" AS t0_r3, "tweets"."user_id" AS t0_r4, "tweets"."created_at" AS t0_r5, "tweets"."updated_at" AS t0_r6, "users"."id" AS t1_r0, "users"."username" AS t1_r1, "users"."created_at" AS t1_r2, "users"."updated_at" AS t1_r3 FROM "tweets"  LEFT OUTER JOIN "users" ON "users".id = "tweets".user_id     WHERE (tweet not like '@quamen@gmail.com%')  ORDER BY created_at DESC):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:360:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:263:in `select'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1417:in `select_all_rows'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1250:in `find_with_associations'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1248:in `catch'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1248:in `find_with_associations'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1339:in `find_every'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:536:in `find'
+    /app/controllers/statuses_controller.rb:11:in `friends_timeline'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:43:57) [GET]
+  Session ID: cf2082aa2638c0f82717ca0370ee6fa6
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3320 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:44:02) [GET]
+  Session ID: 883191d22f1297c2c010862edb3387cc
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004485)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000940)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02319 (43 reqs/sec) | Rendering: 0.00455 (19%) | DB: 0.00542 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:44:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00029 (3401 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:44:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00082 (1215 reqs/sec) | Rendering: 0.00015 (17%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:44:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000830)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@snapperwolf%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00666 (150 reqs/sec) | Rendering: 0.00033 (4%) | DB: 0.00083 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:44:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004307)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@snapperwolf%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000992)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02310 (43 reqs/sec) | Rendering: 0.00432 (18%) | DB: 0.00530 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:44:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004166)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001367)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02251 (44 reqs/sec) | Rendering: 0.00424 (18%) | DB: 0.00553 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:44:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001394)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000695)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01493 (66 reqs/sec) | Rendering: 0.00144 (9%) | DB: 0.00209 (13%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing ApplicationController#index (for 172.16.104.182 at 2008-06-21 11:45:02) [GET]
+  Session ID: bea701bd63cb06f5dd85bbf58ddf068a
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/account/rate_limit_status.xml" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing StatusesController#replies (for 172.16.104.182 at 2008-06-21 11:45:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.000925)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@radarlistener%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00689 (145 reqs/sec) | Rendering: 0.00034 (4%) | DB: 0.00093 (13%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:45:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004242)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@radarlistener%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000977)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02253 (44 reqs/sec) | Rendering: 0.00442 (19%) | DB: 0.00522 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:45:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3366 reqs/sec) | Rendering: 0.00013 (44%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:45:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00031 (3226 reqs/sec) | Rendering: 0.00014 (44%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:45:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001059)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@philoye%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000807)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('4')) [0m
+Rendering statuses/replies
+Completed in 0.01380 (72 reqs/sec) | Rendering: 0.00109 (7%) | DB: 0.00187 (13%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:45:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004014)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@philoye%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001016)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02175 (45 reqs/sec) | Rendering: 0.00423 (19%) | DB: 0.00503 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#update (for 172.16.104.182 at 2008-06-21 11:45:14) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"status"=>"Watching pete yandell's talk", "format"=>"xml", "action"=>"update", "controller"=>"statuses", "source"=>"twitterrific"}
+  [4;36;1mUser Load (0.000125)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'radarlistener') LIMIT 1[0m
+  [4;35;1mUser Create (0.000687)[0m   [0mINSERT INTO "users" ("updated_at", "username", "created_at") VALUES('2008-06-21 01:45:14', 'radarlistener', '2008-06-21 01:45:14')[0m
+  [4;36;1mTweet Create (0.001759)[0m   [0;1mINSERT INTO "tweets" ("updated_at", "username", "user_id", "source", "tweet", "created_at") VALUES('2008-06-21 01:45:14', NULL, 6, NULL, 'Watching pete yandell''s talk', '2008-06-21 01:45:14')[0m
+Rendering statuses/update
+Completed in 0.02261 (44 reqs/sec) | Rendering: 0.00052 (2%) | DB: 0.00257 (11%) | 200 OK [http://twitter.com/statuses/update.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.186 at 2008-06-21 11:45:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001380)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@lachie%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000849)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1')) [0m
+Rendering statuses/replies
+Completed in 0.09076 (11 reqs/sec) | Rendering: 0.00113 (1%) | DB: 0.00223 (2%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.186 at 2008-06-21 11:45:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004428)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@lachie%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001062)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02312 (43 reqs/sec) | Rendering: 0.00445 (19%) | DB: 0.00549 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#update (for 172.16.104.182 at 2008-06-21 11:45:54) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"status"=>"Pete's talking about animals. WHERE'S THE RUBY?!", "format"=>"xml", "action"=>"update", "controller"=>"statuses", "source"=>"twitterrific"}
+  [4;35;1mUser Load (0.000223)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'radarlistener') LIMIT 1[0m
+  [4;36;1mTweet Create (0.000448)[0m   [0;1mINSERT INTO "tweets" ("updated_at", "username", "user_id", "source", "tweet", "created_at") VALUES('2008-06-21 01:45:54', NULL, 6, NULL, 'Pete''s talking about animals. WHERE''S THE RUBY?!', '2008-06-21 01:45:54')[0m
+Rendering statuses/update
+Completed in 0.01626 (61 reqs/sec) | Rendering: 0.00191 (11%) | DB: 0.00067 (4%) | 200 OK [http://twitter.com/statuses/update.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.198 at 2008-06-21 11:45:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3334 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.198 at 2008-06-21 11:45:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00043 (2325 reqs/sec) | Rendering: 0.00021 (49%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.198 at 2008-06-21 11:45:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load Including Associations (0.000000)[0m   [0mSQLite3::SQLException: ambiguous column name: created_at: SELECT "tweets"."id" AS t0_r0, "tweets"."username" AS t0_r1, "tweets"."tweet" AS t0_r2, "tweets"."source" AS t0_r3, "tweets"."user_id" AS t0_r4, "tweets"."created_at" AS t0_r5, "tweets"."updated_at" AS t0_r6, "users"."id" AS t1_r0, "users"."username" AS t1_r1, "users"."created_at" AS t1_r2, "users"."updated_at" AS t1_r3 FROM "tweets" LEFT OUTER JOIN "users" ON "users".id = "tweets".user_id WHERE (tweet like '@quamen@gmail.com%') ORDER BY created_at DESC[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: ambiguous column name: created_at: SELECT "tweets"."id" AS t0_r0, "tweets"."username" AS t0_r1, "tweets"."tweet" AS t0_r2, "tweets"."source" AS t0_r3, "tweets"."user_id" AS t0_r4, "tweets"."created_at" AS t0_r5, "tweets"."updated_at" AS t0_r6, "users"."id" AS t1_r0, "users"."username" AS t1_r1, "users"."created_at" AS t1_r2, "users"."updated_at" AS t1_r3 FROM "tweets"  LEFT OUTER JOIN "users" ON "users".id = "tweets".user_id     WHERE (tweet like '@quamen@gmail.com%')  ORDER BY created_at DESC):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:360:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:263:in `select'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1417:in `select_all_rows'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1250:in `find_with_associations'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1248:in `catch'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1248:in `find_with_associations'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1339:in `find_every'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:536:in `find'
+    /app/controllers/statuses_controller.rb:5:in `replies'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.198 at 2008-06-21 11:45:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load Including Associations (0.000000)[0m   [0;1mSQLite3::SQLException: ambiguous column name: created_at: SELECT "tweets"."id" AS t0_r0, "tweets"."username" AS t0_r1, "tweets"."tweet" AS t0_r2, "tweets"."source" AS t0_r3, "tweets"."user_id" AS t0_r4, "tweets"."created_at" AS t0_r5, "tweets"."updated_at" AS t0_r6, "users"."id" AS t1_r0, "users"."username" AS t1_r1, "users"."created_at" AS t1_r2, "users"."updated_at" AS t1_r3 FROM "tweets" LEFT OUTER JOIN "users" ON "users".id = "tweets".user_id WHERE (tweet not like '@quamen@gmail.com%') ORDER BY created_at DESC[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: ambiguous column name: created_at: SELECT "tweets"."id" AS t0_r0, "tweets"."username" AS t0_r1, "tweets"."tweet" AS t0_r2, "tweets"."source" AS t0_r3, "tweets"."user_id" AS t0_r4, "tweets"."created_at" AS t0_r5, "tweets"."updated_at" AS t0_r6, "users"."id" AS t1_r0, "users"."username" AS t1_r1, "users"."created_at" AS t1_r2, "users"."updated_at" AS t1_r3 FROM "tweets"  LEFT OUTER JOIN "users" ON "users".id = "tweets".user_id     WHERE (tweet not like '@quamen@gmail.com%')  ORDER BY created_at DESC):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:360:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/sqlite_adapter.rb:263:in `select'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1417:in `select_all_rows'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1250:in `find_with_associations'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1248:in `catch'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations.rb:1248:in `find_with_associations'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1339:in `find_every'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:536:in `find'
+    /app/controllers/statuses_controller.rb:11:in `friends_timeline'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.166 at 2008-06-21 11:45:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.005099)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@drnic%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001195)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02783 (35 reqs/sec) | Rendering: 0.00597 (21%) | DB: 0.00629 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.166 at 2008-06-21 11:45:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001399)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@drnic%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000707)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01634 (61 reqs/sec) | Rendering: 0.00191 (11%) | DB: 0.00211 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:46:07) [GET]
+  Session ID: aed47be8e6c30cd68245a108b407d163
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00036 (2777 reqs/sec) | Rendering: 0.00020 (54%) | DB: 0.00000 (0%) | 401 Unauthorized [http://www.twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:46:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004734)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@radarlistener%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001527)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02205 (45 reqs/sec) | Rendering: 0.00228 (10%) | DB: 0.00626 (28%) | 200 OK [http://www.twitter.com/]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:47:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00031 (3226 reqs/sec) | Rendering: 0.00013 (42%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:47:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00044 (2247 reqs/sec) | Rendering: 0.00018 (39%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:47:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001057)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@snapperwolf%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00709 (141 reqs/sec) | Rendering: 0.00035 (4%) | DB: 0.00106 (14%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:47:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004453)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@snapperwolf%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001033)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02297 (43 reqs/sec) | Rendering: 0.00460 (20%) | DB: 0.00549 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:47:42) [GET]
+  Session ID: 72111df1a5fcc88ea88ad7f03dbea6a2
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00029 (3435 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:47:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004957)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001102)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02405 (41 reqs/sec) | Rendering: 0.00461 (19%) | DB: 0.00606 (25%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.164 at 2008-06-21 11:47:48) [GET]
+  Session ID: c7faf6f2a836d4daf355d3bf235f7005
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00036 (2753 reqs/sec) | Rendering: 0.00020 (54%) | DB: 0.00000 (0%) | 401 Unauthorized [http://www.twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:47:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004400)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001030)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02280 (43 reqs/sec) | Rendering: 0.00438 (19%) | DB: 0.00543 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:47:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000994)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000918)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.09527 (10 reqs/sec) | Rendering: 0.00154 (1%) | DB: 0.00191 (2%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:47:57) [GET]
+  Session ID: 6f7fcf65008d99c49ff1c68ef2a406a0
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00032 (3095 reqs/sec) | Rendering: 0.00014 (41%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:47:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004519)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001136)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02369 (42 reqs/sec) | Rendering: 0.00465 (19%) | DB: 0.00566 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:47:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004396)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@radarlistener%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001059)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02385 (41 reqs/sec) | Rendering: 0.00477 (19%) | DB: 0.00546 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.182 at 2008-06-21 11:47:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001103)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@radarlistener%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00703 (142 reqs/sec) | Rendering: 0.00065 (9%) | DB: 0.00110 (15%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:48:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004427)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@radarlistener%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001238)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02359 (42 reqs/sec) | Rendering: 0.00493 (20%) | DB: 0.00567 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.182 at 2008-06-21 11:48:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.000840)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@radarlistener%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00645 (154 reqs/sec) | Rendering: 0.00052 (8%) | DB: 0.00084 (13%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:48:03) [GET]
+  Session ID: a72bc49847a6ed56a830814e3685087d
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3355 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:48:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004763)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001216)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.10353 (9 reqs/sec) | Rendering: 0.00466 (4%) | DB: 0.00598 (5%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#update (for 172.16.104.182 at 2008-06-21 11:48:06) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"status"=>"Nic is trolling irl", "format"=>"xml", "action"=>"update", "controller"=>"statuses", "source"=>"twitterrific"}
+  [4;36;1mUser Load (0.000225)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'radarlistener') LIMIT 1[0m
+  [4;35;1mTweet Create (0.000450)[0m   [0mINSERT INTO "tweets" ("updated_at", "username", "user_id", "source", "tweet", "created_at") VALUES('2008-06-21 01:48:06', NULL, 6, NULL, 'Nic is trolling irl', '2008-06-21 01:48:06')[0m
+Rendering statuses/update
+Completed in 0.01836 (54 reqs/sec) | Rendering: 0.00197 (10%) | DB: 0.00067 (3%) | 200 OK [http://twitter.com/statuses/update.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.164 at 2008-06-21 11:48:06) [GET]
+  Session ID: 3876adc0cd799b84d3474b9ce0f3f83b
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00035 (2888 reqs/sec) | Rendering: 0.00015 (42%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.164 at 2008-06-21 11:48:06) [GET]
+  Session ID: 2bc87db3054c3fe8f7e470645959dc05
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00032 (3116 reqs/sec) | Rendering: 0.00014 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.164 at 2008-06-21 11:48:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004500)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@agenteo%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000998)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02346 (42 reqs/sec) | Rendering: 0.00473 (20%) | DB: 0.00550 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.164 at 2008-06-21 11:48:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000816)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@agenteo%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00722 (138 reqs/sec) | Rendering: 0.00061 (8%) | DB: 0.00082 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:48:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00031 (3236 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:48:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00034 (2906 reqs/sec) | Rendering: 0.00015 (42%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:48:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.000995)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@philoye%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000626)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('4')) [0m
+Rendering statuses/replies
+Completed in 0.01341 (74 reqs/sec) | Rendering: 0.00104 (7%) | DB: 0.00162 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:48:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004623)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@philoye%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001150)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02572 (38 reqs/sec) | Rendering: 0.00582 (22%) | DB: 0.00577 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:48:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004650)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@radarlistener%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001046)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02354 (42 reqs/sec) | Rendering: 0.00465 (19%) | DB: 0.00570 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.182 at 2008-06-21 11:48:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001080)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@radarlistener%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00676 (148 reqs/sec) | Rendering: 0.00052 (7%) | DB: 0.00108 (15%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:48:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004957)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001265)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02615 (38 reqs/sec) | Rendering: 0.00468 (17%) | DB: 0.00622 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:48:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001031)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000692)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01644 (60 reqs/sec) | Rendering: 0.00170 (10%) | DB: 0.00172 (10%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing ApplicationController#index (for 172.16.104.182 at 2008-06-21 11:48:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 172.16.104.182 at 2008-06-21 11:48:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:48:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004526)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@ryan%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001102)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02165 (46 reqs/sec) | Rendering: 0.00193 (8%) | DB: 0.00563 (25%) | 200 OK [http://twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:48:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004711)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@ryan%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001060)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02113 (47 reqs/sec) | Rendering: 0.00161 (7%) | DB: 0.00577 (27%) | 200 OK [http://twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:48:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004442)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@ryan%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001021)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02033 (49 reqs/sec) | Rendering: 0.00165 (8%) | DB: 0.00546 (26%) | 200 OK [http://twitter.com/]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:48:40) [GET]
+  Session ID: 675299944697fcf6cc8aec1962f68ed2
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004549)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001225)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02341 (42 reqs/sec) | Rendering: 0.00463 (19%) | DB: 0.00577 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:49:02) [GET]
+  Session ID: 9b49f07335582d26222ec6dce7fda9b1
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004842)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001041)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02402 (41 reqs/sec) | Rendering: 0.00457 (19%) | DB: 0.00588 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:49:31) [GET]
+  Session ID: 090267395ed62021099f636704cc4365
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00029 (3435 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:49:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004608)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001427)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02733 (36 reqs/sec) | Rendering: 0.00565 (20%) | DB: 0.00604 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:49:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004484)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@ryan%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001021)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02027 (49 reqs/sec) | Rendering: 0.00154 (7%) | DB: 0.00551 (27%) | 200 OK [http://twitter.com/]
+
+
+Processing ApplicationController#index (for 172.16.104.182 at 2008-06-21 11:49:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/lachie" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.166 at 2008-06-21 11:49:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004484)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@drnic%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001080)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02352 (42 reqs/sec) | Rendering: 0.00456 (19%) | DB: 0.00556 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.166 at 2008-06-21 11:49:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.001082)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@drnic%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000659)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01482 (67 reqs/sec) | Rendering: 0.00144 (9%) | DB: 0.00174 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:50:30) [GET]
+  Session ID: 7baeb1aa851662ddae00a564454fea25
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00034 (2933 reqs/sec) | Rendering: 0.00013 (37%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:50:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004489)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001016)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02447 (40 reqs/sec) | Rendering: 0.00591 (24%) | DB: 0.00550 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:50:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3355 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:50:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00061 (1639 reqs/sec) | Rendering: 0.00033 (53%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.199 at 2008-06-21 11:50:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004859)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@snapperwolf%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.001029)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02425 (41 reqs/sec) | Rendering: 0.00458 (18%) | DB: 0.00589 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.199 at 2008-06-21 11:50:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000947)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@snapperwolf%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00739 (135 reqs/sec) | Rendering: 0.00082 (11%) | DB: 0.00095 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:50:37) [GET]
+  Session ID: 73209e56570758981ad01488174d42a1
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00032 (3172 reqs/sec) | Rendering: 0.00013 (42%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:50:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004548)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001143)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02479 (40 reqs/sec) | Rendering: 0.00479 (19%) | DB: 0.00569 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:50:42) [GET]
+  Session ID: 3f9b66450da07762c088869e78e18df7
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00032 (3113 reqs/sec) | Rendering: 0.00014 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.157 at 2008-06-21 11:50:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004792)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@max%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001022)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02393 (41 reqs/sec) | Rendering: 0.00484 (20%) | DB: 0.00581 (24%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#update (for 172.16.104.166 at 2008-06-21 11:50:42) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"status"=>"@radarlistener I missed the start. What's the premise of this talk re: coding?", "format"=>"xml", "action"=>"update", "controller"=>"statuses", "source"=>"twitterrific"}
+  [4;35;1mUser Load (0.000224)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'drnic') LIMIT 1[0m
+  [4;36;1mTweet Create (0.000434)[0m   [0;1mINSERT INTO "tweets" ("updated_at", "username", "user_id", "source", "tweet", "created_at") VALUES('2008-06-21 01:50:42', NULL, 3, NULL, '@radarlistener I missed the start. What''s the premise of this talk re: coding?', '2008-06-21 01:50:42')[0m
+Rendering statuses/update
+Completed in 0.01557 (64 reqs/sec) | Rendering: 0.00153 (9%) | DB: 0.00066 (4%) | 200 OK [http://twitter.com/statuses/update.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.186 at 2008-06-21 11:50:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004553)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@lachie%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001051)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02363 (42 reqs/sec) | Rendering: 0.00467 (19%) | DB: 0.00560 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.186 at 2008-06-21 11:50:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001031)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@lachie%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000640)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('1')) [0m
+Rendering statuses/replies
+Completed in 0.01508 (66 reqs/sec) | Rendering: 0.00150 (9%) | DB: 0.00167 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#replies (for ::1 at 2008-06-21 11:50:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001007)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000844)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('2')) [0m
+Rendering statuses/replies
+Completed in 0.01455 (68 reqs/sec) | Rendering: 0.00127 (8%) | DB: 0.00185 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for ::1 at 2008-06-21 11:50:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.006434)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@mattallen%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001113)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.03285 (30 reqs/sec) | Rendering: 0.00948 (28%) | DB: 0.00755 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.182 at 2008-06-21 11:51:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004861)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@radarlistener%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001242)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02675 (37 reqs/sec) | Rendering: 0.00470 (17%) | DB: 0.00610 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.182 at 2008-06-21 11:51:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.001042)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@radarlistener%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.000627)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('3')) [0m
+Rendering statuses/replies
+Completed in 0.01476 (67 reqs/sec) | Rendering: 0.00131 (8%) | DB: 0.00167 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.164 at 2008-06-21 11:51:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3355 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.164 at 2008-06-21 11:51:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00206 (486 reqs/sec) | Rendering: 0.00027 (12%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.164 at 2008-06-21 11:51:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.004812)[0m   [0mSELECT * FROM "tweets" WHERE (tweet not like '@agenteo%') ORDER BY created_at DESC[0m
+  [4;36;1mUser Load (0.001130)[0m   [0;1mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02589 (38 reqs/sec) | Rendering: 0.00506 (19%) | DB: 0.00594 (22%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.164 at 2008-06-21 11:51:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;35;1mTweet Load (0.000941)[0m   [0mSELECT * FROM "tweets" WHERE (tweet like '@agenteo%') ORDER BY created_at DESC[0m
+Rendering statuses/replies
+Completed in 0.00729 (137 reqs/sec) | Rendering: 0.00054 (7%) | DB: 0.00094 (12%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:51:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00030 (3366 reqs/sec) | Rendering: 0.00013 (43%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:51:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0.00032 (3134 reqs/sec) | Rendering: 0.00014 (42%) | DB: 0.00000 (0%) | 401 Unauthorized [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#replies (for 172.16.104.163 at 2008-06-21 11:51:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"replies", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.000970)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet like '@philoye%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000608)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('4')) [0m
+Rendering statuses/replies
+Completed in 0.01328 (75 reqs/sec) | Rendering: 0.00109 (8%) | DB: 0.00158 (11%) | 200 OK [http://twitter.com/statuses/replies.xml]
+
+
+Processing StatusesController#friends_timeline (for 172.16.104.163 at 2008-06-21 11:51:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"format"=>"xml", "action"=>"friends_timeline", "controller"=>"statuses"}
+  [4;36;1mTweet Load (0.004517)[0m   [0;1mSELECT * FROM "tweets" WHERE (tweet not like '@philoye%') ORDER BY created_at DESC[0m
+  [4;35;1mUser Load (0.000998)[0m   [0mSELECT * FROM "users" WHERE ("users".id IN ('6','1','2','3','4','5')) [0m
+Rendering statuses/friends_timeline
+Completed in 0.02324 (43 reqs/sec) | Rendering: 0.00464 (19%) | DB: 0.00552 (23%) | 200 OK [http://twitter.com/statuses/friends_timeline.xml]
+
+
+Processing StatusesController#update (for 172.16.104.182 at 2008-06-21 11:51:21) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--db062ad6a72c98d0c7e289ef7dc678d7533a9ef9
+  Parameters: {"status"=>"@drnic: not. a. fucking. clue.", "format"=>"xml", "action"=>"update", "controller"=>"statuses", "source"=>"twitterrific"}
+  [4;36;1mUser Load (0.000223)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'radarlistener') LIMIT 1[0m
+  [4;35;1mTweet Create (0.000403)[0m   [0mINSERT INTO "tweets" ("updated_at", "username", "user_id", "source", "tweet", "created_at") VALUES('2008-06-21 01:51:21', NULL, 6, NULL, '@drnic: not. a. fucking. clue.', '2008-06-21 01:51:21')[0m
+Rendering statuses/update
+Completed in 0.01607 (62 reqs/sec) | Rendering: 0.00161 (10%) | DB: 0.00063 (3%) | 200 OK [http://twitter.com/statuses/update.xml]
