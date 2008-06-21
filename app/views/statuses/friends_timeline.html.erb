@@ -2,6 +2,6 @@
 <div class="tweet <%=cycle("on", "off") %>">
 	<h2><%= h tweet.user.username %></h2>
 	<p><%= h tweet.tweet %></p>
-	<span class="datetime"><%= time_ago_in_words(tweet.created_at) %></p>
+	<%= link_to(time_ago_in_words(tweet.created_at), "/statuses/#{tweet.to_param}", :class => "datetime") %>
 </div>
 <% end %>

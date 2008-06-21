@@ -10,6 +10,7 @@ body {
 	background-color: #64461a;
 	position: relative;
 	height: 81px;
+	margin-bottom: 1px;
 }
 #header h1 {
 	display: block; 
@@ -57,12 +58,15 @@ body {
 	margin-bottom: 0;
 	padding-left: 170px;
 }
-.tweet span.datetime {
+.tweet .datetime {
 	position: absolute;
 	margin: 0;
 	z-index: 1000;
 	width: 200px;
 	right: 0;
 	top: 10px;
-	
+	color: #fff;
+}
+.tweet a.datetime {
+	text-decoration: underline;
 }

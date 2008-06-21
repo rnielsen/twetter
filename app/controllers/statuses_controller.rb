@@ -14,6 +14,13 @@ class StatusesController < ApplicationController
       format.html
     end
   end
+  def show
+    @tweet = Tweet.find(params[:id])
+    respond_to do |format|
+      format.xml
+      format.html
+    end
+  end
   def update
     u = User.find_or_create_by_username(@user)
     @tweet = Tweet.new
