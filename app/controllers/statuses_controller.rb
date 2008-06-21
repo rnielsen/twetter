@@ -36,7 +36,8 @@ class StatusesController < ApplicationController
     return true
   end
   def authenticate
-    if user = authenticate_with_http_basic { |u, p| !u.to_s.strip.blank?  }
+    if user = authenticate_with_http_basic { |u, p| u if !u.to_s.strip.blank?  }
+      logger.debug user
       @user = user
     else
       request_http_basic_authentication
