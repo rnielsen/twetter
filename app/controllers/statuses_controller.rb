@@ -1,0 +1,37 @@
+class StatusesController < ApplicationController
+  before_filter :authenticate
+  @user = ""
+  def replies
+    @tweets = Tweet.find(:all,:order => "created_at DESC", :conditions => "tweet like '@#{@user}%'")
+    respond_to do |format|
+      format.xml
+    end
+  end
+  def friends_timeline
+    @tweets = Tweet.find(:all,:order => "created_at DESC",:conditions => "tweet not like '@#{@user}%'")
+    respond_to do |format|
+      format.xml
+    end
+  end
+  def update
+    u = User.find_or_create_by_username(@user)
+    @tweet = Tweet.new
+    @tweet.user = u
+    @tweet.tweet = params[:status]
+    @tweet.source
+    @tweet.save
+    respond_to do |format|
+      format.xml
+    end    
+  end
+  private
+  def verify_authenticity_token
+    return true
+  end
+  def authenticate
+    authenticate_or_request_with_http_basic do |user_name, password|
+      @user = user_name
+      return true
+    end
+  end
+end
