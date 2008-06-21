@@ -50,13 +50,14 @@ body {
 }
 .tweet h2 {
 	position: absolute;
-	width: 150px;
+	width: 140px;
 	font-size: 1em;
 	font-weight: bold;
 }
 .tweet p {
 	margin-bottom: 0;
-	padding-left: 170px;
+	padding-left: 150px;
+	padding-right: 210px;
 }
 .tweet .datetime {
 	position: absolute;
