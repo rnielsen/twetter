@@ -2,13 +2,13 @@ class StatusesController < ApplicationController
   before_filter :authenticate
   @user = ""
   def replies
-    @tweets = Tweet.find(:all,:order => "created_at DESC", :conditions => "tweet like '@#{@user}%'",:include => :user)
+    @tweets = Tweet.find(:all,:order => "tweets.created_at DESC", :conditions => "tweets.tweet like '@#{@user}%'",:include => :user)
     respond_to do |format|
       format.xml
     end
   end
   def friends_timeline
-    @tweets = Tweet.find(:all,:order => "created_at DESC",:conditions => "tweet not like '@#{@user}%'",:include => :user)
+    @tweets = Tweet.find(:all,:order => "tweets.created_at DESC",:conditions => "tweets.tweet not like '@#{@user}%'",:include => :user)
     respond_to do |format|
       format.xml
       format.html
