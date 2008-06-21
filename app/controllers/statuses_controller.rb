@@ -20,7 +20,7 @@ class StatusesController < ApplicationController
       format.xml
       format.html
       format.js {
-        @tweet.to_json
+        render :json => @tweet.to_json, :callback => params[:callback]
       }
     end
   end
