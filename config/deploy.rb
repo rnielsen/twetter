@@ -21,7 +21,8 @@ set :group, "twetter"
 task :after_update_code, :roles => :app do
 sudo <<-CMD
 sh -c "chown -R #{app_user}:#{group} #{release_path} &&
-chmod -R g+w #{release_path}"
+chmod -R g+w #{release_path}" &&
+chown -R twetter /srv/rails/twetter
 CMD
 end
 
