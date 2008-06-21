@@ -13,6 +13,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: /srv/rails/twetter/production.sqlite3
-  timeout: 5000
+  adapter: mysql
+  database: twetter
+  host: 127.0.0.1
+  username: twetter
+  password: tweetme
+  port: 3306
