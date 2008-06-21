@@ -2,6 +2,6 @@
 <div class="tweet <%=cycle("on", "off") %>">
 	<h2><%= h tweet.user.username %></h2>
 	<p><%= h tweet.tweet %></p>
-	<span class="datetime">[relative timestamp?]</p>
+	<span class="datetime"><%= time_ago_in_words(tweet.created_at) %></p>
 </div>
 <% end %>
