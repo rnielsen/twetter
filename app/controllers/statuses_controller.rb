@@ -8,7 +8,8 @@ class StatusesController < ApplicationController
     end
   end
   def friends_timeline
-    @tweets = Tweet.find(:all,:order => "tweets.created_at DESC",:conditions => "tweets.tweet not like '@#{@user}%'",:include => :user,:limit => 25)
+    limit = params[:all] ? 100000000000 : 25
+    @tweets = Tweet.find(:all,:order => "tweets.created_at DESC",:conditions => "tweets.tweet not like '@#{@user}%'",:include => :user,:limit => limit)
     respond_to do |format|
       format.xml
       format.html
