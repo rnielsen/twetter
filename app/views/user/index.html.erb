@@ -1,1 +1,5 @@
-hello <%= params[:username] %>
+<h1><%= @duser.username %></h1>
+<%= image_tag @duser.profile_url %>
+<br/>
+<%= render :partial=>'statuses/tweet', :collection=>@tweets %>
+

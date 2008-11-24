@@ -1,0 +1,8 @@
+<h1><%= @user.username %></h1>
+<%= image_tag @user.profile_url, :style=>"float:left"%>
+<% form_tag({:action => 'update_profile_image'}, {:multipart => true}) do %>
+<p>Upload Profile Image: <%= file_field_tag 'image' %></p> 
+<%= submit_tag "Upload" %>
+<% end %>
+<div style="clear:both"></div>
+<%= render :partial=>'statuses/tweet', :collection=>@tweets %>

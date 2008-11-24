@@ -1,7 +1,1 @@
-<% @tweets.each do |tweet| %>
-<div class="tweet <%=cycle("on", "off") %>">
-	<h2><%= h tweet.user.username %></h2>
-	<p><%= h tweet.tweet %></p>
-	<%= link_to(time_ago_in_words(tweet.created_at) + " ago", "/statuses/#{tweet.to_param}", :class => "datetime") %>
-</div>
-<% end %>
+<%= render :partial=>'tweet', :collection=>@tweets %>
