@@ -1,48 +1,52 @@
 class StatusesController < ApplicationController
   before_filter :authenticate, :except => [:show]
-  @user = ""
   def replies
-    @tweets = Tweet.find(:all,:order => "tweets.created_at DESC", :conditions => "tweets.tweet like '@#{@user}%'",:include => :user,:limit => 25)
-    respond_to do |format|
-      format.xml
-    end
+    @tweets = @user.replies.find(:all, :include => :user,:limit => 25)
+    render_tweets
   end
+    
   def friends_timeline
     limit = params[:all] ? 100000000000 : 25
-    @tweets = Tweet.find(:all,:order => "tweets.created_at DESC",:conditions => "tweets.tweet not like '@#{@user}%'",:include => :user,:limit => limit)
-    respond_to do |format|
-      format.xml
-      format.html
-      format.atom
-    end
+    @tweets = Tweet.find(:all,:order => "tweets.created_at DESC",:conditions => "tweets.tweet_type!='direct'",:include => :user,:limit => limit)
+    render_tweets
   end
+
+  def user_timeline
+    limit = params[:all] ? 100000000000 : 25
+    @tweets = @user.tweets.find(:all,:order => "tweets.created_at DESC",:conditions => "tweets.tweet_type!='direct'",:include => :user,:limit => limit)
+    render_tweets
+  end
+  
+  def followers
+    @users=User.find(:all)
+    render_users
+  end
+  
+  def friends
+    followers
+  end
+  
   def show
     @tweet = Tweet.find(params[:id])
-    respond_to do |format|
-      format.xml
-      format.html
-      format.js {
-        render :json => @tweet.to_json, :callback => params[:callback]
-      }
-    end
+    render_tweet
   end
+  
   def update
-    u = User.find_or_create_by_username(@user)
-    @tweet = Tweet.create({:tweet => params[:status], :user => u, :source => params[:source]})
-    respond_to do |format|
-      format.xml
-    end    
-  end
-  private
-  def verify_authenticity_token
-    return true
-  end
-  def authenticate
-    if user = authenticate_with_http_basic { |u, p| u if !u.to_s.strip.blank?  }
-      logger.debug user
-      @user = user
-    else
-      request_http_basic_authentication
+    tweet = params[:status]
+    type='tweet'
+    if (tweet=~/^d (\S+) (.*)$/m)
+      type='direct'
+      recipient_name = $1
+      tweet = $2
+      recipient = User.find_or_create_by_username(recipient_name)
+    elsif (tweet=~/^@(\S+) /)
+      type="reply"
+      recipient_name = $1
+      recipient = User.find_or_create_by_username(recipient_name)
     end
+      
+    @tweet = Tweet.create({:tweet => tweet, :user => @user, :recipient => recipient, :tweet_type => type, :source => params[:source]})
+    render_tweet
+        
   end
 end
