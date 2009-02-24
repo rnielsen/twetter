@@ -1,0 +1,35 @@
+<form action="/status/update" id="doingForm" method="post">
+    <div style="margin:0;padding:0">
+        <input name="authenticity_token" type="hidden" value="35b185be716b1d76607e18b2fc154509ac055063"/></div>
+    <input id="tab_action" name="tab" type="hidden" value="home"/>
+    <input id="authenticity_token" name="authenticity_token" type="hidden" value="35b185be716b1d76607e18b2fc154509ac055063"/>
+    <input id="in_reply_to_status_id" name="in_reply_to_status_id" type="hidden" value=""/>
+    <input id="in_reply_to" name="in_reply_to" type="hidden" value=""/>
+    <input id="source" name="source" type="hidden" value=""/>
+    <fieldset class="common-form standard-form">
+        <div class="bar">
+            <h3><label for="status" class="doing">What are you doing?</label></h3>
+      <span id="chars_left_notice" class="numeric">
+
+        <strong id="status-field-char-counter" class="char-counter"></strong>
+      </span>
+        </div>
+        <div class="info">
+            <textarea cols="40" rows="2" id="status" name="status"><%= params[:status] %></textarea>
+
+            <div class="status-btn">
+                <input type="submit" name="update" value="update" id="update-submit" class="status-btn round-btn"/>
+            </div>
+
+            <% if (!@user.latest_tweet.nil?) %>
+            <div id="currently">
+                <strong>Latest:</strong>
+        <span id="latest_status">
+            <%= render :partial=>'statuses/latest', :object=>@user.latest_tweet %>
+        </span>
+            </div>
+            <% end %>
+        </div>
+
+    </fieldset>
+</form>

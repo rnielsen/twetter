@@ -5,7 +5,11 @@ class StatusesController < ApplicationController
     @tweets = @user.replies.find(:all, :include => :user,:limit => 25)
     render_tweets
   end
-    
+
+  def public_timeline
+    friends_timeline
+  end
+
   def friends_timeline
     puts "request=#{@user}"
     limit = params[:all] ? 100000000000 : 25

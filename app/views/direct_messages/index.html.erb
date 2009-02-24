@@ -1,0 +1,16 @@
+<% setup(:title=>"Direct Messages", :body_id=>"direct_messages", :body_classes=>"direct_messages replyable", :css=>['timeline']) %>
+<%= render :partial => "statuses/update" %>
+
+<ul class="tabMenu">
+  <li class="active"><a href="/direct_messages" id="direct_message_inbox">Inbox</a></li>
+  <li><a href="/direct_messages/sent" id="direct_message_sent">Sent</a></li>
+</ul>
+
+<div class="tab">
+
+  <h2>Direct Messages Sent Only to You</h2>
+
+<%= render :partial => "statuses/tweets" %>
+</div>
+
+<%= render :partial => "statuses/sidebar" %>

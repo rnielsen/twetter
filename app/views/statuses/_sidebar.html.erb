@@ -1,0 +1,79 @@
+<% content_for :sidebar do %>
+
+    <div class="section">
+        <div class="user_icon">
+            <a href="/<%= h @user.username %>" class="url" rel="contact" title="<%= h @user.name %>"><img alt="<%= h @user.name %>" class="side_thumb photo fn" height="73" src="<%= @user.web_profile_url %>" width="73"/></a>
+
+            <p id="me_name"><%= h @user.username %></p>
+
+        </div>
+
+        <%= render :partial=>'user/user_stats', :object=> @user %>
+
+    </div>
+
+    <ul id="tabMenu">
+        <li>
+
+            <a href="/home" id="home_tab">Home</a></li>
+        <li>
+            <a href="/replies" id="replies_tab">@Replies</a></li>
+        <li>
+            <a href="/direct_messages" id="direct_messages_tab"><span id="message_count" class="stat_count"><%= @user.direct_messages_received.count %></span>
+                Direct Messages</a></li>
+
+        <li>
+            <a href="/favorites" id="favorites_tab">Favorites</a></li>
+        <li>
+            <a href="/public_timeline" id="public_timeline_tab">Everyone</a></li>
+    </ul>
+
+    <div class="section last">
+
+        <div class="section-header" id="people">
+
+            <a href="/invitations" class="section-links">add</a>
+
+            <h1>Following</h1>
+        </div>
+
+
+        <div id="friends">
+
+            <%= render :partial=>'user/friend', :collection=>@user.friends %>
+
+        </div>
+        <div id="friends_view_all"><a href="/friends" rel="me">View All&hellip;</a></div>
+
+
+    </div>
+
+    <div class="section last">
+        <div class="section-header">
+            <h1>Device Updates</h1>
+        </div>
+        <div id="device_control">
+
+            <div id="device_msg">
+                <a href="/devices">Set up SMS updates</a>
+            </div>
+        </div>
+
+
+    </div>
+
+<% end %>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+//<![CDATA[
+
+          $( function () {
+            $('#latest_status').isCurrentStatus();$('#doingForm').isUpdateForm();  $('body#home ul#tabMenu li a#home_tab, body#profile ul#tabMenu li a#updates_tab, body#replies ul#tabMenu li a#replies_tab, body.direct_messages ul#tabMenu li a#direct_messages_tab, body#favourings ul#tabMenu li a#favorites_tab, body#public_timeline ul#tabMenu li a#public_timeline_tab').isSidebarTab();
+      $('#current_user_send_via_sms, #current_user_send_via_none').isDeviceUpdateOption();
+
+          });
+
+//]]>
+    </script>
+<% end %>

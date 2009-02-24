@@ -4,6 +4,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
   map.root :controller => "sessions" ,:action => "new"
   map.connect "/home" , :controller => "statuses" ,:action => "friends_timeline"
+  map.connect "/replies", :controller => "statuses",:action => "replies" 
+  map.connect "/public_timeline", :controller => "statuses",:action => "public_timeline"
+
   map.connect "/statuses/public_timeline.:format", :controller => "statuses", :action => "friends_timeline"
   map.connect "/status/update", :controller => "statuses", :action=> "update"
 

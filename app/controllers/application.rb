@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
 
   def render_tweets(root="statuses")
     respond_to do |format|
-      format.html { render :template => 'statuses/tweets' }
+      format.html { }
       format.atom { render :template => 'statuses/tweets' }
       format.xml { render :xml => @tweets.map(&:to_map).to_xml(:root=>root, :skip_types=>true, :dasherize=>false).gsub('direct_messages','direct-messages') }
       format.json { render :json => @tweets.map(&:to_map) }

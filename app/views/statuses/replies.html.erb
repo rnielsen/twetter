@@ -1,0 +1,8 @@
+<% setup(:title=>"Replies", :body_id=>"replies", :body_classes=>"status replyable", :css=>['timeline']) %>
+<%= render :partial => "statuses/update" %>
+
+<h2 class="timeline-header">Your Replies</h2>
+<h3 class="timeline-subheader">Updates beginning with @<%= h @user.username%></h3>
+
+<%= render :partial => "statuses/tweets" %>
+<%= render :partial => "statuses/sidebar" %>
