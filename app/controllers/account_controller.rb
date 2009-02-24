@@ -1,5 +1,5 @@
 class AccountController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticate, :except=>[:front, :login, :end_session]
 
   def index
     @tweets = @user.public_tweets.find(:all,:include => :user,:limit => 20  )
@@ -7,14 +7,11 @@ class AccountController < ApplicationController
   
   def end_session
     reset_session
+    redirect_to :action=>'front'    
   end
   
   def update_profile_image
-    upload_image = "#{RAILS_ROOT}/tmp/upload/#{@user.id}" 
-    File.open(upload_image, "wb") { |f| f.write(params[:image].read) }
-    cmd = "convert -size 100x100 #{upload_image} #{RAILS_ROOT}/public/images/profile/#{@user.username}.png"
-    puts cmd 
-    puts `#{cmd}`
+    upload_image(params[:image])
     redirect_to :action=>'index'
   end
   
@@ -32,11 +29,32 @@ class AccountController < ApplicationController
       format.json { render :json => rate_limit }
     end
   end
+
+  def settings
+      if (request.post?)
+          if (@user.update_attributes(params[:user]))
+              flash[:notice] = 'User attributes updated'
+          end
+      end
+  end
+
+  def picture
+      if (request.post?)
+        upload_image(params[:profile_image][:uploaded_data])
+      end
+  end
   
   private
   
   def date_formatted(date)
     date.gmtime.strftime("%a %b %d %H:%M:%S +0000 %Y")
   end
-  
+
+  def upload_image(image)
+    upload_image = "#{RAILS_ROOT}/tmp/upload/#{@user.id}" 
+    File.open(upload_image, "wb") { |f| f.write(image.read) }
+    cmd = "convert -size 100x100 #{upload_image} #{RAILS_ROOT}/public/images/profile/#{@user.username}.png"
+    puts cmd
+    puts `#{cmd}`
+  end
 end

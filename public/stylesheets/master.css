@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0084b4;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    display: none;
+}
+
+abbr {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+body {
+    text-align: center;
+    font: .75em / 1.5 'Lucida Grande', sans-serif;
+    color: #333;
+}
+
+#content.minheight {
+    height: 200px;
+}
+
+#content div.section {
+    position: relative;
+    padding: 10px;
+    min-height: 200px;
+}
+
+#content div.section>div {
+    margin: 1em 0;
+}
+
+#content div.section p {
+    margin-bottom: 1em;
+}
+
+#content div.section, div.section>div {
+    clear: both;
+    float: none;
+    position: relative;
+}
+
+fieldset.common-form {
+    margin: 10px 0;
+}
+
+fieldset.common-form p {
+    margin: 0 0 5px 0;
+}
+
+fieldset.common-form th, fieldset.common-form td {
+    padding: 7px 3px;
+}
+
+fieldset.common-form th {
+    text-align: right;
+    width: 11em;
+    padding-top: 10px;
+    font-weight: normal;
+}
+
+fieldset.common-form small {
+    color: #777;
+    font-size: .97em;
+}
+
+fieldset.common-form input[type="text"], fieldset.common-form input[type="password"], fieldset.common-form select, fieldset.common-form checkbox {
+    border: 1px solid #aaa;
+    padding: 4px 2px;
+}
+
+fieldset.common-form input[type="text"], fieldset.common-form input[type="password"] {
+    width: 12em;
+}
+
+fieldset.common-form input[type="text"].medium {
+    width: 50%;
+}
+
+fieldset.common-form td[colspan="2"] {
+    text-align: right;
+}
+
+fieldset.common-form label {
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+fieldset.common-form ul li {
+    padding: 5px 0;
+}
+
+fieldset.common-form ul li label {
+    display: block;
+    font-weight: bold;
+}
+
+fieldset.common-form ul li label sup {
+    color: #888;
+}
+
+fieldset.common-form table.input-form th {
+    vertical-align: top;
+}
+
+fieldset.common-form .instruction, fieldset.common-form .example {
+    margin-top: .5em;
+    font-size: x-small;
+    color: #666;
+}
+
+fieldset.common-form .example {
+    font-style: oblique;
+}
+
+fieldset.common-form .suggestion {
+    color: red;
+}
+
+fieldset.vertical-form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+fieldset.vertical-form label, fieldset.vertical-form input {
+    display: block;
+}
+
+fieldset.vertical-form input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+fieldset.vertical-form input[type="text"] {
+    width: 165px;
+}
+
+div.direct-message-box fieldset.standard-form {
+    width: 548px;
+    padding: 10px 90px;
+}
+
+input.submit, button, input[type=submit], input[type=button], input[type="file"]>input[type="button"] {
+    color: #000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    padding-top: 1px solid #fff;
+    font-size: x-small;
+    padding: 4px 8px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+input.submit:hover, button:hover, input[type=submit]:hover, input[type="file"]>input[type="button"]:hover {
+    background: #d5d5d5;
+}
+
+.hentry .actions>div.follow-actions {
+    visibility: visible;
+    text-align: left;
+}
+
+.follow-actions .following {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+}
+
+.follow-actions p {
+    padding-left: 14px;
+}
+
+.follow-actions .pending {
+    color: #666;
+}
+
+.follow-actions input.submit {
+    width: 8em;
+}
+
+.follow-button {
+    width: 75px;
+}
+
+input.profilesubmit {
+    background-color: #74CA00;
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+    padding: 10px;
+    border: 1px solid #0f0;
+    width: 175px;
+    cursor: hand;
+}
+
+input.profilesubmit:hover {
+    background-color: #8CF500;
+}
+
+#timeline_body .hover, .hentry:hover {
+    background-color: #f7f7f7;
+}
+
+#timeline_body .hover a, .hentry:hover a {
+    color: #0084b4;
+}
+
+.hentry .thumb img {
+    width: 48px;
+    height: 48px;
+}
+
+.hentry td.status-body div {
+    overflow: hidden;
+    width: 424px;
+    padding: .1em 0;
+}
+
+.hentry .entry-content img {
+    vertical-align: middle;
+}
+
+.hentry .disabled {
+    border: 1px solid red;
+}
+
+.hentry .meta {
+    font-size: .80em;
+    font-family: georgia;
+    font-style: italic;
+    margin: 3px 0 0 0;
+    color: #999;
+}
+
+.hentry .meta a {
+    color: #999;
+}
+
+.hentry .meta .call-out {
+    color: #000;
+}
+
+.hentry .actions {
+    font-size: .75em;
+    text-align: center;
+    vertical-align: middle;
+    border-width: 0;
+    border-bottom: 1px dashed #d2dada;
+}
+
+.hentry .actions>div {
+    visibility: hidden;
+}
+
+.hentry:hover .actions div, .hentry .hover .actions div {
+    visibility: visible;
+}
+
+.hentry .actions a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 8px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    outline: none;
+    cursor: pointer;
+}
+
+.hentry .actions a.fav {
+    visibility: visible;
+}
+
+.hentry .actions a.fav-throb, .hentry .actions a.del-throb {
+    visibility: visible;
+}
+
+.person .thumb img {
+    height: 48px;
+    width: 48px;
+}
+
+.feature-limited {
+    background-color: #f9f6ba;
+    border: 2px solid #e9e6aa;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: .5em 1em;
+}
+
+.pagination {
+    height: 2em;
+    margin-bottom: 2em;
+}
+
+.first {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.last {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.clear {
+    clear: both;
+    float: none;
+}
+
+body.search .results-count {
+    float: right;
+    line-height: 1.25em;
+    padding-left: 1em;
+}
+
+body.search .results-count span {
+    font-size: x-small;
+    color: #77778A;
+}
+
+body.search#tweets #content {
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-radius-bottomleft: 5px;
+    -webkit-border-radius-topleft: 5px;
+}
+
+body.search#tweets .tab {
+    border-top: 0;
+}
+
+body.search#tweets #more {
+    border: 1px solid #CCC;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 5px 5px 5px 10px;
+    margin: -2px 0 0 0;
+    display: none;
+}
+
+body.search#tweets #side_base {
+    background: #B3ECEF;
+    border: 0;
+}
+
+body.search#tweets #side h3 {
+    color: #000;
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+body.search#tweets #side ul li {
+    margin: 0 0 5px;
+}
+
+body.search#tweets .sections .section {
+    background: #FFF;
+    margin: 0 0 10px 10px;
+    padding: 13px;
+}
+
+body.search#tweets .sections .top {
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-radius-topright: 5px;
+    -webkit-border-radius-bottomleft: 5px;
+}
+
+body.search#tweets .sections .middle, body.search#tweets .sections .bottom {
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-radius-topleft: 5px;
+    -webkit-border-radius-bottomleft: 5px;
+}
+
+body.search#tweets #trending_topics {
+    height: 210px;
+}
+
+body.search#tweets #featured-profiles ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.search#tweets #featured-profiles ul li {
+    line-height: 30px;
+    padding: 0;
+    margin: 0 0 2px 0;
+}
+
+body.search#tweets #featured-profiles img {
+    border: 0;
+    vertical-align: middle;
+    padding-right: 4px;
+}
+
+body.search#users #timeline {
+    width: 100%;
+    border-top: 1px dashed #D2DADA;
+}
+
+body.search#users .hentry td.status-body {
+    padding: .5em 0;
+}
+
+body.search#users .hentry td.status-body div {
+    width: 370px;
+}
+
+body.search#users .hentry:hover {
+    background-color: transparent;
+}
+
+body.search#users .hentry .bio {
+    font-size: 90%;
+}

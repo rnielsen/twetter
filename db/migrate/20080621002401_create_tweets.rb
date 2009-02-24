@@ -1,8 +1,8 @@
 class CreateTweets < ActiveRecord::Migration
   def self.up
     create_table :tweets do |t|
-      t.string :username,:tweet,:source
-      t.integer :user_id  
+      t.string :tweet,:source, :tweet_type
+      t.integer :recipient_id, :user_id
       t.timestamps
     end
   end

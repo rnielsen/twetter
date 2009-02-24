@@ -1,1 +1,145 @@
-<%= render :partial=>'tweet', :collection=>@tweets %>
+<% setup(:title=>"Home", :body_id=>"home", :body_classes=>"account replyable", :css=>['timeline']) %>
+
+<form action="/status/update" id="doingForm" method="post">
+    <div style="margin:0;padding:0">
+        <input name="authenticity_token" type="hidden" value="35b185be716b1d76607e18b2fc154509ac055063"/></div>
+    <input id="tab_action" name="tab" type="hidden" value="home"/>
+    <input id="authenticity_token" name="authenticity_token" type="hidden" value="35b185be716b1d76607e18b2fc154509ac055063"/>
+    <input id="in_reply_to_status_id" name="in_reply_to_status_id" type="hidden" value=""/>
+    <input id="in_reply_to" name="in_reply_to" type="hidden" value=""/>
+    <input id="source" name="source" type="hidden" value=""/>
+    <fieldset class="common-form standard-form">
+        <div class="bar">
+            <h3><label for="status" class="doing">What are you doing?</label></h3>
+      <span id="chars_left_notice" class="numeric">
+
+        <strong id="status-field-char-counter" class="char-counter"></strong>
+      </span>
+        </div>
+        <div class="info">
+            <textarea cols="40" rows="2" id="status" name="status"><%= params[:status] %></textarea>
+
+            <div class="status-btn">
+                <input type="submit" name="update" value="update" id="update-submit" class="status-btn round-btn"/>
+            </div>
+
+            <% if (!@user.latest_tweet.nil?) %>
+            <div id="currently">
+                <strong>Latest:</strong>
+        <span id="latest_status">
+            <%= render :partial=>'latest', :object=>@user.latest_tweet %>
+        </span>
+            </div>
+            <% end %>
+        </div>
+
+    </fieldset>
+</form>
+
+<div class="tab">
+
+    <h2 class="timeline-header" style="display:none;"></h2>
+
+    <table cellspacing="0" class="doing" id="timeline">
+        <tbody id="timeline_body_for_update" style="display: none"></tbody>
+        <tbody id="timeline_body">
+            <%= render :partial=>'statuses/tweet', :collection=>@tweets, :locals=>{:type=>'friends'} %>
+        </tbody>
+    </table>
+
+
+    <div class="bottom_nav">
+        <div class="pagination" id="pagination">
+
+
+            <a href="/home?page=2" class="section_links" rel="prev">Older &#187;</a>
+
+        </div>
+        <span class="left"><a href="/statuses/friends_timeline/16360207.rss" class="section_links">RSS</a></span>
+    </div>
+
+</div>
+
+
+<img alt="Icon_star_full" src="http://assets0.twitter.com/images/icon_star_full.gif" style="display:none;"/>
+
+
+<% content_for :sidebar do %>
+
+    <div class="section">
+        <div class="user_icon">
+            <a href="/<%= h @user.username %>" class="url" rel="contact" title="<%= h @user.name %>"><img alt="<%= h @user.name %>" class="side_thumb photo fn" height="73" src="<%= @user.web_profile_url %>" width="73"/></a>
+
+            <p id="me_name"><%= h @user.username %></p>
+
+        </div>
+
+        <%= render :partial=>'user/user_stats', :object=> @user %>
+
+    </div>
+
+    <ul id="tabMenu">
+        <li>
+
+            <a href="/home" id="home_tab">Home</a></li>
+        <li>
+            <a href="/replies" id="replies_tab">@Replies</a></li>
+        <li>
+            <a href="/direct_messages" id="direct_messages_tab"><span id="message_count" class="stat_count">6</span>
+                Direct Messages</a></li>
+
+        <li>
+            <a href="/favorites" id="favorites_tab">Favorites</a></li>
+        <li>
+            <a href="/public_timeline" id="public_timeline_tab">Everyone</a></li>
+    </ul>
+
+    <div class="section last">
+
+        <div class="section-header" id="people">
+
+            <a href="/invitations" class="section-links">add</a>
+
+            <h1>Following</h1>
+        </div>
+
+
+        <div id="friends">
+
+            <%= render :partial=>'user/friend', :collection=>@user.friends %>
+
+        </div>
+        <div id="friends_view_all"><a href="/friends" rel="me">View All&hellip;</a></div>
+
+
+    </div>
+
+    <div class="section last">
+        <div class="section-header">
+            <h1>Device Updates</h1>
+        </div>
+        <div id="device_control">
+
+            <div id="device_msg">
+                <a href="/devices">Set up SMS updates</a>
+            </div>
+        </div>
+
+
+    </div>
+
+<% end %>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+//<![CDATA[
+
+          $( function () {
+            $('#latest_status').isCurrentStatus();$('#doingForm').isUpdateForm();  $('body#home ul#tabMenu li a#home_tab, body#profile ul#tabMenu li a#updates_tab, body#replies ul#tabMenu li a#replies_tab, body.direct_messages ul#tabMenu li a#direct_messages_tab, body#favourings ul#tabMenu li a#favorites_tab, body#public_timeline ul#tabMenu li a#public_timeline_tab').isSidebarTab();
+      $('#current_user_send_via_sms, #current_user_send_via_none').isDeviceUpdateOption();
+
+          });
+
+//]]>
+    </script>
+<% end %>

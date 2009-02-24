@@ -1,0 +1,52 @@
+<% setup(:title=>"Picture", :body_id=>"picture", :body_classes=>"account", :css=>['screen']) %>
+
+<%= render :partial=>'settings_menu' %>
+
+  <form action="/account/picture" enctype="multipart/form-data" method="post" style="display: inline;"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="1da14d87216f6d9b6c32da2f7b1b68c689dce989" /></div>  <fieldset class="common-form standard-form">
+
+  <table cellspacing="0">
+  <tr>
+  <th>
+  <label for="profile_image_uploaded_data">
+  <img alt="Default_profile_normal" height="48" src="<%= @user.web_profile_url %>" width="48" />
+  </label>
+  </th>
+  <td>
+  <input id="profile_image_uploaded_data" name="profile_image[uploaded_data]" size="30" type="file" />
+
+  <p><small>Maximum size of 700k.  JPG, GIF, PNG.</small></p>
+  </td>
+  </tr>
+  <tr>
+  <th></th>
+  <td>
+<input name="commit" type="submit" value="Save" />
+    </td>
+
+  </tr>
+  </table>
+</fieldset>
+  </form>
+
+<% content_for :sidebar do %>
+  <div class="section">
+<div class="section-header"><h3 class="faq-header">Picture</h3></div>
+<p>Your Twitter profile pic helps instantly identify you to those following you -- and tells those who aren't more about you.</p>
+<br/>
+<h4>Tips</h4>
+  <div class="faq-index">
+  <ul>
+
+<li>A real picture of yourself is encouraged. It adds personableness to your tweets.</li>
+<li>Because the images are usually seen in a small version, a crop of your face works best.</li>
+<li>People can see the full-sized version when they click on your picture from your profile page. So don't upload a tiny one -- we'll create the thumbnail for you.</li>
+<li>If you want to control exactly how it will be cropped, upload a square picture. </li>
+<li>Nudity or obscene images are not allowed.</li>
+<li>Be sure you have permission to use the photo you're using. (And don't use a celebrity's picture -- unless you're that celebrity, of course.)</li>
+
+  </ul>
+</div>
+  </div>
+
+</div>
+<% end %>

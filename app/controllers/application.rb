@@ -2,6 +2,8 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  include AuthenticatedSystem
+
   helper :all # include all helpers, all the time
 
   # See ActionController::RequestForgeryProtection for details
@@ -16,15 +18,13 @@ class ApplicationController < ActionController::Base
   def verify_authenticity_token
     return true
   end
+
   def authenticate
-    if user = authenticate_with_http_basic { |u, p| u if !u.to_s.strip.blank?  }
-      logger.debug user
-      @user = User.find_or_create_by_username(user)
-    else
-      request_http_basic_authentication
-    end
+    x = login_required
+    @user = current_user
+    x
   end
-  
+
   private
 
   def render_tweets(root="statuses")

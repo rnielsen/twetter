@@ -1,0 +1,68 @@
+<% setup(:body_id=>"new", :body_classes=>"sessions", :css=>['screen']) %>
+
+<h2>Sign in to Twetter</h2>
+
+<p>Twetter is an offline version of Twitter.com designed to be used in camp situations where networking
+is available but not Internet.  It is compatible with many third party Twitter notification programs like Twitteriffic,
+Twitterfox etc.</p>
+
+
+<form method="post" class="signin" action="/sessions">
+
+    <fieldset class="common-form standard-form">
+        <table cellspacing="0">
+            <tr>
+                <th><label for="username_or_email">Username</label></th>
+
+                <td><input id="username_or_email" name="session[username]" type="text" value=""/></td>
+            </tr>
+            <tr>
+                <th><label for="password">Password</label></th>
+                <td><input id="session[password]" name="session[password]" type="password"/>
+                    <small><a href="/account/resend_password">Forgot?</a></small>
+                </td>
+            </tr>
+            <tr>
+
+                <th></th>
+                <td><input id="remember_me" name="remember_me" type="checkbox" value="1"/>
+                    <label for="remember_me" class="inline">Remember me</label></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td><input id="signin_submit" name="commit" type="submit" value="Sign In"/></td>
+            </tr>
+        </table>
+
+    </fieldset>
+</form>
+
+<% content_for :sidebar do %>
+    <div class="section">
+        <div class="section-header">
+
+            <h1>Create Your Account</h1>
+        </div>
+        <div class="join">
+            <p class="complete">
+                You do not need to sign up to use Twetter.  Just login with any username and password and an
+                account will be created for you if the username does not already exist.
+            </p>
+        </div>
+    </div>
+
+<% end %>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+//<![CDATA[
+
+          $( function () {
+                $('#username_or_email').focus();
+
+          });
+
+//]]>
+    </script>
+<% end %>

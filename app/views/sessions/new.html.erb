@@ -1,0 +1,70 @@
+<% setup(:body_id=>"new", :body_classes=>"sessions", :css=>['screen']) %>
+
+<h2>Sign in to Twetter</h2>
+
+<p>Twetter is an offline version of Twitter.com designed to be used in camp situations where networking
+is available but not Internet.  It is compatible with many third party Twitter notification programs like Twitteriffic,
+Twitterfox etc.</p>
+
+
+<% form_tag session_path, :class=>'signin' do -%>
+
+    <fieldset class="common-form standard-form">
+        <table cellspacing="0">
+            <tr>
+                <th><%= label_tag 'username' %></th>
+
+                <td><%= text_field_tag 'login', @login %></td>
+            </tr>
+            <tr>
+                <th><%= label_tag 'password' %></th>
+                <td><%= password_field_tag 'password', nil %>
+                    <small><a href="/account/resend_password">Forgot?</a></small>
+                </td>
+            </tr>
+            <tr>
+
+                <th></th>
+                <td><%= check_box_tag 'remember_me', '1', @remember_me %>
+                    <%= label_tag 'remember_me', 'Remember me' %></td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td><input id="signin_submit" name="commit" type="submit" value="Sign In"/></td>
+            </tr>
+        </table>
+
+    </fieldset>
+<% end %>
+
+<% content_for :sidebar do %>
+    <div class="section">
+        <div class="section-header">
+
+            <h1>First Time?</h1>
+        </div>
+        <div class="join">
+            <p class="complete">
+                You do not need to sign up to use Twetter.  Just login with any username and password and an
+                account will be created for you if the username does not already exist.  You may find that
+                your 3rd party Twitter client has already logged in with your standard Twitter credentials.
+            </p>
+        </div>
+    </div>
+
+<% end %>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+//<![CDATA[
+
+          $( function () {
+                $('#username').focus();
+
+          });
+
+//]]>
+    </script>
+<% end %>
+

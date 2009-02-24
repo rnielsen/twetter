@@ -1,0 +1,17 @@
+<span id="latest_text">
+    <span class="status-text"></span>
+    <span id="latest_meta" class="entry-meta"><%= time_ago_in_words(latest.created_at)%> ago</span>
+</span>
+
+<span id="latest_text_full">
+    <span class="status-text">
+      <%= h latest.tweet %>
+    </span>
+
+    <span class="entry-meta"><a href="/<%= h latest.user.username %>/status/<%= h latest.id %>" class="entry-date" rel="bookmark"><span class="published" title="<%= latest.created_at_formatted %>"><%= time_ago_in_words(latest.created_at) %>
+        ago</span></a> <span>from <%= h latest.source%></span>
+        <% if (!latest.recipient.nil?) then %>
+     <a href="http://twitter.com/rob_nielsen/status/1014433331">in reply to <%= latest.recipient.username %></a>
+    <% end %>
+    </span>
+</span>

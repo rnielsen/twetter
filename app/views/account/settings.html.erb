@@ -1,0 +1,122 @@
+<% setup(:title=>"Settings", :body_id=>"settings", :body_classes=>"account", :css=>['screen']) %>
+
+<div id="settings">
+    <%= render :partial=>'settings_menu' %>
+
+    <form action="/account/settings" enctype="multipart/form-data" method="post">
+        <div style="margin:0;padding:0">
+            <input name="authenticity_token" type="hidden" value="35b185be716b1d76607e18b2fc154509ac055063"/></div>
+        <fieldset class="common-form standard-form">
+            <table cellspacing="0" class="input-form">
+                <tr>
+                    <th><label for="user_name">Name:</label></th>
+                    <td>
+                        <input id="user_name" maxlength="20" name="user[name]" size="20" type="text" value="<%= h @user.name %>"/>
+                        <br/>
+                        <small>Enter your real name, so people you know can recognize you.</small>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="user_screen_name">Username:</label></th>
+                    <td>
+                        <input class="requires-auth" id="user_screen_name" maxlength="15" name="user[username]" size="15" type="text" value="<%= h @user.username %>"/>
+
+                        <p>
+                            <small>Your URL: http://twitter.com/<span id="username_url"><%= h @user.username %></span>
+                            </small>
+                            <br/>
+
+                            <span id="avail_check_indicator" style="display:none"><img alt="Indicator_arrows_circle" src="http://assets0.twitter.com/images/indicator_arrows_circle.gif"/> Checking for availability of this username ...</span>
+                            <small id="username_msg">No spaces, please.</small>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="user_description">One Line Bio:</label></th>
+
+                    <td>
+                        <input id="user_description" maxlength="160" name="user[bio]" size="30" type="text" value="<%= h @user.bio %>"/>
+
+                        <p>
+                            <small>About yourself in fewer than 160 chars.</small>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="user_location">Home Location:</label></th>
+                    <td>
+
+                        <input id="user_location" name="user[location]" size="30" type="text" value="<%= h @user.location %>"/>
+
+                        <p>
+                            <small>Where in the world are you from?</small>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input id="settings_save" name="commit" type="submit" value="Save"/></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <p>
+        <a href="/account/delete">Delete my account.</a>
+
+    </p>
+</div>
+
+<% content_for :sidebar do %>
+    <div class="section">
+        <div class="section-header"><h3 class="faq-header">Account</h3></div>
+
+        <p>From here you can change your basic account info, fill in your profile data, and set whether you want to be
+            private or public.</p>
+        <br/>
+        <h4>Tips</h4>
+
+        <div class="faq-index">
+            <ul>
+                <li>Filling in your profile information will help people find you on Twetter. For example, you'll be
+                    more likely to turn up in a Twetter search if you've added your location or your real name.
+                </li>
+                <li>Change your Twetter user name anytime without affecting your existing updates, @replies, direct
+                    messages, or other data. After changing it, make sure to let your followers know so you'll continue
+                    receiving all of your messages with your new user name.
+                </li>
+
+                <li>Protect your profile to keep your Twetter updates private. Approve who can follow you and keep your
+                    updates out of search results.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<% end %>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+        //<![CDATA[
+
+                $( function () {
+                        twttrSettings.screenNameKeyUp();
+                        $('.requires-auth').each( function() {
+                                $input = $(this);
+                                $input.focus(function() {
+                                        $('#auth').show();
+                                        }).keypress(function(event) {
+                                        if (event.keyCode == 13) {
+                                                $('#auth_password').focus();
+                                                return false;
+                                                }
+                                        });
+                                });
+                        twttrSettings.setTZ();
+
+                        });
+
+                //]]>
+    </script>
+
+<% end %>

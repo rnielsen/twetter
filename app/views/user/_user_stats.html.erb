@@ -1,0 +1,26 @@
+<table class="stats" cellspacing="0">
+    <tr>
+        <td>
+
+            <a href="/<%= h user_stats.username %>/friends" id="following_count_link" rel="me">
+                <span id="following_count" class="stats_count numeric"><%= user_stats.following_count %></span>
+                <br/>
+
+                <span class="label">Following</span>
+            </a>
+        </td>
+        <td>
+
+            <a href="/<%= h user_stats.username %>/followers" id="follower_count_link" rel="me">
+                <span id="follower_count" class="stats_count numeric"><%= user_stats.follower_count %></span>
+                <br/>
+                <span class="label">Followers</span>
+
+            </a>
+        </td>
+        <td>
+            <a href="/<%= h user_stats.username %>" rel="me"><span id="update_count" class="stats_count numeric"><%= user_stats.public_tweets.count %></span><br/>
+                <span class="label">Updates</span></a>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,15 @@
+<div style="float:left;margin-top:5px;">
+    <a href="/account/picture"><img alt="<%= @user.username %>" class="side_thumb photo fn" height="73" src="<%= @user.web_profile_url %>" width="73"/></a>
+</div>
+
+<div style="float:left;margin-left:10px;margin-top:5px;"><h2><%= @user.username %></h2></div>
+
+<p style="clear:both;height:10px;"></p>
+
+<ul id="settingsNav">
+    <%= settings_list_entry('settings') %>
+<!--    <%= settings_list_entry('password') %> -->
+    <%= settings_list_entry('picture') %>
+</ul>
+
+<div class="tab settings"></div>

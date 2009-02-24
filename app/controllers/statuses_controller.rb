@@ -1,11 +1,13 @@
 class StatusesController < ApplicationController
   before_filter :authenticate, :except => [:show]
+
   def replies
     @tweets = @user.replies.find(:all, :include => :user,:limit => 25)
     render_tweets
   end
     
   def friends_timeline
+    puts "request=#{@user}"
     limit = params[:all] ? 100000000000 : 25
     @tweets = Tweet.find(:all,:order => "tweets.created_at DESC",:conditions => "tweets.tweet_type!='direct'",:include => :user,:limit => limit)
     render_tweets
@@ -45,8 +47,14 @@ class StatusesController < ApplicationController
       recipient = User.find_or_create_by_username(recipient_name)
     end
       
-    @tweet = Tweet.create({:tweet => tweet, :user => @user, :recipient => recipient, :tweet_type => type, :source => params[:source]})
-    render_tweet
-        
+    @tweet = Tweet.create({:tweet => tweet, :user => @user, :recipient => recipient, :tweet_type => type, :source => params[:source] || 'web'})
+    if (params['twttr'])
+        latest_status = render_to_string :partial => "latest", :object=> @tweet
+        ret = {"status_count"=>@user.public_tweets.count, "latest_status"=> latest_status,"text"=>tweet}
+        ret["status_tr"] = render_to_string :partial => "tweet", :object=> @tweet, :locals=>{:type=>'friends_update'}
+        render :json => ret
+    else
+        render_tweet
+    end
   end
 end

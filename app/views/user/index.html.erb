@@ -1,5 +1,133 @@
-<h1><%= @duser.username %></h1>
-<%= image_tag @duser.profile_url %>
-<br/>
-<%= render :partial=>'statuses/tweet', :collection=>@tweets %>
+<% setup(:title=>@duser.username, :body_id=>"profile", :css=>['timeline']) %>
+<div class="profile-head">
+    <h2 class="thumb">
+        <!-- <img alt="Default_profile_bigger" height="73" src="/images/default_profile_bigger.png" width="73" /> -->
+        <%= image_tag @duser.web_profile_url, :size=>"73x73" %>
+        <%= @duser.username %>
+    </h2>
 
+    <div class="clear"></div>
+    <div id="follow_actions_17525701" class="follow-actions rob_test">
+        <% if (@duser != @user) %>
+            <div class="follow-control">
+                <div id="follow-toggle" class="closed med-btn">
+
+                    <img class="ticon" src="/images/tiny_check.gif" alt="following" class="followicon"/><strong>Following</strong>&nbsp;
+                </div>
+
+                <div id="follow-details">
+                    <p id="following">
+                        <strong>You follow <%= h @duser.username %></strong>
+                        <input class="remove-button" id="remove_button" onclick="removeUser(17525701, <%= @duser.username %>, 'cf586308d33b4601f0dfba618cc4bbf7c5baf1c0');" type="button" value="Remove"/>
+                        <br/>
+                                <span class="desc"><%= h @duser.username %>
+                                    's updates appear in your <a href="/home">timeline</a>.</span>
+                    </p>
+
+                    <div id="notifications">
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+
+    <div class="hentry">
+    </div>
+</div>
+
+<div class="tab">
+    <table cellspacing="0" class="doing" id="timeline">
+        <tbody id="timeline_body_for_update" style="display: none"></tbody>
+        <tbody id="timeline_body">
+
+        <%= render :partial=>'statuses/tweet', :collection=>@tweets, :locals=>{:type=>'mine'} %>
+
+        </tbody>
+    </table>
+    <div class="bottom_nav">
+        <div class="pagination" id="pagination">
+            <span class="section_links disabled">Older &#187;</span>
+        </div>
+    <span class="statuses_options">
+      <a href="http://twitter.com/statuses/user_timeline/17525701.rss" class="section_links">RSS</a>
+    </span>
+    </div>
+</div>
+
+<% content_for :sidebar do %>
+
+    <div class="section">
+  <span class="section-links">
+      </span>
+        <address>
+            <ul class="about vcard entry-author">
+                <li><span class="label">Name</span> <span class="fn"><%= h @duser.username %></span></li>
+                <% if @duser.location %>
+                    <li><span class="label">Location</span> <span class="adr"><%= h @duser.location %></span></li>
+                <% end %>
+                <% if @duser.bio %>
+                    <li id="bio"><span class="label">Bio</span> <span class="bio"><%= h @duser.bio %></span></li>
+                <% end %>
+            </ul>
+        </address>
+
+        <%= render :partial=>'user_stats', :object=> @duser %>
+
+    </div>
+
+    <ul id="tabMenu">
+        <li>
+            <a href="/rob_test" id="updates_tab">Updates</a></li>
+        <li>
+            <a href="/rob_test/favourites" id="favorites_tab">Favorites</a></li>
+    </ul>
+
+    <div class="section last">
+
+
+        <div class="section-header">
+
+            <h1>Actions</h1>
+        </div>
+        <!-- /section-header -->
+        <ul>
+            <li>
+                <a href="/direct_messages/create/<%= @duser.id %>">message</a> <%= h @duser.username %>
+            </li>
+
+
+            <a href="/blocks/confirm/<%= @duser.id %>" style="color: gray;">block</a> <%= h @duser.username %>
+
+
+        </ul>
+
+        <br/>
+
+        <div class="section-header">
+            <h1>Following</h1>
+        </div>
+
+
+        <div id="friends">
+
+            <%= render :partial=>'friend', :collection=>@duser.friends %>
+
+
+        </div>
+        <br/>
+    </div>
+
+<% end %>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+        //<![CDATA[
+
+                $( function () {
+                        $('body#profile ul#tabMenu li a#updates_tab, body#favourings ul#tabMenu li a#favorites_tab').isSidebarTab();
+
+                        });
+
+                //]]>
+    </script>
+<% end %>

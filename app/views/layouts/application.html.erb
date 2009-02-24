@@ -1,25 +1,177 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Twetter</title>
-	<meta name="generator" content="TextMate http://macromates.com/">
-	<meta name="author" content="Phil Oye">
-	<!-- Date: 2008-06-21 -->
-	<%= stylesheet_link_tag 'twetter' %>
-	<link rel="icon" type="image/gif" href="favicon.gif" />
-</head>
-<body>
-<div id="container">
-	<div id="header">
-		<h1>Twetter</h1>
-		<p>Mac nerds get <a href="twitterrific3.zip">Twitterific</a>
- 	</div>
-	<div id="content">
-		<%= yield %>
-	</div>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="Twitter is a free social messaging utility for staying connected in real-time" name="description" />
+<meta content="no" http-equiv="imagetoolbar" />
+<meta content="width => 780" name="viewport" />
+<meta content="4FTTxY4uvo0RZTMQqIyhh18HsepyJOctQ+XTOu1zsfE=" name="verify-v1" />
+<meta content="y" name="session-loggedin" />
+<meta content="16360207" name="session-userid" />
+<meta content="rob_nielsen" name="session-user-screen_name" />
+<meta content="rob_test" name="page-user-screen_name" />
+
+    <title><%= @title %></title>
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <% @css.each do |css| %>
+          <%= stylesheet_link_tag css %>
+    <% end %>
+	<%= stylesheet_link_tag 'master' %>
+
+    <style type="text/css">
+      body { background: #9ae4e8 url(/images/bg.gif) fixed no-repeat top left; }
+        div.content-bubble-arrow { margin-top: 6px; padding-top: 11px; background: url(/images/arr2.gif) no-repeat 25px 0px; }
+  .status-btn input.round-btn { background: url('/images/round-btn.gif'); }
+  .status-btn input.round-btn:hover { background: url('/images/round-btn-hover.gif'); }
+  .status-btn input.disabled, .status-btn input.disabled:hover { background: url('/images/round-btn.gif'); }
+  .hentry .actions .fav { background-image: url('/images/icon_star_full.gif'); }
+  .hentry .actions .non-fav { background-image: url('/images/icon_star_empty.gif'); }
+  .hentry .actions .fav-throb, .hentry .actions a.del-throb { background-image: url('/images/icon_throbber.gif'); }
+  .hentry .actions .del { background-image: url('/images/icon_trash.gif'); }
+  body#show .repl, .hentry .actions .repl { background-image: url('/images/icon_reply.gif'); }
+  .direct_message .actions .repl { background-image: url('/images/icon_direct_reply.gif'); }
+  .direct_message .actions .del { background-image: url('/images/icon_trash.gif'); }
+  .notify { background-image: url('/images/girl.gif'); }
+  .promotion, ul#tabMenu a#keyword_search_tab.hover, ul#tabMenu a:hover { background-image: url('/images/pale.png'); }
+  div#follow-toggle.closed { background-image: url('/images/toggle_closed.gif'); }
+  div#follow-toggle.opened { background-image: url('/images/toggle_opened.gif'); }
+  .follow-actions .following { background-image: url('/images/checkmark.gif'); }  
+</style>
+      <link rel="alternate" type="application/rss+xml" title="rob_test (RSS)" href="/statuses/user_timeline/17525701.rss" />
+      <link rel="alternate" type="application/atom+xml" title="rob_test (Atom)" href="/statuses/user_timeline/17525701.atom" />
+  </head>
+
+  <body class="<%= @body_classes %>" id="<%= @body_id %>">
+    <div id="dim-screen"></div>
+    <ul id="accessibility">
+  <li>On a mobile phone? Check out <a href="http://m.twitter.com/">m.twitter.com</a>!</li>
+  <li><a href="#footer" accesskey="2">Skip to navigation</a></li>
+  <li><a href="#tabMenu" accesskey="3">Jump to the sidebar</a></li>  <li><a href="#signin">Skip to sign in form</a></li>
+
+</ul>
+
+    
+    <div id="container" class="subpage">
+      <span id="loader" style="display:none"><img alt="Loader" src="/images/loader.gif" /></span>
+      <h1 id="header">
+	<a href="/home" title="Twetter: home" accesskey="1">
+    
+      <img alt="Twetter.com" height="41" src="/images/twitter_logo_s.png" width="191" />
+    
+	</a>
+</h1>
+
+
+      <% if flash[:notice] || flash[:error] %>
+            <div id="flash">
+            <h2 class="thumb"><img alt="Girl" class="girl" src="/images/girl.gif" /></h2>
+
+            <div class="content-bubble-arrow"></div>
+            <div class="desc"><p><%= flash[:notice] %><%= flash[:error] %></p></div>
+
+      <% else %>
+            <div id="flash" style="display:none;">
+      <% end %>
+      </div>
+      <div class="content-bubble-arrow"></div>
+      
+        <table cellspacing="0" class="columns">
+          <tbody>
+            <tr>
+                <td id="content" class="column">
+                    <div class="wrapper">
+				        <%= yield %>
+                    </div>
+                </td>
+
+                <td id="side_base" class="column">
+                    <div id="side">
+                        <%= yield :sidebar %>
+                    </div>
+                    <hr/>
+
+                </td>
+
+            </tr>
+          </tbody>
+        </table>
+      
+
+      <div id="footer" >
+  <h3>Footer</h3>
+
+  <ul>
+    <li class="first">&copy; 2009 Twetter</li>
+
+    <li><a href="/about#about">About Us</a></li>
+    <li><a href="/about#contact">Contact</a></li>
+    <!--
+    <li><a href="http://blog.twitter.com">Blog</a></li>
+    <li><a href="http://status.twitter.com">Status</a></li>
+          <li><a href="/downloads">Apps</a></li>
+        <li><a href="http://apiwiki.twitter.com/">API</a></li>
+
+    <li><a href="http://search.twitter.com">Search</a></li>
+    <li><a href="http://help.twitter.com">Help</a></li>
+    <li><a href="/jobs">Jobs</a></li>
+    <li><a href="/terms">Terms</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+    -->
+  </ul>
+
 </div>
-</body>
+
+      <hr />
+              
+  <div id="navigation">
+    <ul>
+      <li class="first"><a href="/home" id="home_link">Home</a></li>
+      <li><a href="/rob_nielsen" id="profile_link">Profile</a></li>
+      <!--<li><a href="/invitations" id="find_people_link">Find People</a></li> -->
+
+      <li><a href="/account/settings" id="settings_link">Settings</a></li>
+      <!--<li><a href="http://google.com" id="help_link">Help</a></li> -->
+      <li><a id="sign_out_link" href="#" onclick="document.getElementById('sign_out_form').submit(); return false;">Sign out</a></li>
+      
+      
+    </ul>
+    <form method="post" id="sign_out_form" action="/sessions/destroy" style="display:none;">
+      <input name="authenticity_token" value="cf586308d33b4601f0dfba618cc4bbf7c5baf1c0" type="hidden" />
+    </form>
+
+  </div>
+  
+
+
+          </div>
+
+    
+    <script src="/javascripts/jquery.min.js" type="text/javascript"></script><script src="/javascripts/application.js" type="text/javascript"></script><script src="/javascripts/jquery.color.js" type="text/javascript"></script>
+<script src="/javascripts/timeline.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+      twttr.form_authenticity_token = 'cf586308d33b4601f0dfba618cc4bbf7c5baf1c0';
+
+//]]>
+
+</script>
+<% if (flash[:notice]||flash[:error]) %>
+        <script type="text/javascript">
+//<![CDATA[
+
+              $( function () {
+              setTimeout(function() { $('#flash').slideUp(); }, 3000);
+              });
+
+//]]>
+        </script>
+<% end %>
+
+<%= yield :javascript %>
+
+  </body>
+
 </html>

@@ -1,3 +1,5 @@
+<% setup({}) %>
+
 <h1><%= @user.username %></h1>
 <%= image_tag @user.profile_url, :style=>"float:left"%>
 <% form_tag({:action => 'update_profile_image'}, {:multipart => true}) do %>

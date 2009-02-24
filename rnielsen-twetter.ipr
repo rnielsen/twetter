@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project relativePaths="false" version="4">
+  <component name="AntConfiguration">
+    <defaultAnt bundledAnt="true" />
+  </component>
   <component name="BuildJarProjectSettings">
     <option name="BUILD_JARS_ON_MAKE" value="false" />
   </component>
@@ -26,6 +29,9 @@
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
+  </component>
+  <component name="CopyrightManager" default="">
+    <module2copyright />
   </component>
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
@@ -211,6 +217,9 @@
     <converter id="javaee-modules" />
     <converter id="ror-modules" />
     <converter id="SelenaRunConfToDiana" />
+  </component>
+  <component name="ProjectKey">
+    <option name="state" value="project:///Users/rob/work/git/rnielsen-twetter/rnielsen-twetter.ipr" />
   </component>
   <component name="ProjectModuleManager">
     <modules>

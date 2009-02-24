@@ -4,6 +4,7 @@
     <facet type="RailsFacetType" name="Ruby on Rails">
       <configuration>
         <RAILS_FACET_CONFIG_ID NAME="SHOULD_USE_RSPEC_PLUGIN" VALUE="false" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_SUPPORT_ADDED" VALUE="true" />
         <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_APPLICATION_ROOT" VALUE="$MODULE_DIR$" />
       </configuration>
     </facet>
