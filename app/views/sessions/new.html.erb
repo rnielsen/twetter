@@ -19,7 +19,9 @@ Twitterfox etc.</p>
             <tr>
                 <th><%= label_tag 'password' %></th>
                 <td><%= password_field_tag 'password', nil %>
-                    <small><a href="/account/resend_password">Forgot?</a></small>
+                    <% if (@login) %>
+                    <small><a href="/sessions/reset_password/<%= @login %>">Forgot?</a></small>
+                    <% end %>
                 </td>
             </tr>
             <tr>

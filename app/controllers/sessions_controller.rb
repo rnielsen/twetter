@@ -4,6 +4,18 @@ class SessionsController < ApplicationController
   def new
   end
 
+  def reset_password
+    @user = User.find_by_username(params[:id])
+    if (@user)
+      @user.password = nil
+      @user.password_confirmation = nil
+      @user.save
+      @tweet = Tweet.create({:tweet => "Received password reset request from #{request.remote_ip}", :user => @user, :tweet_type => 'tweet', :source => 'web'})
+    end
+    flash[:notice] = 'Password for #{params[:id]} has been reset'
+    redirect_to :action => 'new'
+  end
+
   def create
     logout_keeping_session!
     user = User.authenticate(params[:login], params[:password])
