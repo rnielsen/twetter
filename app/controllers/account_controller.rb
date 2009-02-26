@@ -9,6 +9,10 @@ class AccountController < ApplicationController
     reset_session
     redirect_to :action=>'front'    
   end
+
+  def profile_image
+    @duser = User.fetch(params[:id])
+  end
   
   def update_profile_image
     upload_image(params[:image])
@@ -51,9 +55,9 @@ class AccountController < ApplicationController
   end
 
   def upload_image(image)
-    upload_image = "#{RAILS_ROOT}/tmp/upload/#{@user.id}" 
+    upload_image = "#{RAILS_ROOT}/tmp/upload/#{@user.username}" 
     File.open(upload_image, "wb") { |f| f.write(image.read) }
-    cmd = "convert -size 100x100 #{upload_image} #{RAILS_ROOT}/public/images/profile/#{@user.username}.png"
+    cmd = "convert -size 200x200 #{upload_image} #{RAILS_ROOT}/public/images/profile/#{@user.username}.png"
     puts cmd
     puts `#{cmd}`
   end

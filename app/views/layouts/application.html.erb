@@ -87,6 +87,7 @@
                     </div>
                 </td>
 
+                <% if yield(:sidebar) %>
                 <td id="side_base" class="column">
                     <div id="side">
                         <%= yield :sidebar %>
@@ -94,6 +95,7 @@
                     <hr/>
 
                 </td>
+                <% end %>
 
             </tr>
           </tbody>

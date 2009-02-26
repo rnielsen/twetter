@@ -14,7 +14,7 @@ class DirectMessagesController < ApplicationController
   def new
     tweet = params[:text]
     type='direct'
-    recipient = User.find_or_create_by_username(params[:user])
+    recipient = User.fetch(params[:user])
     @tweet = Tweet.create({:tweet => tweet, :user => @user, :recipient => recipient, :tweet_type => type, :source => params[:source]})
     render_tweet        
   end

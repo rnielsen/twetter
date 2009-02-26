@@ -5,14 +5,13 @@ class SessionsController < ApplicationController
   end
 
   def reset_password
-    @user = User.find_by_username(params[:id])
+    @user = User.find_by_username(params[:id].downcase)
     if (@user)
-      @user.password = nil
-      @user.password_confirmation = nil
+      @user.crypted_password = nil
       @user.save
       @tweet = Tweet.create({:tweet => "Received password reset request from #{request.remote_ip}", :user => @user, :tweet_type => 'tweet', :source => 'web'})
     end
-    flash[:notice] = 'Password for #{params[:id]} has been reset'
+    flash[:notice] = "Password for #{params[:id]} has been reset"
     redirect_to :action => 'new'
   end
 

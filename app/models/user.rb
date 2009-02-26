@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   # This will also let us return a human error message.
   #
   def self.authenticate(login, password)
-     u = find_or_create_by_username(login)
+     u = fetch(login)
      if (!u.crypted_password)
          u.password = password
          u.save!
@@ -43,6 +43,10 @@ class User < ActiveRecord::Base
      u.authenticated?(password) ? u : nil
   end
 
+  def self.fetch(username)
+    find_or_create_by_username(username.downcase)
+  end
+  
   def password_required?
       false
   end
@@ -77,7 +81,8 @@ class User < ActiveRecord::Base
   end
 
   def name
-      read_attribute(:name) || self.username
+      n = read_attribute(:name)
+      n = self.username if (n.blank?) 
   end
 
   def latest_tweet

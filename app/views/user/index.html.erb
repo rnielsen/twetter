@@ -2,7 +2,7 @@
 <div class="profile-head">
     <h2 class="thumb">
         <!-- <img alt="Default_profile_bigger" height="73" src="/images/default_profile_bigger.png" width="73" /> -->
-        <%= image_tag @duser.web_profile_url, :size=>"73x73" %>
+        <%= link_to(image_tag(@duser.web_profile_url, :size=>"73x73"), :controller=>'account', :action=>'profile_image', :id=>@duser.username) %>
         <%= @duser.username %>
     </h2>
 

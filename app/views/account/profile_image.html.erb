@@ -1,0 +1,23 @@
+<% setup(:title=>@duser.username, :body_id=>"profile_image", :css=>['timeline']) %>
+
+<table cellspacing="0" class="columns">
+          <tbody>
+            <tr>
+
+              <td id="content" class="column">
+                                <div class="wrapper">
+
+                  <h2><a href="http://twitter.com/<%= h @duser.username %>"><%= h @duser.name || @duser.username %></a></h2>
+
+<p><img alt="<%= @duser.username %>" src="<%= @duser.web_profile_url %>" /></p>
+
+<% if (@user == @duser) %>
+<p><small><a href="/account/picture">Change this?</a></small></p>
+<% end %>
+                </div>
+                              </td>
+
+
+            </tr>
+          </tbody>
+        </table>
