@@ -44,7 +44,7 @@ class AccountController < ApplicationController
 
   def picture
       if (request.post?)
-        upload_image(params[:profile_image][:uploaded_data])
+        User.upload_image(@user.username, params[:profile_image][:uploaded_data].read)
       end
   end
   

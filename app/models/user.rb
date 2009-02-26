@@ -56,14 +56,24 @@ class User < ActiveRecord::Base
     write_attribute :username, (value ? value.downcase : nil)
   end
 
-  def web_profile_url
-    file = "#{RAILS_ROOT}/public/images/profile/#{self.username}.png"
-    if (File.exists?(file))
-      number = File.mtime(file).to_i.to_s rescue ""
-      "/images/profile/#{self.username}.png?#{number}"
-    else
-      "/images/default_profile.png"
+  def self.upload_image(username, image)
+    upload_image = "#{RAILS_ROOT}/tmp/upload/#{username}"
+    File.open(upload_image, "wb") { |f| f.write(image) }
+    cmd = "convert -resize 200x200 #{upload_image} #{RAILS_ROOT}/public/images/profile/full/#{username}.png"
+    puts cmd
+    `#{cmd}`
+    cmd = "convert -resize 48x48! #{upload_image} #{RAILS_ROOT}/public/images/profile/#{username}.png"
+    puts cmd
+    `#{cmd}`
+  end
+
+  def web_profile_url(type = :small)
+    path = "/images/profile#{type == :full ? "/full" : ""}/#{self.username}.png"
+    if (!File.exists?("#{RAILS_ROOT}/public#{path}"))
+      path = "/images/default_profile#{type == :full ? "_bigger" : ""}.png"
     end
+    number = File.mtime("#{RAILS_ROOT}/public#{path}").to_i.to_s rescue ""
+    "#{path}?#{number}"
   end
 
   def profile_url
@@ -82,7 +92,8 @@ class User < ActiveRecord::Base
 
   def name
       n = read_attribute(:name)
-      n = self.username if (n.blank?) 
+      n = self.username if (n.blank?)
+      n
   end
 
   def latest_tweet
