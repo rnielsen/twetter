@@ -127,11 +127,11 @@
 </div>
 
       <hr />
-              
+  <% if (current_user) %>
   <div id="navigation">
     <ul>
       <li class="first"><a href="/home" id="home_link">Home</a></li>
-      <li><a href="/rob_nielsen" id="profile_link">Profile</a></li>
+      <li><a href="/<%= h current_user.username %>" id="profile_link">Profile</a></li>
       <!--<li><a href="/invitations" id="find_people_link">Find People</a></li> -->
 
       <li><a href="/account/settings" id="settings_link">Settings</a></li>
@@ -145,7 +145,7 @@
     </form>
 
   </div>
-  
+  <% end %>
 
 
           </div>
