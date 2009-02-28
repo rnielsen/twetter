@@ -44,80 +44,18 @@
 
         </tbody>
     </table>
-    <div class="bottom_nav">
-        <div class="pagination" id="pagination">
-            <span class="section_links disabled">Older &#187;</span>
-        </div>
-    <span class="statuses_options">
-      <a href="http://twitter.com/statuses/user_timeline/17525701.rss" class="section_links">RSS</a>
-    </span>
-    </div>
+
+    <!--<div class="bottom_nav">-->
+        <!--<div class="pagination" id="pagination">-->
+            <!--<span class="section_links disabled">Older &#187;</span>-->
+        <!--</div>-->
+    <!--<span class="statuses_options">-->
+      <!--<a href="http://twitter.com/statuses/user_timeline/17525701.rss" class="section_links">RSS</a>-->
+    <!--</span>-->
+    <!--</div>-->
 </div>
 
-<% content_for :sidebar do %>
-
-    <div class="section">
-  <span class="section-links">
-      </span>
-        <address>
-            <ul class="about vcard entry-author">
-                <li><span class="label">Name</span> <span class="fn"><%= h @duser.name %></span></li>
-                <% if @duser.location %>
-                    <li><span class="label">Location</span> <span class="adr"><%= h @duser.location %></span></li>
-                <% end %>
-                <% if @duser.bio %>
-                    <li id="bio"><span class="label">Bio</span> <span class="bio"><%= h @duser.bio %></span></li>
-                <% end %>
-            </ul>
-        </address>
-
-        <%= render :partial=>'user_stats', :object=> @duser %>
-
-    </div>
-
-    <ul id="tabMenu">
-        <li>
-            <a href="/rob_test" id="updates_tab">Updates</a></li>
-        <li>
-            <a href="/rob_test/favourites" id="favorites_tab">Favorites</a></li>
-    </ul>
-
-    <div class="section last">
-
-
-        <div class="section-header">
-
-            <h1>Actions</h1>
-        </div>
-        <!-- /section-header -->
-        <ul>
-            <li>
-                <a href="/direct_messages/create/<%= @duser.id %>">message</a> <%= h @duser.username %>
-            </li>
-
-
-            <a href="/blocks/confirm/<%= @duser.id %>" style="color: gray;">block</a> <%= h @duser.username %>
-
-
-        </ul>
-
-        <br/>
-
-        <div class="section-header">
-            <h1>Following</h1>
-        </div>
-
-
-        <div id="friends">
-
-            <%= render :partial=>'friend', :collection=>@duser.friends %>
-
-
-        </div>
-        <br/>
-    </div>
-
-<% end %>
+<%= render :partial=>'user/sidebar' %>
 
 <% content_for :javascript do %>
     <script type="text/javascript">

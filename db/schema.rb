@@ -9,7 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090119123823) do
+ActiveRecord::Schema.define(:version => 20090226213219) do
+
+  create_table "favorites", :id => false, :force => true do |t|
+    t.integer "user_id",  :null => false
+    t.integer "tweet_id", :null => false
+  end
 
   create_table "tweets", :force => true do |t|
     t.string   "tweet"

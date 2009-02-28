@@ -38,6 +38,7 @@ class ApplicationController < ActionController::Base
 
   def render_users(root="users")
     respond_to do |format|
+      format.html { }
       format.xml { render :xml => @users.map{|u| u.to_map(true)}.to_xml(:root=>root, :skip_types=>true, :dasherize=>false) }
       format.json { render :json => @users.map{|u| u.to_map(true) }}
     end

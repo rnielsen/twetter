@@ -1,0 +1,11 @@
+<% setup(:title=>"People who follow #{@duser.username}", :body_id=>"followers", :body_classes=>['followers'], :css=>['screen']) %>
+
+<div id="followers">
+
+    <h2><%= h @duser.username %>'s <%= @duser.followers_count %> Followers</h2>
+    <br />
+
+    <table class="followers-table doing" cellspacing="0">
+          <%= render :partial=>'user/user', :collection=>@users %>
+    </table>
+</div>

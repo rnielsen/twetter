@@ -5,15 +5,18 @@
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="en-us" http-equiv="Content-Language" />
-<meta content="Twitter is a free social messaging utility for staying connected in real-time" name="description" />
+<meta content="Twetter is a free social messaging utility for staying connected in real-time" name="description" />
 <meta content="no" http-equiv="imagetoolbar" />
 <meta content="width => 780" name="viewport" />
 <meta content="4FTTxY4uvo0RZTMQqIyhh18HsepyJOctQ+XTOu1zsfE=" name="verify-v1" />
-<meta content="y" name="session-loggedin" />
-<meta content="16360207" name="session-userid" />
-<meta content="rob_nielsen" name="session-user-screen_name" />
-<meta content="rob_test" name="page-user-screen_name" />
-
+<meta content="<%= @user ? "y" : "n" %>" name="session-loggedin" />
+<% if (@user) %>
+<meta content="<%= @user.id %>" name="session-userid" />
+<meta content="<%= @user.username %>" name="session-user-screen_name" />
+<% end %>
+<% if (@user || @duser) %>
+<meta content="<%= (@duser || @user).username %>" name="page-user-screen_name" />
+<% end %>
     <title><%= @title %></title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <% @css.each do |css| %>

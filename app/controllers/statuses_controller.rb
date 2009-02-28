@@ -24,12 +24,13 @@ class StatusesController < ApplicationController
   end
   
   def followers
-    @users=User.find(:all)
+    @users=@user.followers
     render_users
   end
   
   def friends
-    followers
+    @users=@user.friends
+    render_users
   end
   
   def show

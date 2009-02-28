@@ -1,0 +1,5 @@
+<% setup(:title=>"Favorites", :body_id=>"favourings", :body_classes=>"favourings", :css=>['timeline']) %>
+<h2 class="timeline-header">Your Favorites</h2>
+<h3 class="timeline-subheader">Star your favorite Twitter updates and they&rsquo;ll be saved for you here!</h3>
+<%= render :partial => "statuses/tweets" %>
+<%= render :partial => "statuses/sidebar" %>

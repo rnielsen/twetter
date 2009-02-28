@@ -1,0 +1,36 @@
+<tr id="person_<%= user.id %>" class="vcard person <%= h user.username %>">
+  <td class="thumb">
+    <a href="/<%= h user.username %>" rel="contact"><img alt="<%= h user.name %>" class="photo fn" height="48" src="<%= h user.web_profile_url %>" width="48" /></a>
+  </td>
+  <td>
+
+    <strong>
+      <a href="/<%= h user.username %>" class="url uid" title="<%= h user.bio %>"><span class="nickname"><%= h user.username %></span></a>
+      <% if (user.name != user.username) %>
+       / <%= h user.name %>
+      <% end %>
+    </strong>
+
+      <div class="person-actions" id="actions<%= h user.id %>">
+
+
+        <span id="removed<%= h user.id %>"></span>
+        <% if (user != @user) %>
+        <div  id="control<%= h user.id %>">
+
+            <img src="/images/yes.gif" alt="following" class="follow-icon" />You are following <%= h user.username %>            <span id="notifications14292159" style="display:none;font-size:90%">
+
+              <!--<button style="margin-left:10px;" id="remove-btn<%= h user.id %>" class="small remove-button">remove</button>-->
+              
+            </span>
+
+        </div>
+        <% end %>
+      </div>
+
+
+  </td>
+  <td>
+
+  </td>
+</tr>

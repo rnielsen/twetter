@@ -1,4 +1,5 @@
-<tr class="hentry status u-<%= h tweet.user.username %><%= (tweet.user==@user) ? " mine" : "" %><%= ((type=='mine' && tweet_counter==0) || type=='friends_update') ? " latest-status":"" %>" id="status_<%= h tweet.id %>">
+<% fav = !@user.favorites.find_by_id(tweet.id).nil? %>
+<tr class="hentry status <% fav ? "favorite" : "" %>u-<%= h tweet.user.username %><%= (tweet.user==@user) ? " mine" : "" %><%= ((type=='mine' && tweet_counter==0) || type=='friends_update') ? " latest-status":"" %>" id="status_<%= h tweet.id %>">
     <% if (type!='mine') %>
     <td class="thumb vcard author">
         <a href="/<%= h tweet.user.username %>" class="url"><img alt="<%= tweet.user.name %>" class="photo fn" height="48" src="<%= tweet.user.web_profile_url %>" width="48"/></a>
@@ -20,7 +21,7 @@
     </td>
     <td class="actions">
         <div>
-            <a class="non-fav" id="status_star_<%= h tweet.id %>" title="favorite this update">&nbsp;&nbsp;</a><a class="repl" href="/home?status=@<%= h tweet.user.username %>%20&amp;in_reply_to_status_id=<%= h tweet.id %>&amp;in_reply_to=<%= h tweet.user.username %>" title="reply to <%= h tweet.user.username %>">&nbsp;&nbsp;</a>
+            <a class="fav-action <%= fav ? "" : "non-" %>fav" id="status_star_<%= h tweet.id %>" title="<%= fav ? "" : "un-" %>favorite this update">&nbsp;&nbsp;</a><a class="repl" href="/home?status=@<%= h tweet.user.username %>%20&amp;in_reply_to_status_id=<%= h tweet.id %>&amp;in_reply_to=<%= h tweet.user.username %>" title="reply to <%= h tweet.user.username %>">&nbsp;&nbsp;</a>
         </div>
     </td>
 </tr>

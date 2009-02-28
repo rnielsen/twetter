@@ -3,7 +3,7 @@
         <td>
 
             <a href="/<%= h user_stats.username %>/friends" id="following_count_link" rel="me">
-                <span id="following_count" class="stats_count numeric"><%= user_stats.following_count %></span>
+                <span id="following_count" class="stats_count numeric"><%= user_stats.friends_count %></span>
                 <br/>
 
                 <span class="label">Following</span>
@@ -12,7 +12,7 @@
         <td>
 
             <a href="/<%= h user_stats.username %>/followers" id="follower_count_link" rel="me">
-                <span id="follower_count" class="stats_count numeric"><%= user_stats.follower_count %></span>
+                <span id="follower_count" class="stats_count numeric"><%= user_stats.followers_count %></span>
                 <br/>
                 <span class="label">Followers</span>
 

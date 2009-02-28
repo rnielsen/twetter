@@ -1,7 +1,7 @@
 class Tweet < ActiveRecord::Base
   belongs_to :user
   belongs_to :recipient, :class_name => "User"
-  
+    
   def created_at_formatted
     self.created_at.gmtime.strftime("%a %b %d %H:%M:%S +0000 %Y")
   end

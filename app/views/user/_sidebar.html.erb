@@ -1,0 +1,67 @@
+<% content_for :sidebar do %>
+
+    <div class="section">
+  <span class="section-links">
+      </span>
+        <address>
+            <ul class="about vcard entry-author">
+                <li><span class="label">Name</span> <span class="fn"><%= h @duser.name %></span></li>
+                <% if @duser.location %>
+                    <li><span class="label">Location</span> <span class="adr"><%= h @duser.location %></span></li>
+                <% end %>
+                <% if @duser.bio %>
+                    <li id="bio"><span class="label">Bio</span> <span class="bio"><%= h @duser.bio %></span></li>
+                <% end %>
+            </ul>
+        </address>
+
+        <%= render :partial=>'user_stats', :object=> @duser %>
+
+    </div>
+
+    <ul id="tabMenu">
+        <li>
+            <a href="/<%= h @duser.username %>" id="updates_tab">Updates</a></li>
+        <li>
+            <a href="/<%= h @duser.username %>/favourites" id="favorites_tab">Favorites</a></li>
+    </ul>
+
+    <div class="section last">
+
+
+        <div class="section-header">
+
+            <h1>Actions</h1>
+        </div>
+        <!-- /section-header -->
+        <ul>
+            <li>
+                <a href="/direct_messages/create/<%= @duser.id %>">message</a> <%= h @duser.username %>
+            </li>
+
+
+            <a href="/blocks/confirm/<%= @duser.id %>" style="color: gray;">block</a> <%= h @duser.username %>
+
+
+        </ul>
+
+        <br/>
+
+        <div class="section-header">
+            <h1>Following</h1>
+        </div>
+
+
+        <div id="friends">
+
+            <%= render :partial=>'friend', :collection=>@duser.friends[0..35] %>
+            <% if (@user.friends_count > 36) %>
+            <div id="friends_view_all"><a href="/friends" rel="me">View All&hellip;</a></div>
+            <% end %>
+
+
+        </div>
+        <br/>
+    </div>
+
+<% end %>

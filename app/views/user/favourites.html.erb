@@ -1,0 +1,4 @@
+<% setup(:title=>"Favorites", :body_id=>"favourings", :body_classes=>"favourings", :css=>['timeline']) %>
+<h2 class="timeline-header"><%= h @duser.name %>'s Favorites</h2>
+<%= render :partial => "statuses/tweets" %>
+<%= render :partial => "user/sidebar" %>

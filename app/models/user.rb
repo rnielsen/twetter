@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
     has_many :direct_messages_sent, :class_name=>'Tweet', :conditions=>"tweet_type='direct'", :order => "tweets.created_at DESC"
     has_many :public_tweets, :class_name=>'Tweet', :conditions=>"tweet_type!='direct'", :order=>"tweets.created_at DESC"
 
+  has_and_belongs_to_many :favorites, :class_name=>'Tweet', :join_table=>'favorites', :order=>"created_at DESC"
+
   validates_presence_of     :username
   validates_length_of       :username,    :within => 3..40
   validates_uniqueness_of   :username
@@ -100,16 +102,20 @@ class User < ActiveRecord::Base
       public_tweets[0]
   end
 
-  def following_count
+  def friends_count
       User.count - 1
   end
 
-  def follower_count
+  def followers_count
       User.count - 1
   end
 
   def friends
       User.find(:all, :conditions => ["id != ?", self.id])
+  end
+
+  def followers
+    friends
   end
 
 

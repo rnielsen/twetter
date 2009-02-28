@@ -5,6 +5,8 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "sessions" ,:action => "new"
   map.connect "/home" , :controller => "statuses" ,:action => "friends_timeline"
   map.connect "/replies", :controller => "statuses",:action => "replies" 
+  map.connect "/friends", :controller => "statuses",:action => "friends"
+  map.connect "/followers", :controller => "statuses",:action => "followers" 
   map.connect "/public_timeline", :controller => "statuses",:action => "public_timeline"
 
   map.connect "/statuses/public_timeline.:format", :controller => "statuses", :action => "friends_timeline"
@@ -18,6 +20,5 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 
-  map.connect ":username", :controller => "user", :action => "index"
-
+  map.connect ":username/:action", :controller => "user"
 end

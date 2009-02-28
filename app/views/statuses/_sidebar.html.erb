@@ -40,25 +40,12 @@
 
         <div id="friends">
 
-            <%= render :partial=>'user/friend', :collection=>@user.friends %>
+            <%= render :partial=>'user/friend', :collection=>@user.friends[0..35] %>
 
         </div>
+        <% if (@user.friends_count > 36) %>
         <div id="friends_view_all"><a href="/friends" rel="me">View All&hellip;</a></div>
-
-
-    </div>
-
-    <div class="section last">
-        <div class="section-header">
-            <h1>Device Updates</h1>
-        </div>
-        <div id="device_control">
-
-            <div id="device_msg">
-                <a href="/devices">Set up SMS updates</a>
-            </div>
-        </div>
-
+        <% end %>
 
     </div>
 
