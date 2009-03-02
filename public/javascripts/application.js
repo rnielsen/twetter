@@ -15,7 +15,7 @@ function _(C, A) {
     }
     if (A) {
         for (var D in A) {
-            C = C.replace(new RegExp("\\#\\{" + D + "\\}", "gi"), A[D])
+            C = C.replace(new RegExp("\\%\\{" + D + "\\}", "gi"), A[D])
         }
     }
     return C
@@ -43,9 +43,11 @@ $.fn.isSidebarTab = function() {
             var B = A.attr("href");
             twttr.googleAnalytics(B + "/refresh");
             $.ajax({type:"GET",url:B,data:{twttr:true},dataType:"json",beforeSend:twttr.loading,success:function(C) {
-                twttr.processJson(C);
-                $.initializeTimeline()
-            },complete:twttr.loaded});
+                twttr.processJson(C)
+            },complete:function() {
+                initializeTimeline();
+                twttr.loaded()
+            }});
             return false
         })
     })
@@ -64,7 +66,7 @@ $.fn.isExampleField = function(A, B, C) {
     }
     return this.each(function() {
         var D = $(this);
-        if (B) {
+        if (B && D.val() == "") {
             D.val(B)
         } else {
             B = D.val()
@@ -98,6 +100,7 @@ $.fn.isUpdateForm = function() {
         var B = I.find("label.doing");
         var E = /^\s*@(\w+)\W+/;
         var D = /^\s*[dD][mM]?\s+(?:(\w+)\W+)?/;
+
         function H() {
             var J = F.val();
             if (J.length > 140) {
@@ -112,6 +115,7 @@ $.fn.isUpdateForm = function() {
                 }
             }
         }
+
         function G(J) {
             A.removeAttr("disabled", "disabled");
             var K = J.text;
@@ -119,9 +123,8 @@ $.fn.isUpdateForm = function() {
                 $("#flash").html(J.flash).fadeIn(200)
             } else {
                 $("#timeline tr.hentry:first").removeClass("latest-status");
-                if (J.status_tr && $("body").attr("id") == "home") {
-                    $("#timeline tbody").prepend(J.status_tr);
-                    $.initializeTimeline()
+                if (J.status_li && $("body").attr("id") == "home") {
+                    $.Timeline.prepend(J.status_li)
                 }
                 $("#update_count").fadeOut("medium", function() {
                     $("#update_count").html(J.status_count).fadeIn("medium")
@@ -136,14 +139,15 @@ $.fn.isUpdateForm = function() {
             C("");
             F.trigger("change")
         }
+
         function C(K) {
             var J;
             if (J = K.match(D)) {
-                B.html(_("Direct message") + (J[1] ? " " + J[1] : "") + ":");
+                B.html(J[1] ? _("Direct message %{person}:", {person:J[1]}) : _("Direct message:"));
                 A.val(_("send"))
             } else {
                 if (J = K.match(E)) {
-                    B.html(_("Reply to #{screen_name}:", {screen_name:J[1]}));
+                    B.html(_("Reply to %{screen_name}:", {screen_name:J[1]}));
                     A.val(_("reply"))
                 } else {
                     B.html(_("What are you doing?"));
@@ -151,6 +155,7 @@ $.fn.isUpdateForm = function() {
                 }
             }
         }
+
         F.bind("keyup blur focus", function() {
             C($(this).val())
         });
@@ -183,45 +188,91 @@ $.fn.isUpdateForm = function() {
 };
 $.fn.isDirectMessageForm = function() {
     return this.each(function() {
-        var A = $(this);
-        var B = A.find("textarea").isCharCounter();
-        B.find("input[type=submit]").attr("disabled", "disabled").addClass("disabled");
-        B.focusEnd();
-        A.find("select").change(function(C) {
-            B.trigger("update", C)
+        var B = $(this);
+        var C = B.find("textarea").isCharCounter();
+        var A = /^\s*[dD][mM]?\s+([A-Za-z0-9]{1,20})[^A-Za-z0-9]/;
+        var D = B.find("select");
+        var F = B.find("#update-submit");
+        var G = "";
+        C.find("input[type=submit]").attr("disabled", "disabled").addClass("disabled");
+        C.focusEnd();
+        function E(I) {
+            if (D.val()) {
+                return
+            }
+            if ((matches = I.match(A)) && matches[1] && (G != matches[1])) {
+                var H = true;
+                D.find("option").each(function() {
+                    if (this.innerHTML.toLowerCase() == matches[1].toLowerCase()) {
+                        D.val(this.value);
+                        H = false;
+                        return false
+                    }
+                });
+                if (H) {
+                    D.append(_('<option value="%{screen_name}">%{screen_name}</option>', {screen_name:matches[1]}));
+                    D.val(matches[1])
+                }
+                G = matches[1]
+            }
+        }
+
+        F.click(function(H) {
+            var K = C.val();
+            var I = K.match(A);
+            var J = D.find("option[value=" + D.val() + "]");
+            if (I && I[1] && I[1].toLowerCase() == J.text().toLowerCase()) {
+                C.val(K.replace(A, ""))
+            }
+            return true
+        });
+        D.change(function(H) {
+            C.trigger("update", H)
+        });
+        C.bind("keyup blur focus", function(H) {
+            E($(this).val());
+            C.trigger("update", H)
         })
     })
 };
 $.fn.isCharCounter = function() {
     return this.each(function() {
-        var H = $(this);
-        var B = H.parents("form");
-        var D = B.find(".char-counter");
-        var F = B.find("input[type=submit]");
-        var A = B.find("select");
+        var A = true;
+        var E = $(this);
+        var J = E.parents("form");
+        var D = J.find(".char-counter");
+        var H = J.find("input[type=submit]");
+        var C = J.find("select");
+
+        function B() {
+            H.attr("disabled", "disabled").addClass("disabled");
+            A = true
+        }
+
         function G() {
-            F.attr("disabled", "disabled").addClass("disabled")
+            if (A) {
+                H.removeAttr("disabled").removeClass("disabled");
+                A = false
+            }
         }
-        function E() {
-            F.removeAttr("disabled").removeClass("disabled")
-        }
-        function C() {
-            var J = H.val();
-            var I = J.length;
-            D.html("" + (140 - I));
-            if (I <= 0) {
+
+        function F() {
+            var L = E.val();
+            var K = L.length;
+            D.html("" + (140 - K));
+            if (K <= 0) {
                 D.css("color", "#cccccc");
-                G()
+                B()
             } else {
-                if (A.length == 0 || A.val()) {
-                    E()
-                } else {
+                if (K <= 140 && (C.length == 0 || C.val())) {
                     G()
+                } else {
+                    B()
                 }
-                if (I > 130) {
+                if (K > 130) {
                     D.css("color", "#d40d12")
                 } else {
-                    if (I > 120) {
+                    if (K > 120) {
                         D.css("color", "#5c0002")
                     } else {
                         D.css("color", "#cccccc")
@@ -229,18 +280,24 @@ $.fn.isCharCounter = function() {
                 }
             }
         }
-        H.bind("keyup blur focus change paste input", function(I) {
-            C()
+
+        var I = "blur focus change " + ($.browser.mozilla ? "paste input" : "keyup");
+        E.bind(I, function(K) {
+            F()
         });
-        H.focus()
+        C.change(function(K) {
+            F()
+        });
+        E.focus()
     })
 };
 $.fn.isCurrentStatus = function(A) {
     return this.each(function() {
-        var D = $(this);
-        var B = D.find("#latest_text");
-        var C = B.find(".status-text");
-        var G = B.find(".entry-meta");
+        var E = $(this);
+        var B = E.find("#latest_text");
+        var D = B.find(".status-text");
+        var H = B.find(".entry-meta");
+        var C = $(this).parent("#currently");
         $("#latest_text_full, #latest_text").click(function() {
             $("#latest_text_full, #latest_text").toggle()
         });
@@ -248,13 +305,16 @@ $.fn.isCurrentStatus = function(A) {
         twttr.boxTruncate($("#latest_text_full .status-text").text(), "#currently #latest_text .status-text", "#currently #latest_text", {height:40,minlength:60});
         B.css("visibility", "visible");
         if (A) {
-            var F = C.css("color");
-            var E = G.css("color");
+            if (C.css("visibility") == "hidden") {
+                C.css("visibility", "visible")
+            }
+            var G = D.css("color");
+            var F = H.css("color");
             if (!$.browser.msie) {
                 B.css("opacity", 0)
             }
-            C.css("color", "#000");
-            G.css("color", "#000");
+            D.css("color", "#000");
+            H.css("color", "#000");
             if (!$.browser.msie) {
                 B.animate({opacity:1}, 1000)
             }
@@ -262,8 +322,8 @@ $.fn.isCurrentStatus = function(A) {
                 clearTimeout(twttr.timeouts.updateLatestStatus)
             }
             twttr.timeouts.updateLatestStatus = setTimeout(function() {
-                C.animate({color:F}, 3000);
-                G.animate({color:E}, 3000)
+                D.animate({color:G}, 3000);
+                H.animate({color:F}, 3000)
             }, 5000)
         }
     })
@@ -298,26 +358,32 @@ $.fn.isNudgable = function() {
 $.fn.isSelectAll = function(A) {
     return this.each(function() {
         var B = $(this);
-        var C = $(A);
-        var E = C.find("input[type=checkbox]");
-        function D() {
-            var F = true;
-            E.each(function() {
+        if (typeof (A) == "string") {
+            var D = $(A).find("input[type=checkbox]")
+        } else {
+            var D = A
+        }
+        function C() {
+            var E = true;
+            D.each(function() {
                 if (!this.checked) {
-                    F = false;
+                    E = false;
                     return false
                 }
             });
-            B.get(0).checked = F
+            B.get(0).checked = E
         }
+
         B.click(function() {
-            var F = B.get(0).checked;
-            E.each(function() {
-                this.checked = F
-            })
+            var E = B.get(0).checked;
+            D.each(function() {
+                this.checked = E
+            });
+            $(this).trigger("select-all-changed", E)
         });
-        E.click(function() {
-            D()
+        D.click(function() {
+            C();
+            $(this).trigger("checkbox-changed", this.checked)
         })
     })
 };
@@ -337,6 +403,7 @@ $.fn.isFollowControl = function() {
                 $(".follow-control").isFollowControl()
             },beforeSend:twttr.loading,complete:twttr.loaded})
         }
+
         H.click(function() {
             $.ajax({type:"POST",dataType:"text",url:"/friendships/create/" + B,data:{authenticity_token:twttr.form_authenticity_token,twttr:true},success:function(I) {
                 if (I.match(/Bring/)) {
@@ -385,6 +452,7 @@ $.fn.isFollowRequestLinks = function() {
         var F = D ? B.attr("id").replace("ifr_", "") : "";
         var A = B.find("#accept_all_requests");
         var C = B.find("#deny_all_requests");
+
         function E(G) {
             var H = {decision:G,authenticity_token:twttr.form_authenticity_token};
             if (D) {
@@ -408,6 +476,7 @@ $.fn.isFollowRequestLinks = function() {
                 }
             },beforeSend:twttr.loading,complete:twttr.loaded})
         }
+
         A.click(function() {
             E("accept");
             return false
@@ -438,6 +507,7 @@ $.fn.isTabMenu = function() {
                 }
             })
         }
+
         B.find("li a").each(function() {
             var C = $(this);
             C.click(function() {
@@ -446,6 +516,26 @@ $.fn.isTabMenu = function() {
             })
         })
     })
+};
+$.fn.isLinkMenu = function() {
+    $(this).one("click", B);
+    function B() {
+        var C = $(this);
+        var D = C.siblings(":hidden");
+        $("body, a").one("click", {link:C,menu:D}, A);
+        D.click(function(E) {
+            E.stopPropagation()
+        }).show();
+        return false
+    }
+
+    function A(C) {
+        C.data.menu.hide();
+        C.data.link.one("click", B);
+        if ($(C.target).attr("id") == C.data.link.attr("id")) {
+            return false
+        }
+    }
 };
 $.fn.focusEnd = function() {
     var A;
@@ -463,6 +553,167 @@ $.fn.focusEnd = function() {
         }
     })
 };
+(function(A) {
+    A.fn.isPasswordStrengthField = function(B, C) {
+        return this.each(function() {
+            if (!B) {
+                return
+            }
+            if (!C) {
+                C = {}
+            }
+            var I = A(this);
+            var K = A(B);
+            K.append('<span class="pstrength-text"></span>');
+            var G = K.find(".pstrength-text");
+
+            function F(L) {
+                K.children().each(function() {
+                    var M = A(this);
+                    if (M.hasClass("pstrength-text")) {
+                        if (L) {
+                            M.show()
+                        } else {
+                            M.hide()
+                        }
+                    } else {
+                        if (L) {
+                            M.hide()
+                        } else {
+                            M.show()
+                        }
+                    }
+                })
+            }
+
+            function J(L) {
+                var N = 0;
+                var M = C.minlength ? C.minlength : 6;
+                if (L.length < M) {
+                    return{score:L.length,message:_("Too short"),className:"password-invalid"}
+                }
+                if (C.username) {
+                    var O = (typeof (C.username) == "function") ? C.username() : C.username;
+                    if (O && (L.toLowerCase() == O.toLowerCase())) {
+                        return{score:0,message:_("Too obvious"),className:"password-invalid"}
+                    }
+                }
+                if (A.inArray(L.toLowerCase(), ["password","password1","password12","password123","qwerty","asdfgh","123456","abcdef","abc123","monkey","letmein"]) != -1) {
+                    return{score:0,message:_("Too obvious"),className:"password-invalid"}
+                }
+                N += L.length * 4;
+                N += (E(1, L).length - L.length) * 1;
+                N += (E(2, L).length - L.length) * 1;
+                N += (E(3, L).length - L.length) * 1;
+                N += (E(4, L).length - L.length) * 1;
+                if (L.match(/(.*[0-9].*[0-9].*[0-9])/)) {
+                    N += 5
+                }
+                if (L.match(/(.*[!,@,#,$,%,^,&,*,?,_,~].*[!,@,#,$,%,^,&,*,?,_,~])/)) {
+                    N += 5
+                }
+                if (L.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+                    N += 10
+                }
+                if (L.match(/([a-zA-Z])/) && L.match(/([0-9])/)) {
+                    N += 15
+                }
+                if (L.match(/([!,@,#,$,%,^,&,*,?,_,~])/) && L.match(/([0-9])/)) {
+                    N += 15
+                }
+                if (L.match(/([!,@,#,$,%,^,&,*,?,_,~])/) && L.match(/([a-zA-Z])/)) {
+                    N += 15
+                }
+                if (L.match(/^\w+$/) || L.match(/^\d+$/)) {
+                    N -= 10
+                }
+                if (N < 0) {
+                    N = 0
+                }
+                if (N > 100) {
+                    N = 100
+                }
+                if (N < 34) {
+                    return{score:N,message:_("Weak"),className:"password-weak"}
+                }
+                if (N < 50) {
+                    return{score:N,message:_("Good"),className:"password-good"}
+                }
+                if (N < 75) {
+                    return{score:N,message:_("Strong"),className:"password-strong"}
+                }
+                return{score:N,message:_("Very Strong"),className:"password-verystrong"}
+            }
+
+            function E(M, P) {
+                var L = "";
+                for (var O = 0; O < P.length; O++) {
+                    var Q = true;
+                    for (var N = 0; N < M && (N + O + M) < P.length; N++) {
+                        Q = Q && (P.charAt(N + O) == P.charAt(N + O + M))
+                    }
+                    if (N < M) {
+                        Q = false
+                    }
+                    if (Q) {
+                        O += M - 1;
+                        Q = false
+                    } else {
+                        L += P.charAt(O)
+                    }
+                }
+                return L
+            }
+
+            function D(L) {
+                if (L && K.hasClass(L)) {
+                    return false
+                }
+                K.removeClass("password-weak").removeClass("password-good").removeClass("password-strong").removeClass("password-verystrong").removeClass("password-invalid");
+                return true
+            }
+
+            function H() {
+                var M = I.val();
+                if (M.length == 0) {
+                    D();
+                    F(false)
+                } else {
+                    if (M.length) {
+                        F(true)
+                    }
+                }
+                if (M.length > 0) {
+                    var L = J(M);
+                    G.html(L.message);
+                    if (D(L.className)) {
+                        K.addClass(L.className)
+                    }
+                }
+            }
+
+            I.bind("show-password-meter", function() {
+                K.show()
+            });
+            I.bind("hide-password-meter", function() {
+                K.hide()
+            });
+            I.keyup(function() {
+                H()
+            });
+            I.blur(function() {
+                if (this.value.length == 0) {
+                    D();
+                    I.trigger("hide-password-meter")
+                }
+            });
+            if (I.val()) {
+                H();
+                K.show()
+            }
+        })
+    }
+})(jQuery);
 $.fn.focusFirstTextField = function() {
     return this.find("input[type=text]:visible:enabled:first").focus().length > 0
 },$.fn.focusFirstTextArea = function() {
@@ -470,22 +721,49 @@ $.fn.focusFirstTextField = function() {
 };
 $.fn.focusFirstTextElement = function() {
     return this.focusFirstTextField() || this.focusFirstTextArea()
-},$.fn.isWrapped = function(E) {
-    if (!E) {
+};
+$.fn.isWrapped = function(B) {
+    if (!B) {
         return
     }
-    $this = $(this);
-    $this.hide();
-    var C = $this.html();
-    var G = C.length;
-    var B = "";
-    var H = $this.width();
-    var F = H / E;
-    var A = G / F;
-    for (var D = 0; D <= F; D += 1) {
-        B += (C.substr(A * D, A) + "\n")
+    var F = $(this);
+    F.hide();
+    var D = F.html();
+    var G = D.length;
+    var H = "";
+    var C = F.width();
+    var A = C / B;
+    var E = G / A;
+    for (var I = 0; I <= A; I += 1) {
+        H += (D.substr(E * I, E) + "\n")
     }
-    $this.html(B).show()
+    F.html(H).show()
+};
+(function(A) {
+    A.fn.isOAuthApplication = function() {
+        return this.each(function() {
+            var D = A(this);
+            var C = D.attr("id").replace("oauth_application_", "");
+            var B = D.find(".revoke-access");
+            B.click(function() {
+                A.ajax({type:"POST",dataType:"json",url:"/oauth/revoke",data:{authenticity_token:twttr.form_authenticity_token,token:C,twttr:true},success:function(E) {
+                    if (E.revoked) {
+                        D.addClass("revoked")
+                    } else {
+                        D.removeClass("revoked")
+                    }
+                    B.text(E.label)
+                },beforeSend:twttr.loading,complete:twttr.loaded});
+                return false
+            })
+        })
+    }
+})(jQuery);
+$.fn.isLoading = function() {
+    $(this).addClass("loading")
+};
+$.fn.isLoaded = function() {
+    $(this).removeClass("loading")
 };
 if (!window.twttr) {
     var _tmp = {};
@@ -562,4 +840,37 @@ if (!window.twttr) {
         return rtn
     })()
 }
-;
+$.fn.occasionally = function(H, I) {
+    var B = this;
+    var F = $.extend({interval:10000,max:null,maxed:function() {
+    },decay:2}, I);
+    var D = 0;
+    var A;
+    var G = F.decay;
+    var C = F.interval;
+
+    function E() {
+        if (F.max && D > F.max) {
+            clearInterval(A);
+            C = F.interval;
+            F.maxed(B);
+            return
+        }
+        D += 1;
+        if (H(B)) {
+            C = F.interval
+        } else {
+            C = C * G
+        }
+        A = setTimeout(function() {
+            E()
+        }, C)
+    }
+
+    A = setTimeout(function() {
+        E()
+    }, C)
+};
+(function(A) {
+    A.ajaxSetup({beforeSend:twttr.loading,complete:twttr.loaded})
+})(jQuery);

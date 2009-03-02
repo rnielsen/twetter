@@ -1,13 +1,13 @@
 <% setup(:title=>@duser.username, :body_id=>"profile", :css=>['timeline']) %>
 <div class="profile-head">
-    <h2 class="thumb">
+    <h2 class="thumb clearfix">
         <!-- <img alt="Default_profile_bigger" height="73" src="/images/default_profile_bigger.png" width="73" /> -->
         <%= link_to(image_tag(@duser.web_profile_url(:full), :size=>"73x73"), :controller=>'account', :action=>'profile_image', :id=>@duser.username) %>
         <%= @duser.username %>
     </h2>
 
     <div class="clear"></div>
-    <div id="follow_actions_17525701" class="follow-actions rob_test">
+    <div id="follow_actions_<%= @duser.id %>" class="follow-actions <%= @duser.username %>">
         <% if (@duser != @user) %>
             <div class="follow-control">
                 <div id="follow-toggle" class="closed med-btn">
@@ -18,7 +18,7 @@
                 <div id="follow-details">
                     <p id="following">
                         <strong>You follow <%= h @duser.username %></strong>
-                        <input class="remove-button" id="remove_button" onclick="removeUser(17525701, <%= @duser.username %>, 'cf586308d33b4601f0dfba618cc4bbf7c5baf1c0');" type="button" value="Remove"/>
+                        <input type="button" id="remove_button" class="remove-button" value="Remove"/>
                         <br/>
                                 <span class="desc"><%= h @duser.username %>
                                     's updates appear in your <a href="/home">timeline</a>.</span>
@@ -35,23 +35,15 @@
     </div>
 </div>
 
-<div class="tab">
-    <table cellspacing="0" class="doing" id="timeline">
-        <tbody id="timeline_body_for_update" style="display: none"></tbody>
-        <tbody id="timeline_body">
+<div class="section">
 
+    <ol class="statuses" id="timeline">
         <%= render :partial=>'statuses/tweet', :collection=>@tweets, :locals=>{:type=>'mine'} %>
-
-        </tbody>
-    </table>
-
-    <!--<div class="bottom_nav">-->
-        <!--<div class="pagination" id="pagination">-->
-            <!--<span class="section_links disabled">Older &#187;</span>-->
+    </ol>
+    <!--<div class="bottom-nav">-->
+        <!--<div id="pagination" class="pagination">-->
+            <!--<a href="/paul_okeeffe?page=2" class="section_links" rel="prev">Older &#187;</a>-->
         <!--</div>-->
-    <!--<span class="statuses_options">-->
-      <!--<a href="http://twitter.com/statuses/user_timeline/17525701.rss" class="section_links">RSS</a>-->
-    <!--</span>-->
     <!--</div>-->
 </div>
 

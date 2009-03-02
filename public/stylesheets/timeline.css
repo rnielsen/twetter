@@ -9,24 +9,6 @@
     overflow: hidden;
 }
 
-#container {
-    width: 763px;
-    margin: 0 auto;
-    padding: 15px 0;
-    text-align: left;
-    position: relative;
-}
-
-#loader {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    padding: 0;
-    background: #FFF;
-    border: 1px solid #CCC;
-    line-height: 0;
-}
-
 .columns {
     margin-bottom: 15px;
     width: 100%;
@@ -128,7 +110,6 @@ fieldset {
 }
 
 .get-started-steps {
-    margin-bottom: 10px;
     font-size: 1.2em;
     line-height: 1.1;
 }
@@ -163,10 +144,6 @@ fieldset label {
     padding: 5px 10px 0 5px;
 }
 
-#content .disabled {
-    color: #bbb;
-}
-
 .status-btn input.round-btn {
     width: 115px;
     height: 32px;
@@ -188,19 +165,6 @@ fieldset label {
 .status-btn input.disabled, .status-btn input.disabled:hover {
     color: #aaa;
     cursor: default;
-}
-
-.wrapper input.submit, .wrapper button, .wrapper input[type=button], .wrapper input[type="file"]>input[type="button"] {
-    background-color: #E6E6E6;
-    border: 1px solid #ccc;
-    padding-top: 1px solid #fff;
-    font-size: 1em;
-    padding: 4px 8px 4px 8px;
-}
-
-.wrapper input.submit:hover, .wrapper button:hover, .wrapper input[type=submit]:hover, .wrapper input[type="file"]>input[type="button"]:hover {
-    background: #d5d5d5;
-    cursor: pointer;
 }
 
 .flatbutton button, .flatbutton input[type=submit], input[type=button].flatbutton {
@@ -244,15 +208,6 @@ body#favourings .tab, body#home .tab, body#profile .tab, body.status .tab, body#
     margin: -1px 10px;
 }
 
-body#home #timeline, body.status #timeline {
-    border-top: 1px dashed #d2dada;
-}
-
-body#profile #timeline, body#favourings #timeline {
-    border-top: 1px dashed #d2dada;
-    margin-top: 10px;
-}
-
 #content.wide {
     width: 100%;
     -moz-border-radius: 5px;
@@ -261,13 +216,9 @@ body#profile #timeline, body#favourings #timeline {
 
 .tab {
     background: #fff;
-    padding: 0;
+    padding: 10px 0;
     border-top: 1px solid #cecece;
     margin: -1px 10px;
-}
-
-body#home #timeline {
-    border-top: 1px dashed #d2dada;
 }
 
 #content h2.timeline-header {
@@ -299,263 +250,6 @@ body#home #timeline {
 .doing td {
     border-bottom: 1px dashed #d2dada;
     vertical-align: middle;
-}
-
-.bottom_nav {
-    padding: 0;
-    margin-top: 20px;
-    float: none;
-    clear: both;
-}
-
-.pagination {
-    float: right;
-}
-
-.pagination ul {
-    padding: 0;
-    margin: 0;
-}
-
-.pagination li {
-    float: left;
-    padding: 0 7px;
-}
-
-#content .section_links {
-    border: 1px solid #cecece;
-    padding: 4px 15px;
-    margin: 5px 0;
-}
-
-.clear {
-    clear: both;
-}
-
-#side_base {
-    border-left: 1px solid #bddcad;
-    width: 199px;
-    line-height: 1.2;
-    background-color: #dfc;
-    -moz-border-radius-topright: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-}
-
-#side_ad_base {
-    height: 185px;
-    text-align: center;
-    padding-top: 5px;
-}
-
-#side {
-    margin-bottom: 10px;
-}
-
-.subpage #side {
-    margin-top: 0;
-}
-
-#side_base div.section {
-    padding: 13px 13px 16px;
-}
-
-div.section-header {
-    margin: 10px 0 5px 0;
-}
-
-div.section-header h1 {
-    font-weight: bold;
-    color: #333;
-    font-size: 1.1em;
-    padding: 0 0 2px;
-}
-
-.notify {
-    text-align: center;
-    line-height: 1;
-    padding: 5px 0;
-    background-repeat: no-repeat;
-    background-position: left center;
-    margin-bottom: 8px;
-}
-
-.notify div {
-    background-color: #fff;
-    font-size: .9em;
-    margin: 0 12px 0 24px;
-    padding: 10px 3px;
-    border: 1px solid #888;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-.actions {
-    border: 1px solid #87bc44;
-    margin: 10px -3px;
-}
-
-.actions small {
-    font-size: .9em;
-}
-
-.actions a {
-    padding-left: 7px;
-}
-
-div.user_icon {
-    padding-bottom: 10px;
-}
-
-div.user_icon img {
-    float: left;
-    padding-right: .8em;
-}
-
-.side_thumb {
-    height: 31px;
-    width: 31px;
-}
-
-#me_name {
-    font-size: 1.35em;
-    line-height: 30px;
-    margin-right: -10px;
-}
-
-#side table.stats {
-    margin: 5px 0 10px 0;
-}
-
-#side table.stats td {
-    padding: 0 7px 0 0;
-}
-
-#side table.stats td a {
-    text-decoration: none;
-}
-
-#side table.stats td a:hover .label {
-    text-decoration: underline;
-}
-
-#side table.stats td+td {
-    padding: 0 7px;
-    border-left: solid 1px #bddcad;
-    border-right: solid 1px #bddcad;
-}
-
-#side table.stats td+td+td {
-    border: 0;
-}
-
-#side table.stats td .numeric {
-    font-size: 1.3em;
-    font-family: georgia;
-    text-decoration: none;
-}
-
-#side table.stats td .label {
-    text-transform: lowercase;
-    font-size: .9em;
-}
-
-.promotion {
-    color: #000;
-    border: 1px solid #BDDCAD;
-    text-align: left;
-    font-size: 11px;
-    margin-top: 7px;
-    padding: 6px 10px;
-    width: 152px;
-}
-
-#side ul {
-    margin: 0;
-}
-
-ul#tabMenu li {
-    display: block;
-    border-top: 1px solid #bddcad;
-    width: 100%;
-}
-
-ul#tabMenu a {
-    display: block;
-    padding: 13px;
-    text-decoration: none;
-    color: #4c4c4c;
-    font-weight: bold;
-    font-size: 110%;
-}
-
-body#home ul#tabMenu a#home_tab, body#profile ul#tabMenu a#updates_tab, body#replies ul#tabMenu a#replies_tab, body.direct_messages ul#tabMenu a#direct_messages_tab, body#favourings ul#tabMenu a#favorites_tab, body#public_timeline ul#tabMenu a#public_timeline_tab {
-    background: #fff;
-    margin-left: -1px;
-    padding-left: 14px;
-}
-
-ul#tabMenu a#user_search_tab {
-    display: block;
-    padding: 10px;
-}
-
-.disabled-search-text {
-    border: 1px solid #777;
-    height: 16px;
-    width: 95px;
-    color: #666;
-    background-color: #EEE ß;
-    padding: 2px 2px 1px 2px;
-}
-
-.stat_count {
-    float: right;
-    font-weight: bold;
-}
-
-#side div.last {
-    border-top: 1px solid #bddcad;
-}
-
-div.section-header#people {
-    margin-top: 0;
-}
-
-#side .section-links {
-    float: right;
-    font-size: .9em;
-    text-align: right;
-}
-
-#friends {
-    padding: 0 0 0 3px;
-    overflow: hidden;
-}
-
-#friends span {
-    float: left;
-    padding: 0 3px 2px 1px;
-}
-
-#friends img {
-    padding: 0;
-}
-
-#friends_view_all {
-    font-size: .9em;
-    padding: 0 0 0 4px;
-}
-
-#device_control label {
-    margin-right: 5px;
-}
-
-#device_control #device_msg {
-    font-size: 80%;
-    margin-top: -5px;
-    margin-bottom: 0;
 }
 
 .join {
@@ -642,72 +336,6 @@ div.section-header#people {
     text-decoration: underline;
 }
 
-.about li {
-    padding-bottom: 3px;
-}
-
-.about .label {
-    font-weight: bold;
-}
-
-#footer {
-    clear: left;
-    text-align: center;
-    padding: 8px 0;
-    line-height: 1;
-}
-
-#footer li {
-    display: inline;
-    padding: 0 4px;
-}
-
-#footer li.first:before {
-    content: '';
-    padding-right: 0;
-}
-
-#navigation, #footer {
-    background: #fff;
-    white-space: nowrap;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -webkit-border-top-left-radius: 5px;
-}
-
-#navigation {
-    position: absolute;
-    top: 24px;
-    right: 0;
-    padding: 8px 10px 8px 5px;
-    line-height: 1.0em;
-    text-align: right;
-    text-align: center;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    font-size: 105%;
-}
-
-#navigation ul {
-    padding-top: 0;
-}
-
-#navigation li {
-    display: inline;
-    padding: 0 0 0 9px;
-}
-
-#navigation li:before {
-    content: ' ';
-    padding-right: 0;
-}
-
-#navigation li.first:before {
-    content: '';
-    padding-right: 0;
-}
-
 #went-protected-notice {
     background: #FF9;
     border: 1px solid #FCFC19;
@@ -740,10 +368,6 @@ div.section-header#people {
     font-weight: bold;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-}
-
-#flash .thumb {
-    padding-left: 24px;
 }
 
 .alert-box {
@@ -825,13 +449,11 @@ body#profile #content h2.thumb {
     font-size: 2.8em;
     line-height: 50px;
     padding: 20px 15px 0 0;
-    margin-bottom: 0;
 }
 
 body#profile #content h2.thumb img {
     float: left;
     margin-bottom: 5px;
-    margin-top: -10px;
 }
 
 body#profile h2.thumb div#follow-details img#x {
@@ -991,58 +613,6 @@ input.update-button, .update-button button, .update-button input[type=submit], i
     -webkit-border-radius: 5px;
 }
 
-div#profilebird {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    height: 48px;
-    clear: both;
-}
-
-div#profilebox {
-    width: 741px;
-    background: #feffdf;
-    border: 1px solid #ff0;
-    padding: 5px 10px 10px 10px;
-    vertical-align: middle;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-div#profiletext {
-    float: left;
-    width: 480px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-div#profilebutton {
-    float: left;
-    text-align: center;
-    width: 175px;
-    margin-left: 50px;
-}
-
-div#profilebutton small {
-    line-height: 8px;
-}
-
-input.profilesubmit {
-    background-color: #74CA00;
-    font-size: 24px;
-    color: #fff;
-    font-weight: bold;
-    margin: 20px 0 10px 0;
-    padding: 10px;
-    border: 1px solid #0f0;
-    width: 175px;
-    cursor: hand;
-}
-
-input.profilesubmit:hover {
-    background-color: #8CF500;
-}
-
 .direct_messages .bar h3 {
     padding: 4px 4px;
 }
@@ -1101,19 +671,4 @@ input.profilesubmit:hover {
     vertical-align: top;
     margin: 0 0 0 5px;
     font-size: .8em;
-}
-
-#admin_dialog {
-    display: none;
-}
-
-#admin_dialog input[type="text"] {
-    border: 1px solid #777;
-    color: #777;
-    height: 16px;
-    padding: 2px 2px 1px;
-}
-
-#admin_dialog table td {
-    text-align: right;
 }

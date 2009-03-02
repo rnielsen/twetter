@@ -1,4 +1,4 @@
-class FavouritesController < ApplicationController
+class FavoritesController < ApplicationController
   before_filter :authenticate
 
   def index
@@ -19,5 +19,4 @@ class FavouritesController < ApplicationController
       render :text=>"OK"
     end
   end
-      
 end

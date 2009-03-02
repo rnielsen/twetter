@@ -1,27 +1,14 @@
 <div class="tab">
 
-    <h2 class="timeline-header" style="display:none;"></h2>
-
-    <table cellspacing="0" class="doing" id="timeline">
-        <tbody id="timeline_body_for_update" style="display: none"></tbody>
-        <tbody id="timeline_body">
-            <%= render :partial=>'statuses/tweet', :collection=>@tweets, :locals=>{:type=>'friends'} %>
-        </tbody>
-    </table>
-
-    <!--
-    <div class="bottom_nav">
-        <div class="pagination" id="pagination">
+    <ol class="statuses" id="timeline">
+        <%= render :partial=>'statuses/tweet', :collection=>@tweets, :locals=>{:type=>'friends'} %>
+    </ol>
+    <!--<div class="bottom-nav">-->
+        <!--<div id="pagination" class="pagination">-->
+            <!--<a href="/home?page=2" class="section_links" rel="prev">Older &#187;</a>-->
+        <!--</div>-->
+    <!--</div>-->
 
 
-            <a href="/home?page=2" class="section_links" rel="prev">Older &#187;</a>
-
-        </div>
-        <span class="left"><a href="/statuses/friends_timeline/16360207.rss" class="section_links">RSS</a></span>
-    </div>
-    -->
 </div>
-
-
-<img alt="Icon_star_full" src="http://assets0.twitter.com/images/icon_star_full.gif" style="display:none;"/>
 

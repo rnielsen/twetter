@@ -1,5 +1,5 @@
 <% setup(:title=>"Direct Messages", :body_id=>"direct_messages", :body_classes=>"direct_messages replyable", :css=>['timeline']) %>
-<%= render :partial => "statuses/update" %>
+<%= render :partial => "send_direct" %>
 
 <ul class="tabMenu">
   <li class="active"><a href="/direct_messages" id="direct_message_inbox">Inbox</a></li>
@@ -10,7 +10,25 @@
 
   <h2>Direct Messages Sent Only to You</h2>
 
-<%= render :partial => "statuses/tweets" %>
+  <ol class="statuses" id="timeline">
+    <%= render :partial => "direct", :collection=>@tweets %>
+  </ol>
 </div>
 
 <%= render :partial => "statuses/sidebar" %>
+
+<% content_for :javascript do %>
+    <script type="text/javascript">
+//<![CDATA[
+
+          $( function () {
+              $('#doingForm').isDirectMessageForm();
+      $('body#home ul#tabMenu li a#home_tab, body#profile ul#tabMenu li a#updates_tab, body#replies ul#tabMenu li a#replies_tab, body.direct_messages ul#tabMenu li a#direct_messages_tab, body#favourings ul#tabMenu li a#favorites_tab, body#public_timeline ul#tabMenu li a#public_timeline_tab').isSidebarTab();
+      $('#current_user_send_via_sms, #current_user_send_via_none').isDeviceUpdateOption();
+
+          });
+
+//]]>
+    </script>
+
+<% end %>

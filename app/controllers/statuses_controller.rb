@@ -56,7 +56,7 @@ class StatusesController < ApplicationController
     if (params['twttr'])
         latest_status = render_to_string :partial => "latest", :object=> @tweet
         ret = {"status_count"=>@user.public_tweets.count, "latest_status"=> latest_status,"text"=>tweet}
-        ret["status_tr"] = render_to_string :partial => "tweet", :object=> @tweet, :locals=>{:type=>'friends_update'}
+        ret["status_li"] = render_to_string :partial => "tweet", :object=> @tweet, :locals=>{:type=>'friends_update'}
         render :json => ret
     else
         render_tweet

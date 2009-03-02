@@ -12,23 +12,58 @@ a:hover {
     text-decoration: underline;
 }
 
+#trends_link img {
+    background-color: #0084b4;
+}
+
 ul {
     list-style: none;
+}
+
+ul.dot li:before {
+    content: "\00B7 \0020";
 }
 
 hr {
     display: none;
 }
 
-abbr {
-    text-decoration: none;
-    border-bottom: none;
-}
-
 body {
     text-align: center;
-    font: .75em / 1.5 'Lucida Grande', sans-serif;
+    font: .75em 'Lucida Grande', sans-serif;
     color: #333;
+}
+
+#container {
+    width: 763px;
+    margin: 1.25em auto;
+    text-align: left;
+    position: relative;
+}
+
+#loader {
+    position: absolute;
+    top: .7em;
+    right: -25px;
+    padding: 0;
+    background: #FFF;
+    border: 1px solid #CCC;
+    font-size: 10px;
+    line-height: 0;
+    z-index: 999;
+}
+
+#header {
+    height: auto;
+    margin: 0;
+    text-align: left;
+}
+
+.content-bubble-arrow {
+    margin-top: 1em;
+    padding-top: 11px;
+    background-repeat: no-repeat;
+    background-position: 25px 0;
 }
 
 #content.minheight {
@@ -55,6 +90,343 @@ body {
     position: relative;
 }
 
+#content div.section ul li {
+    margin: 0;
+    padding: 0 0 1em 0;
+}
+
+#content div.steps, #content div.section div.steps {
+    margin-top: 3em;
+}
+
+#side {
+    padding-top: .5em;
+}
+
+#side .segment {
+    margin: 1em 10px;
+}
+
+#side .segment>* {
+    padding-bottom: 1em;
+}
+
+#side .segment p {
+    line-height: 1.6em !important;
+}
+
+#side .segment ul li {
+    margin: 0;
+    padding: 0 0 1em 0;
+}
+
+#side {
+    margin-bottom: 10px;
+}
+
+.subpage #side {
+    margin-top: 0;
+}
+
+#side_base {
+    width: 199px;
+    line-height: 1.2;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-left: 1px solid #bddcad;
+    background-color: #dfc;
+}
+
+#side_ad_base {
+    height: 185px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#side .promotion {
+    color: #000;
+    border: 1px solid #BDDCAD;
+    text-align: left;
+    font-size: 11px;
+    margin-top: 7px;
+    padding: 6px 10px;
+    width: 152px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#side div.section {
+    padding: 13px;
+}
+
+#side div#profile.section {
+    padding-bottom: 16px;
+}
+
+#side div.last {
+    border-top: 1px solid #bddcad;
+}
+
+#side h1 {
+    color: #333;
+    font-size: 1.1em;
+    padding: 0 0 2px;
+    margin-bottom: .5em;
+}
+
+#side div.section-header h3.faq-header {
+    border-bottom: 1px solid #bddcad;
+    color: #333;
+}
+
+#side .section-links {
+    float: right;
+    font-size: .9em;
+    text-align: right;
+}
+
+#side div.msg strong {
+    display: block;
+    font-size: 1.4em;
+}
+
+#side div.msg h3 {
+    font-size: 1.25em;
+}
+
+#side ul {
+    margin: 0;
+}
+
+#side .faq-index ul {
+    list-style-type: square;
+    margin-left: 15px;
+}
+
+#side .faq-index li {
+    margin: 10px 0;
+}
+
+#side p {
+    padding: .5em 0;
+}
+
+.subpage #side {
+    margin-top: 0;
+}
+
+#side ul {
+    margin: 0;
+}
+
+.notify {
+    text-align: center;
+    line-height: 1;
+    padding: 5px 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-bottom: 8px;
+}
+
+.notify div {
+    background-color: #fff;
+    font-size: .9em;
+    margin: 0 12px 0 24px;
+    padding: 10px 3px;
+    border: 1px solid #888;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#side .actions {
+    border: 1px solid #87bc44;
+    margin: 10px -3px;
+}
+
+#side .actions small {
+    font-size: .9em;
+}
+
+#side .actions a {
+    padding-left: 7px;
+}
+
+.side_thumb {
+    height: 31px;
+    width: 31px;
+}
+
+#side .user_icon {
+    height: 30px;
+}
+
+#side .user_icon>* {
+    vertical-align: middle;
+    padding: 0;
+}
+
+#side .user_icon img {
+    float: left;
+    padding-right: .8em;
+}
+
+#me_name {
+    font-size: 1.35em;
+    line-height: 30px;
+    float: left;
+}
+
+#side .stats {
+    clear: both;
+    float: none;
+    margin: 10px 0 10px 0;
+}
+
+#side .stats td {
+    padding: 0 7px 0 0;
+}
+
+#side .stats td+td {
+    padding: 0 7px;
+    border-left: solid 1px #bddcad;
+    border-right: solid 1px #bddcad;
+}
+
+#side .stats td+td+td {
+    border: 0;
+}
+
+#side .stats td .numeric {
+    font-size: 1.3em;
+    font-family: georgia;
+    text-decoration: none;
+}
+
+#side .stats td .label {
+    text-transform: lowercase;
+    font-size: .9em;
+}
+
+#side .stats a:hover {
+    text-decoration: none;
+}
+
+#side .stats a:hover .label {
+    text-decoration: underline;
+}
+
+#side .about li {
+    padding-bottom: 3px;
+}
+
+#side .about .label {
+    font-weight: bold;
+}
+
+#side .about li#bio {
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 170px;
+}
+
+.promotion {
+    color: #000;
+    border: 1px solid #BDDCAD;
+    text-align: left;
+    font-size: 11px;
+    margin-top: 7px;
+    padding: 6px 10px;
+    width: 152px;
+}
+
+ul#tabMenu li {
+    border-top: 1px solid #bddcad;
+}
+
+ul#tabMenu a, #side .section h1 {
+    display: block;
+    padding: 13px;
+    text-decoration: none;
+    color: #4c4c4c;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+#side .section h1 {
+    padding: 0 0 .25em 0;
+}
+
+body#home ul#tabMenu a#home_tab, body#profile ul#tabMenu a#updates_tab, body#replies ul#tabMenu a#replies_tab, body.direct_messages ul#tabMenu a#direct_messages_tab, body#favourings ul#tabMenu a#favorites_tab, body#public_timeline ul#tabMenu a#public_timeline_tab {
+    background: #fff;
+    margin-left: -1px;
+    padding-left: 14px;
+}
+
+#side .stat_count {
+    float: right;
+}
+
+#following_list {
+    padding: 0 0 0 3px;
+    overflow: hidden;
+}
+
+#following_list span {
+    float: left;
+    padding: 0 3px 2px 1px;
+}
+
+#following_list img {
+    padding: 0;
+}
+
+#device_control label {
+    margin-right: 5px;
+}
+
+#device_msg {
+    margin-top: -5px;
+    margin-bottom: 0;
+}
+
+.rss {
+    padding: .5em 0 .5em 20px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+}
+
+#side .xref {
+    font-size: x-small;
+}
+
+#side p.complete {
+    font-size: .9em;
+    margin-top: 1em;
+}
+
+#footer {
+    text-align: center;
+    padding: 8px 0;
+    line-height: 1;
+}
+
+#footer li {
+    display: inline;
+    padding: 0 4px;
+}
+
+#footer li.first:before {
+    content: '';
+    padding-right: 0;
+}
+
+#footer {
+    background: #fff;
+    white-space: nowrap;
+}
+
 fieldset.common-form {
     margin: 10px 0;
 }
@@ -79,7 +451,7 @@ fieldset.common-form small {
     font-size: .97em;
 }
 
-fieldset.common-form input[type="text"], fieldset.common-form input[type="password"], fieldset.common-form select, fieldset.common-form checkbox {
+fieldset.common-form input[type="text"], fieldset.common-form input[type="password"], fieldset.common-form textarea, fieldset.common-form select, fieldset.common-form checkbox {
     border: 1px solid #aaa;
     padding: 4px 2px;
 }
@@ -88,8 +460,16 @@ fieldset.common-form input[type="text"], fieldset.common-form input[type="passwo
     width: 12em;
 }
 
-fieldset.common-form input[type="text"].medium {
+fieldset.common-form input[type="text"].medium, fieldset.common-form textarea.medium {
     width: 50%;
+}
+
+fieldset.common-form input[type="text"].wider, fieldset.common-form textarea.wider {
+    width: 75%;
+}
+
+fieldset.common-form input[type="text"].widest, fieldset.common-form textarea.widest {
+    width: 100%;
 }
 
 fieldset.common-form td[colspan="2"] {
@@ -118,10 +498,14 @@ fieldset.common-form table.input-form th {
     vertical-align: top;
 }
 
-fieldset.common-form .instruction, fieldset.common-form .example {
-    margin-top: .5em;
+fieldset.common-form .instruction, fieldset.common-form .example, fieldset.common-form .required {
     font-size: x-small;
     color: #666;
+    font-weight: normal;
+}
+
+fieldset.common-form .instruction, fieldset.common-form .example {
+    margin-top: .5em;
 }
 
 fieldset.common-form .example {
@@ -155,6 +539,19 @@ div.direct-message-box fieldset.standard-form {
     padding: 10px 90px;
 }
 
+.buttons {
+    padding-top: 12px;
+    text-align: center;
+}
+
+.buttons input, .buttons button {
+    margin: 0 3px;
+}
+
+.buttons a button {
+    margin: 0;
+}
+
 input.submit, button, input[type=submit], input[type=button], input[type="file"]>input[type="button"] {
     color: #000;
     -moz-border-radius: 5px;
@@ -170,6 +567,32 @@ input.submit, button, input[type=submit], input[type=button], input[type="file"]
 
 input.submit:hover, button:hover, input[type=submit]:hover, input[type="file"]>input[type="button"]:hover {
     background: #d5d5d5;
+}
+
+input.flow-button, input.flow-button:hover {
+    height: 41px;
+    padding: 0 10px 2px 0;
+    border: 0;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+input.green-arrow, input.green-arrow:hover {
+    background-image: url('/images/btn_green_arrow.gif') !important;
+    width: 234px !important;
+    background-color: transparent;
+}
+
+input.green-arrow-small, input.green-arrow-small:hover {
+    background-image: url('/images/btn_green_arrow_small.gif') !important;
+    width: 138px !important;
+}
+
+input.red-small, input.red-small:hover {
+    background-image: url('/images/btn_red_small.gif') !important;
+    width: 114px !important;
+    text-align: center;
+    padding: 0 0 2px 0;
 }
 
 .hentry .actions>div.follow-actions {
@@ -214,34 +637,66 @@ input.profilesubmit:hover {
     background-color: #8CF500;
 }
 
-#timeline_body .hover, .hentry:hover {
-    background-color: #f7f7f7;
+.link-menu>a {
+    padding: .5em .75em .5em .5em;
+    background: transparent url('/images/divot.gif') no-repeat 100% 50%;
 }
 
-#timeline_body .hover a, .hentry:hover a {
-    color: #0084b4;
+.link-menu>ul, .link-menu>span, .link-menu>div {
+    position: absolute;
+    left: 0;
+    z-index: 999;
 }
 
-.hentry .thumb img {
+ol.statuses {
+    list-style: none;
+    font-size: 1.2em;
+}
+
+ol.statuses li {
+    position: relative;
+    padding: .7em 0 .6em 0;
+    border-bottom: 1px dashed #D2DADA;
+    line-height: 1.1em;
+}
+
+ol.statuses li:first-child {
+    border-top: 1px dashed #D2DADA;
+}
+
+ol.statuses .thumb {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    margin: 0 10px 0 5px;
+    overflow: hidden;
+}
+
+ol.statuses .thumb img {
     width: 48px;
     height: 48px;
 }
 
-.hentry td.status-body div {
+ol.statuses span.status-body {
+    display: block;
+    min-height: 50px;
+    width: 420px;
     overflow: hidden;
-    width: 424px;
-    padding: .1em 0;
+    margin-left: 65px;
 }
 
-.hentry .entry-content img {
-    vertical-align: middle;
+ol.statuses .lock, ol.statuses .screen-name {
+    margin-right: 5px;
 }
 
-.hentry .disabled {
-    border: 1px solid red;
+.search ol.statuses .bio {
+    margin-left: 5px;
 }
 
-.hentry .meta {
+ol.statuses span.meta, .hentry .meta {
+    display: block;
     font-size: .80em;
     font-family: georgia;
     font-style: italic;
@@ -249,31 +704,23 @@ input.profilesubmit:hover {
     color: #999;
 }
 
-.hentry .meta a {
+ol.statuses span.meta a, .hentry .meta a {
     color: #999;
 }
 
-.hentry .meta .call-out {
+ol.statuses span.meta .call-out, .hentry .meta .call-out {
     color: #000;
 }
 
-.hentry .actions {
-    font-size: .75em;
-    text-align: center;
-    vertical-align: middle;
+ol.statuses .actions {
+    position: absolute;
+    right: 5px;
+    top: .5em;
+    line-height: 1.25em;
     border-width: 0;
-    border-bottom: 1px dashed #d2dada;
 }
 
-.hentry .actions>div {
-    visibility: hidden;
-}
-
-.hentry:hover .actions div, .hentry .hover .actions div {
-    visibility: visible;
-}
-
-.hentry .actions a {
+ol.statuses .actions a {
     display: block;
     text-decoration: none;
     padding: 3px 8px;
@@ -281,19 +728,43 @@ input.profilesubmit:hover {
     background-repeat: no-repeat;
     outline: none;
     cursor: pointer;
+    visibility: hidden;
 }
 
-.hentry .actions a.fav {
+ol.statuses li:hover, ol.statuses li.hover {
+    background-color: #f7f7f7;
+}
+
+ol.statuses li:hover .actions a, ol.statuses li.hover .actions a {
     visibility: visible;
 }
 
-.hentry .actions a.fav-throb, .hentry .actions a.del-throb {
+ol.statuses .actions a.fav {
+    visibility: visible;
+}
+
+ol.statuses .actions a.fav-throb, ol.statuses .actions a.del-throb {
     visibility: visible;
 }
 
 .person .thumb img {
     height: 48px;
     width: 48px;
+}
+
+#flash {
+    padding-top: 45px;
+    background-repeat: no-repeat;
+    background-position: 24px 0;
+    margin: 1.5em 0;
+}
+
+#flash p {
+    background-color: #fff;
+    font-size: 2.12em;
+    line-height: 1.2em;
+    padding: .5em;
+    font-weight: bold;
 }
 
 .feature-limited {
@@ -304,9 +775,85 @@ input.profilesubmit:hover {
     padding: .5em 1em;
 }
 
-.pagination {
+.minor-notification {
+    background-color: #ffc;
+    border-width: 1px 0;
+    border-color: #eeb;
+    border-style: solid none;
+    padding: .5em 1em;
+}
+
+.bottom-nav {
+    padding: 0 10px;
+    margin: 1em 0 .5em 0;
+}
+
+.bottom-nav a, .bottom-nav .link-like {
+    border: 1px solid #cecece;
+    padding: .25em 1em;
+    margin: .25em 0;
+}
+
+#pagination {
+    text-align: center;
+}
+
+#pagination.pagination {
     height: 2em;
-    margin-bottom: 2em;
+}
+
+#pagination.pagination a, #pagination.pagination .link-like {
+    float: right;
+    margin-right: 10px;
+}
+
+#pagination input[type=submit].more {
+    width: 100%;
+    font-size: 1.2em;
+}
+
+#pagination a.last {
+    margin-left: 1em;
+}
+
+.password-meter {
+    padding-left: 10px;
+}
+
+.pstrength-text {
+    font-weight: bold;
+}
+
+.password-weak {
+    color: #801b1b;
+}
+
+.password-good {
+    color: #803f1b;
+}
+
+.password-strong {
+    color: #80771b;
+}
+
+.password-verystrong {
+    color: #2a801b;
+}
+
+.error {
+    color: #801b1b;
+}
+
+.top {
+    vertical-align: top !important;
+}
+
+.bottom {
+    vertical-align: bottom !important;
+}
+
+.middle {
+    vertical-align: middle !important;
 }
 
 .first {
@@ -319,98 +866,219 @@ input.profilesubmit:hover {
     padding-bottom: 0;
 }
 
-.clear {
-    clear: both;
-    float: none;
-}
-
-body.search .results-count {
+.right {
     float: right;
-    line-height: 1.25em;
-    padding-left: 1em;
 }
 
-body.search .results-count span {
-    font-size: x-small;
-    color: #77778A;
+.left {
+    float: left;
 }
 
-body.search#tweets #content {
-    -moz-border-radius-bottomleft: 5px;
-    -moz-border-radius-topleft: 5px;
-    -webkit-border-radius-bottomleft: 5px;
-    -webkit-border-radius-topleft: 5px;
+.clearfix {
+    zoom: 1;
 }
 
-body.search#tweets .tab {
-    border-top: 0;
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 
-body.search#tweets #more {
-    border: 1px solid #CCC;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    padding: 5px 5px 5px 10px;
-    margin: -2px 0 0 0;
+.disabled {
+    color: #bbb;
+}
+
+.loading {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.hidden {
     display: none;
 }
 
-body.search#tweets #side_base {
-    background: #B3ECEF;
-    border: 0;
+.invisible {
+    visibility: hidden;
 }
 
-body.search#tweets #side h3 {
-    color: #000;
-    font-size: 13px;
-    font-weight: normal;
-    margin-bottom: 5px;
+.offscreen {
+    position: absolute;
+    left: -9999px;
 }
 
-body.search#tweets #side ul li {
-    margin: 0 0 5px;
+.empty-set {
+    padding: 30px !important;
 }
 
-body.search#tweets .sections .section {
-    background: #FFF;
-    margin: 0 0 10px 10px;
-    padding: 13px;
+.round {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
-body.search#tweets .sections .top {
+.round-top-right {
     -moz-border-radius-topright: 5px;
-    -moz-border-radius-bottomleft: 5px;
-    -webkit-border-radius-topright: 5px;
-    -webkit-border-radius-bottomleft: 5px;
+    -webkit-border-top-right-radius: 5px;
 }
 
-body.search#tweets .sections .middle, body.search#tweets .sections .bottom {
+.round-right {
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+
+.round-bottom-right {
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+
+.round-bottom {
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+
+.round-bottom-left {
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+
+.round-left {
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-bottomleft: 5px;
-    -webkit-border-radius-topleft: 5px;
-    -webkit-border-radius-bottomleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
 }
 
-body.search#tweets #trending_topics {
-    height: 210px;
+.round-top-left {
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
 }
 
-body.search#tweets #featured-profiles ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.round-top {
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
 }
 
-body.search#tweets #featured-profiles ul li {
-    line-height: 30px;
-    padding: 0;
-    margin: 0 0 2px 0;
+#profilebox_outer {
+    padding-top: 41px;
+    position: relative;
 }
 
-body.search#tweets #featured-profiles img {
-    border: 0;
+#profilebird {
+    position: absolute;
+    top: 0;
+}
+
+#profilebox {
+    background: #feffdf;
+    border: 1px solid #ff0;
+    padding: 20px;
     vertical-align: middle;
-    padding-right: 4px;
+    margin-bottom: 10px;
+}
+
+#profilebox h1, #profilebox h2 {
+    font-weight: normal;
+}
+
+#profilebox h2 {
+    margin-top: .5em;
+    font-size: 1.3em;
+}
+
+#profiletext {
+    float: left;
+    width: 495px;
+}
+
+div#profilebutton {
+    float: right;
+    text-align: center;
+    margin-left: 50px;
+}
+
+div#profilebutton small {
+    line-height: 1.25em;
+}
+
+input.profilesubmit {
+    background-color: #74CA00;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    border: 1px solid #0f0;
+    width: 175px;
+    cursor: hand;
+}
+
+input.profilesubmit:hover {
+    background-color: #8CF500;
+}
+
+body#profile ol.statuses span.status-body {
+    margin-left: 0;
+    min-height: 0;
+}
+
+body#profile ol.statuses li {
+    padding-bottom: .8em;
+    padding-left: .5em;
+}
+
+body#profile ol.statuses li.latest-status {
+    padding: 1.5em 0 1.5em .5em;
+    border-top-width: 0;
+    line-height: 1.5em;
+}
+
+body#profile ol.statuses .latest-status .actions {
+    top: .5em;
+    vertical-align: middle;
+}
+
+body#profile ol.statuses .latest-status .entry-content {
+    font-size: 1.77em;
+}
+
+body#profile .latest-status .entry-meta {
+    display: block;
+}
+
+body#show .status-body {
+    display: block;
+    margin-right: 30px;
+    font-size: 1.2em;
+    padding-bottom: 15px;
+}
+
+body#show .thumb img {
+    width: 48px;
+    height: 48px;
+}
+
+body#show .protected {
+    padding-left: 0;
+    background-position: 55px 50%;
+    background-repeat: no-repeat;
+}
+
+body#show .top-nav, body#show #footer {
+    font-size: 85%;
+    overflow: hidden;
 }
 
 body.search#users #timeline {
@@ -432,4 +1100,170 @@ body.search#users .hentry:hover {
 
 body.search#users .hentry .bio {
     font-size: 90%;
+}
+
+.oauth_clients #content {
+    background: #fff url('/images/wind-up-bird.png') top right no-repeat;
+}
+
+.ie6.oauth_clients #content {
+    background: #fff url('/images/wind-up-bird.gif') top right no-repeat;
+}
+
+body#oauth_clients #content div.section {
+    margin-top: 50px;
+}
+
+body.oauth_clients #content div.section {
+    margin: 1em 10px;
+}
+
+.oauth_clients div.section ul.bulleted {
+    line-height: 1.25em;
+    display: block;
+    list-style: disc;
+    margin: 0 2em;
+}
+
+.oauth_clients div.section h2 {
+    padding: 10px 0;
+}
+
+.oauth_clients table.input-form {
+    width: 500px;
+    margin-top: 20px;
+}
+
+.oauth_clients .common-form .input-form input[type=text] {
+    width: 300px;
+}
+
+.oauth_clients .common-form .input-form input[type=file] {
+    width: 270px;
+}
+
+.oauth_clients .common-form .input-form textarea {
+    height: 100px;
+    width: 300px;
+}
+
+#connections .common-form li.suspended {
+    background-color: #fdd;
+}
+
+.oauth_clients #content h1 {
+    margin: 10px 15px 0;
+    font-size: 2em;
+}
+
+.app-details {
+    width: 100%;
+}
+
+.app-details th {
+    font-size: 1.1em;
+    vertical-align: top;
+    text-align: right;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.app-details th, .app-details td {
+    padding: 3px 8px;
+}
+
+ul.app-list {
+    margin: 20px 0 20px 0;
+}
+
+ul.app-list label {
+    font-size: .9em;
+    line-height: 1.2;
+}
+
+ul.app-list strong, .app-details strong {
+    font-size: 1.3em;
+}
+
+ul.app-list p {
+    margin: 2px 0 0 !important;
+    line-height: 1.3 !important;
+}
+
+ul.app-list li.suspended label, ul.app-list li.suspended label a, ul.app-list li.suspended span {
+    color: #963b3b;
+}
+
+li.revoked label, li.revoked span, li.revoked p, li.revoked img, li.revoked small {
+    opacity: .5;
+    filter: alpha(opacity = 50);
+}
+
+ul.app-list li.inactive span {
+    color: #666;
+    font-weight: bold;
+}
+
+ul.app-list small, .app-details small {
+    color: gray;
+}
+
+ul.app-list a.revoke-access {
+    font-weight: bold;
+    font-size: .9em;
+}
+
+#content div.section ul.app-list li {
+    margin: 15px 0;
+    clear: both;
+}
+
+#content ul.app-list li img {
+    margin: 0 8px 25px;
+    vertical-align: middle;
+    float: left;
+}
+
+.oauth_clients #content img {
+    margin: 0;
+    border: 1px solid #999;
+    height: 73px;
+    width: 73px;
+}
+
+.app-details h2 {
+    padding: 0 !important;
+}
+
+.app-details li label {
+    font-weight: bold;
+}
+
+.app-details ul {
+    margin: 70px 0;
+    display: block;
+    clear: both;
+}
+
+.app-details li small {
+    font-size: .8em;
+}
+
+.app-details ul li {
+    font-size: 1.1em;
+    padding: 3px 0 !important;
+}
+
+.app-details code {
+    border-top: 1px solid #aaa;
+    display: block;
+    padding: 8px 0 15px;
+}
+
+.app-details div.buttons {
+    text-align: left;
+}
+
+.oauth_clients #content div.app-details, body#details.oauth_clients div.section {
+    margin-top: 10px;
 }
