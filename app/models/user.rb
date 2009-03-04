@@ -84,7 +84,7 @@ class User < ActiveRecord::Base
 
   def to_map(include_latest=false)
     ret = {:id=>id, :name=>name, :screen_name=>username, :profile_image_url=> profile_url,
-     :location=>location, :description=>bio, :url=>'', :protected=>false, :followers_count=>follower_count}
+     :location=>location, :description=>bio, :url=>'', :protected=>false, :followers_count=>followers_count}
     if (include_latest)
       last_tweet = public_tweets.find(:first)
       ret[:status] = last_tweet.to_map(false) if (!last_tweet.nil?)

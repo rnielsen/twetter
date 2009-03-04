@@ -44,6 +44,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def render_user(root="user")
+    respond_to do |format|
+      format.html { }
+      format.xml { render :xml => @user.to_map(true).to_xml(:root=>root, :skip_types=>true, :dasherize=>false) }
+      format.json { render :json => @user.to_map(true) }
+    end
+  end
+
   def render_tweet(root="status")
     respond_to do |format|
       format.html { render :action => 'tweet' }
