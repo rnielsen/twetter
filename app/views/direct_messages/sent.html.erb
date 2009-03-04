@@ -1,5 +1,5 @@
 <% setup(:title=>"Direct Messages", :body_id=>"direct_messages", :body_classes=>"direct_messages replyable", :css=>['timeline']) %>
-<%= render :partial => "statuses/update" %>
+<%= render :partial => "send_direct" %>
 
 <ul class="tabMenu">
   <li><a href="/direct_messages" id="direct_message_inbox">Inbox</a></li>
@@ -10,7 +10,12 @@
 
   <h2>Direct Messages You've Sent</h2>
 
-<%= render :partial => "statuses/tweets" %>
+  <ol class="statuses" id="timeline">
+    <% @tweets.each do |tweet| %>
+      <%= render :partial => "direct", :object=>tweet, :locals=>{:user=>tweet.recipient} %>
+    <% end %>
+  </ol>
 </div>
 
 <%= render :partial => "statuses/sidebar" %>
+

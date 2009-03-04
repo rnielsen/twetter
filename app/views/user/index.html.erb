@@ -50,14 +50,5 @@
 <%= render :partial=>'user/sidebar' %>
 
 <% content_for :javascript do %>
-    <script type="text/javascript">
-        //<![CDATA[
-
-                $( function () {
-                        $('body#profile ul#tabMenu li a#updates_tab, body#favourings ul#tabMenu li a#favorites_tab').isSidebarTab();
-
-                        });
-
-                //]]>
-    </script>
+    $('body#profile ul#tabMenu li a#updates_tab, body#favourings ul#tabMenu li a#favorites_tab').isSidebarTab();
 <% end %>

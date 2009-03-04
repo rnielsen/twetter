@@ -11,24 +11,9 @@
   <h2>Direct Messages Sent Only to You</h2>
 
   <ol class="statuses" id="timeline">
-    <%= render :partial => "direct", :collection=>@tweets %>
-  </ol>
+    <% @tweets.each do |tweet| %>
+      <%= render :partial => "direct", :object=>tweet, :locals=>{:user=>tweet.user} %>
+    <% end %>  </ol>
 </div>
 
 <%= render :partial => "statuses/sidebar" %>
-
-<% content_for :javascript do %>
-    <script type="text/javascript">
-//<![CDATA[
-
-          $( function () {
-              $('#doingForm').isDirectMessageForm();
-      $('body#home ul#tabMenu li a#home_tab, body#profile ul#tabMenu li a#updates_tab, body#replies ul#tabMenu li a#replies_tab, body.direct_messages ul#tabMenu li a#direct_messages_tab, body#favourings ul#tabMenu li a#favorites_tab, body#public_timeline ul#tabMenu li a#public_timeline_tab').isSidebarTab();
-      $('#current_user_send_via_sms, #current_user_send_via_none').isDeviceUpdateOption();
-
-          });
-
-//]]>
-    </script>
-
-<% end %>

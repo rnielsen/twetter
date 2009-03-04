@@ -31,4 +31,6 @@
         </div>
     </fieldset>
 </form>
-    
+<% content_for :javascript do %>
+    $('#doingForm').isDirectMessageForm();
+<% end %>

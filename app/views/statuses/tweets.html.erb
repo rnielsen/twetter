@@ -1,4 +1,6 @@
 <% setup(:title=>"Home", :body_id=>"home", :body_classes=>"account replyable", :css=>['timeline']) %>
 <%= render :partial => "statuses/update" %>
-<%= render :partial => "statuses/tweets" %>
+<div class="tab">
+    <%= render :partial => "statuses/tweets" %>    
+</div>
 <%= render :partial => "statuses/sidebar" %>

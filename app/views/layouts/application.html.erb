@@ -9,8 +9,8 @@
     <meta content="no" http-equiv="imagetoolbar"/>
     <meta content="width => 780" name="viewport"/>
     <meta content="4FTTxY4uvo0RZTMQqIyhh18HsepyJOctQ+XTOu1zsfE=" name="verify-v1"/>
-    <meta content="1" name="page" />
-    <meta content="IE=EmulateIE7" name="X-UA-Compatible" />
+    <meta content="1" name="page"/>
+    <meta content="IE=EmulateIE7" name="X-UA-Compatible"/>
     <meta content="<%= @user ? "y" : "n" %>" name="session-loggedin"/>
     <% if (@user) %>
         <meta content="<%= @user.id %>" name="session-userid"/>
@@ -78,15 +78,13 @@
 
     <% if flash[:notice] || flash[:error] %>
         <div id="flash">
-            <h2 class="thumb"><img alt="Girl" class="girl" src="/images/girl.gif"/></h2>
-
-            <div class="content-bubble-arrow"></div>
-            <div class="desc"><p><%= flash[:notice] %><%= flash[:error] %></p></div>
-
+            <div class="content-bubble-arrow">
+                <p class="round"><%= flash[:notice] %><%= flash[:error] %></p>
+            </div>
+        </div>
     <% else %>
-        <div id="flash" style="display:none;">
+        <div id="flash" style="display:none;"></div>
     <% end %>
-    </div>
     <div class="content-bubble-arrow"></div>
 
     <table cellspacing="0" class="columns">
@@ -95,7 +93,7 @@
             <td id="content" class="column">
                 <div class="wrapper">
                     <%= yield %>
-                    <img alt="Icon_star_full" src="/images/icon_star_full.gif" style="display:none;" />
+                    <img alt="Icon_star_full" src="/images/icon_star_full.gif" style="display:none;"/>
 
                 </div>
             </td>
@@ -207,23 +205,18 @@
     <script src="/javascripts/timeline.js" type="text/javascript"></script>
     <script type="text/javascript">
         //<![CDATA[
-                twttr.form_authenticity_token = '42114f58c6f3824dc51197223d6e1fb9b1d184a7';
-                if (window.top !== window.self) { setTimeout(function(){document.body.innerHTML='';},1);window.self.onload=function(evt){document.body.innerHTML='';};}
-                        //]]>
+        twttr.form_authenticity_token = '42114f58c6f3824dc51197223d6e1fb9b1d184a7';
+        if (window.top !== window.self) { setTimeout(function(){document.body.innerHTML='';},1);window.self.onload=function(evt){document.body.innerHTML='';};}
+
+        $( function () {
+            <% if (flash[:notice]||flash[:error]) %>
+                setTimeout(function() { $('#flash').slideUp(); }, 3000);
+            <% end %>
+            <%= yield :javascript %>
+        });
+        //]]>
     </script>
-    <% if (flash[:notice]||flash[:error]) %>
-        <script type="text/javascript">
-            //<![CDATA[
 
-                    $( function () {
-                            setTimeout(function() { $('#flash').slideUp(); }, 3000);
-                            });
-
-                    //]]>
-        </script>
-    <% end %>
-
-    <%= yield :javascript %>
 </body>
 
 </html>

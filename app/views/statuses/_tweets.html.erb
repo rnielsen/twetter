@@ -1,14 +1,12 @@
-<div class="tab">
-
-    <ol class="statuses" id="timeline">
-        <%= render :partial=>'statuses/tweet', :collection=>@tweets, :locals=>{:type=>'friends'} %>
-    </ol>
-    <!--<div class="bottom-nav">-->
-        <!--<div id="pagination" class="pagination">-->
-            <!--<a href="/home?page=2" class="section_links" rel="prev">Older &#187;</a>-->
-        <!--</div>-->
+<ol class="statuses" id="timeline">
+    <%= render :partial=>'statuses/tweet', :collection=>@tweets, :locals=>{:type=>'friends'} %>
+</ol>
+<!--<div class="bottom-nav">-->
+    <!--<div id="pagination" class="pagination">-->
+        <!--<a href="/home?page=2" class="section_links" rel="prev">Older &#187;</a>-->
     <!--</div>-->
+<!--</div>-->
 
-
-</div>
-
+<% content_for :javascript do %>
+  $('#latest_status').isCurrentStatus();
+<% end %>

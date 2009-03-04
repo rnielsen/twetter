@@ -65,7 +65,7 @@ module AuthenticatedSystem
       respond_to do |format|
         format.html do
           store_location
-          redirect_to new_session_path
+          redirect_to login_path
         end
         # format.any doesn't work in rails version < http://dev.rubyonrails.org/changeset/8987
         # Add any other API formats here.  (Some browsers, notably IE6, send Accept: */* and trigger 
@@ -122,6 +122,7 @@ module AuthenticatedSystem
     # Called from #current_user.  Finaly, attempt to login by an expiring token in the cookie.
     # for the paranoid: we _should_ be storing user_token = hash(cookie_token, request IP)
     def login_from_cookie
+      puts cookies[:auth_token]
       user = cookies[:auth_token] && User.find_by_remember_token(cookies[:auth_token])
       if user && user.remember_token?
         self.current_user = user

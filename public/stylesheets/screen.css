@@ -28,7 +28,7 @@ dt {
     top: 0;
     left: 0;
     opacity: .90;
-    filter: alpha( opacity = 90 );
+    filter: alpha(opacity = 90);
     display: none;
     margin: 0 auto;
 }
@@ -52,28 +52,10 @@ dt {
     font-size: 1.1em;
 }
 
-#container {
-    width: 763px;
-    margin: 0 auto;
-    padding: 15px 0;
-    text-align: left;
-    position: relative;
-}
-
 #accessibility, #navigation h3, #footer h3 {
     position: absolute;
     left: -9999px;
     overflow: hidden;
-}
-
-#loader {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    padding: 0;
-    background: #FFF;
-    border: 1px solid #CCC;
-    line-height: 0;
 }
 
 #logout_form {
@@ -91,29 +73,6 @@ dt {
     font-size: 22pt !important;
 }
 
-#container #flash .content-bubble-arrow {
-    margin-top: 0;
-}
-
-#container #flash .desc {
-    margin-bottom: 9px;
-}
-
-#container #flash .desc p {
-    display: block;
-    background-color: #fff;
-    font-size: 2.12em;
-    line-height: 1.2em;
-    padding: 7px;
-    font-weight: bold;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-#container #flash .thumb {
-    padding-left: 24px;
-}
-
 .columns {
     margin-bottom: 15px;
     width: 100%;
@@ -122,15 +81,6 @@ dt {
 .columns td.column {
     padding: 0;
     vertical-align: top;
-}
-
-#navigation, #footer {
-    background: #fff;
-    white-space: nowrap;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -webkit-border-top-left-radius: 5px;
 }
 
 #content {
@@ -296,7 +246,7 @@ dt {
     background: #fff;
     padding: 0;
     border-top: 1px solid #cecece;
-    margin: -1px 10px;
+    margin: 1px 10px;
 }
 
 body.static #content .tab, body#home #content .tab, body#profile #content .tab, body.status #content .tab {
@@ -361,20 +311,6 @@ body#profile #content tr.latest-status:hover {
 
 #content .tab p {
     text-indent: 1em;
-}
-
-#content .section_links {
-    border: 1px solid #cecece;
-    padding: 4px 15px;
-    margin: 5px 0;
-}
-
-#content .section_links.last {
-    margin: 5px 0 0 10px;
-}
-
-#content .disabled {
-    color: #bbb;
 }
 
 #content .doing {
@@ -473,11 +409,6 @@ body#show #content {
     width: 570px;
     padding: 15px;
     margin-bottom: 15px;
-}
-
-body#show #navigation, body#show #footer {
-    font-size: 85%;
-    overflow: hidden;
 }
 
 body#show #footer {
@@ -589,25 +520,6 @@ body#profile .hentry td .status-body {
     font-size: 90%;
 }
 
-.bottom_nav {
-    padding: 0;
-    margin-top: 20px;
-}
-
-.pagination {
-    float: right;
-}
-
-.pagination ul {
-    padding: 0;
-    margin: 0;
-}
-
-.pagination li {
-    float: left;
-    padding: 0 7px;
-}
-
 .subpage #content .wrapper {
     padding: 5px 10px 15px;
 }
@@ -669,81 +581,9 @@ body#profile .hentry td .status-body {
     font-size: 1.3em;
 }
 
-#side_base {
-    border-left: 1px solid #bddcad;
-    width: 199px;
-    line-height: 1.2;
-    background-color: #dfc;
-    -moz-border-radius-topright: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-}
-
-#side_ad_base {
-    height: 185px;
-    text-align: center;
-    padding-top: 5px;
-}
-
-#side {
-    margin-bottom: 10px;
-}
-
-.subpage #side {
-    margin-top: 0;
-}
-
-#side .promotion {
-    background-image: url( 'http://static.twitter.com/images/pale.png' );
-    color: #000;
-    border: 1px solid #BDDCAD;
-    text-align: left;
-    font-size: 11px;
-    margin-top: 7px;
-    padding: 6px 10px;
-    width: 152px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#side div.user_icon {
-    padding-bottom: 10px;
-}
-
-#side div.user_icon img {
-    float: left;
-    padding-right: .8em;
-}
-
-#side div.section {
-    padding: 13px 13px 16px;
-}
-
-#side div.last {
-    border-top: 1px solid #bddcad;
-}
-
-#side div.section-header {
-    margin: 10px 0 5px 0;
-}
-
-#side div.section-header h1 {
-    font-weight: bold;
-    color: #333;
-    font-size: 1.1em;
-    padding: 0 0 2px;
-}
-
-#side div.section-header h3.faq-header {
+#side h3.faq-header {
     border-bottom: 1px solid #bddcad;
     color: #333;
-}
-
-#side .section-links {
-    float: right;
-    font-size: .9em;
-    text-align: right;
 }
 
 #side div.msg strong {
@@ -755,10 +595,6 @@ body#profile .hentry td .status-body {
     font-size: 1.25em;
 }
 
-#side ul {
-    margin: 0;
-}
-
 #side .faq-index ul {
     list-style-type: square;
     margin-left: 15px;
@@ -766,73 +602,6 @@ body#profile .hentry td .status-body {
 
 #side .faq-index li {
     margin: 10px 0;
-}
-
-#side table.stats {
-    margin: 5px 0 10px 0;
-}
-
-#side table.stats td {
-    padding: 0 7px 0 0;
-}
-
-#side table.stats td a {
-    text-decoration: none;
-}
-
-#side table.stats td a:hover .label {
-    text-decoration: underline;
-}
-
-#side table.stats td+td {
-    padding: 0 5px;
-    border-left: solid 1px #bddcad;
-    border-right: solid 1px #bddcad;
-}
-
-#side table.stats td+td+td {
-    border: 0;
-}
-
-#side table.stats td .numeric {
-    font-size: 1.3em;
-    font-family: georgia;
-    text-decoration: none;
-}
-
-#side table.stats td .label {
-    text-transform: lowercase;
-    font-size: .9em;
-}
-
-#side .notify {
-    background: url( 'http://static.twitter.com/images/girl.gif' ) no-repeat left center;
-    padding: 2px 5px;
-    margin-bottom: 8px;
-}
-
-#side .notify div {
-    background-color: #fff;
-    font-size: .9em;
-    margin: 0 12px 0 24px;
-    padding: 10px 3px;
-    border: 1px solid #888;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-#side .actions {
-    border: 1px solid #87bc44;
-    padding: 2px 5px;
-    margin: 10px -3px;
-}
-
-#side .actions small {
-    font-size: .9em;
-}
-
-#side .actions a {
-    padding-left: 7px;
 }
 
 #side .featured {
@@ -864,86 +633,6 @@ body#profile .hentry td .status-body {
 
 #side .promo img {
     vertical-align: middle;
-}
-
-#side #stat_table {
-    margin: 0 0 5px;
-}
-
-#side .stat_value {
-    font-size: 1.65em;
-    font-family: georgia;
-    padding: 0;
-}
-
-#side .stat {
-    font-size: .9em;
-    padding: 0 6px;
-}
-
-#side #stat_mid {
-    border-left: solid 1px #333;
-}
-
-#side .stat a {
-    color: #333;
-    display: block;
-}
-
-#side .stat_count {
-    float: right;
-    font-weight: bold;
-}
-
-#side #me_name {
-    font-size: 1.35em;
-    line-height: 30px;
-    margin-right: -10px;
-}
-
-ul#tabMenu li {
-    display: block;
-    border-top: 1px solid #bddcad;
-    width: 100%;
-}
-
-ul#tabMenu li a {
-    display: block;
-    padding: 13px;
-    text-decoration: none;
-    color: #4c4c4c;
-    font-weight: bold;
-    font-size: 110%;
-}
-
-ul#tabMenu li a:hover {
-    background-image: url( 'http://static.twitter.com/images/pale.png' );
-}
-
-body#home ul#tabMenu li a#home_tab, body#profile ul#tabMenu li a#updates_tab, body#replies ul#tabMenu li a#replies_tab, body.direct_messages ul#tabMenu li a#direct_messages_tab, body#favourings ul#tabMenu li a#favorites_tab, body#public_timeline ul#tabMenu li a#public_timeline_tab {
-    background: #fff;
-    margin-left: -1px;
-    padding-left: 14px;
-}
-
-ul#tabMenu li a#user_search_tab {
-    display: block;
-    padding: 10px;
-}
-
-#side #device_control label {
-    margin-right: 5px;
-}
-
-#side #device_control #device_msg {
-    font-size: 80%;
-    margin-top: -5px;
-    margin-bottom: 0;
-}
-
-#side p.complete {
-    font-size: .9em;
-    margin-top: 1em;
 }
 
 #side .notify {
@@ -980,65 +669,17 @@ div.join input:hover {
     font: bold 1.12em / 1.5 'Lucida Grande', sans-serif;
 }
 
-#side #friends {
-    padding: 0 0 0 3px;
-    overflow: hidden;
-}
-
-#side #friends img {
-    padding: 0;
-}
-
-#side #friends .non-friend {
-    opacity: .7;
-    filter: alpha( opacity = 70 );
-}
-
-#side #friends_view_all {
-    font-size: .9em;
-    padding: 0 0 0 4px;
-}
-
-#side .note {
-    background: #fff;
-    font-size: .95em;
-    padding: 3px;
-    border: 1px dashed #aaa;
-}
-
-#side .note strong {
-    color: red;
-}
-
-#side .note li+li {
-    border-top: 1px solid #ccc;
-    padding-top: 4px;
-}
-
-#side .note a {
-    text-decoration: underline;
-}
-
-#side .about li {
-    padding-bottom: 3px;
-}
-
-#side .about .label {
-    font-weight: bold;
-}
-
-#side div.section-header#people {
-    margin-top: 0;
-}
-
-#side small {
-    float: left;
-    clear: both;
-}
-
-#friends span {
-    float: left;
-    padding: 0 3px 2px 1px;
+#side .promotion {
+    background-image: url('http://static.twitter.com/images/pale.png');
+    color: #000;
+    border: 1px solid #BDDCAD;
+    text-align: left;
+    font-size: 11px;
+    margin-top: 7px;
+    padding: 6px 10px;
+    width: 152px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body.help #side {
@@ -1047,38 +688,6 @@ body.help #side {
 
 body.help #side .section {
     height: 100%;
-}
-
-#navigation {
-    position: absolute;
-    top: 24px;
-    right: 0;
-    padding: 8px 10px 8px 5px;
-    line-height: 1.0em;
-    text-align: right;
-    text-align: center;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    font-size: 105%;
-}
-
-#navigation ul {
-    padding-top: 0;
-}
-
-#navigation li {
-    display: inline;
-    padding: 0 0 0 9px;
-}
-
-#navigation li:before {
-    content: ' ';
-    padding-right: 0;
-}
-
-#navigation li.first:before {
-    content: '';
-    padding-right: 0;
 }
 
 #navigationunauth {
@@ -1352,11 +961,11 @@ div#follow-toggle {
 }
 
 div#follow-toggle.closed {
-    background-image: url( 'http://static.twitter.com/images/toggle_closed.gif' );
+    background-image: url('http://static.twitter.com/images/toggle_closed.gif');
 }
 
 div#follow-toggle.opened {
-    background-image: url( 'http://static.twitter.com/images/toggle_opened.gif' );
+    background-image: url('http://static.twitter.com/images/toggle_opened.gif');
 }
 
 div#followed {
@@ -1383,7 +992,7 @@ input.update-button {
 }
 
 div.status-btn input.round-btn {
-    background: url( 'http://static.twitter.com/images/round-btn.gif' );
+    background: url('http://static.twitter.com/images/round-btn.gif');
     width: 115px;
     height: 32px;
     border: 0;
@@ -1393,7 +1002,7 @@ div.status-btn input.round-btn {
 }
 
 div.status-btn input.round-btn:hover {
-    background: url( 'http://static.twitter.com/images/round-btn-hover.gif' );
+    background: url('http://static.twitter.com/images/round-btn-hover.gif');
     width: 115px;
     height: 32px;
     border: 0;
@@ -1403,7 +1012,7 @@ div.status-btn input.round-btn:hover {
 }
 
 div.status-btn input.disabled, div.status-btn input.disabled:hover {
-    background: url( 'http://static.twitter.com/images/round-btn.gif' );
+    background: url('http://static.twitter.com/images/round-btn.gif');
     color: #aaa;
     cursor: default;
 }
@@ -1457,7 +1066,6 @@ img.follow-icon {
 button.small {
     background: #e6e6e6;
     width: 44px;
-    height: 16px;
     padding: 0;
     font-size: 9px;
     text-align: center;
@@ -1538,7 +1146,7 @@ div.short-btn {
 }
 
 input.big-btn {
-    background: url( 'http://static.twitter.com/images/btn-bg.gif' ) no-repeat top left;
+    background: url('http://static.twitter.com/images/btn-bg.gif') no-repeat top left;
     border: none;
     display: block;
     width: 88px;
@@ -1913,7 +1521,7 @@ input.labeled_field {
 
 #settingsNav li a {
     display: inline;
-    padding: 3px 15px 1px 15px;
+    padding: 3px 10px 1px 10px;
     background: #e6e6e6;
     text-decoration: none;
     color: #4c4c4c;
@@ -1929,7 +1537,7 @@ input.labeled_field {
 }
 
 #settingsNav li.active {
-    padding: 3px 15px 1px 15px;
+    padding: 3px 10px 1px 10px;
     border-top: 1px solid #cecece;
     border-right: 1px solid #cecece;
     border-left: 1px solid #cecece;
@@ -1946,19 +1554,19 @@ input.labeled_field {
     border-left: 1px solid #fff;
 }
 
-body#settings.account #tab_settings, body#password.account #tab_password, body#devices.devices #tab_index, body#notifications.account #tab_notifications, body#picture.account #tab_picture, body#profile_settings.account #tab_profile_settings {
-    padding: 3px 15px 1px 15px;
+body#settings.account #tab_settings, body#password.account #tab_password, body#devices.devices #tab_index, body#notifications.account #tab_notifications, body#picture.account #tab_picture, body#profile_settings.account #tab_profile_settings, body#connections.account #tab_connections {
+    padding: 3px 10px 1px 10px;
     border-top: 1px solid #cecece;
     border-right: 1px solid #cecece;
     border-left: 1px solid #cecece;
     border-bottom: 1px solid #fff;
 }
 
-body#profile_settings.account #tab_profile_settings {
+body#profile_settings.account li.last-tab {
     border-left-width: 0;
 }
 
-body#settings.account #tab_settings a, body#password.account #tab_password a, body#devices.devices #tab_index a, body#notifications.account #tab_notifications a, body#picture.account #tab_picture a, body#profile_settings.account #tab_profile_settings a {
+body#settings.account #tab_settings a, body#password.account #tab_password a, body#devices.devices #tab_index a, body#notifications.account #tab_notifications a, body#picture.account #tab_picture a, body#profile_settings.account #tab_profile_settings a, body#connections.account #tab_connections a {
     display: inline;
     background: #fff;
     text-decoration: none;
@@ -1998,40 +1606,8 @@ body#settings.account #tab_settings a, body#password.account #tab_password a, bo
     text-decoration: none;
 }
 
-div#profilebird {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    height: 48px;
-    clear: both;
-}
-
-div#profilebox {
-    width: 733px;
-    background: #feffdf;
-    border: 1px solid #ff0;
-    padding: 5px 10px 10px 10px;
-    vertical-align: middle;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-div#profiletext {
-    float: left;
-    width: 480px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-div#profilebutton {
-    float: left;
-    text-align: center;
-    width: 175px;
-    margin-left: 50px;
-}
-
-div#profilebutton small {
-    line-height: 8px;
+#authorized_apps {
+    margin: 10px 0;
 }
 
 .side_thumb {
@@ -2088,7 +1664,7 @@ div#query_review_header_0 {
     float: right;
     width: 15px;
     height: 15px;
-    background: transparent url( close.gif );
+    background: transparent url(close.gif);
     display: block;
     line-height: 0;
     font-size: 0;
@@ -2096,7 +1672,7 @@ div#query_review_header_0 {
 }
 
 .prototip .toolbar a.close:hover {
-    background: transparent url( close_hover.gif );
+    background: transparent url(close_hover.gif);
 }
 
 .iframeShim {
@@ -2146,65 +1722,11 @@ div#query_review_header_0 {
     margin-top: 10px;
 }
 
-table.admindata {
-    border-collapse: collapse;
-    margin-bottom: 15px;
-}
-
-table.admindata th {
-    vertical-align: top;
-}
-
-table.admindata th, table.admindata td {
-    border: 1px solid #ccc;
-    padding: 2px;
-}
-
-table.admindata .omgwtf {
-    font-weight: bold;
-    color: red;
-}
-
-.ohhai {
-    font-weight: bold;
-    color: green;
-}
-
-div.adminarea {
-    margin-top: 25px;
-}
-
-ul.horiz li {
-    display: inline;
-    margin: 0 1.5em 0 0;
-}
-
-div.adminarea ul.menu {
-    float: right;
-}
-
-div.adminarea ul.menu li {
-    border-right: 1px solid black;
-    padding: 0 1em;
-    margin: 0;
-    display: inline;
-}
-
-#adminbutton {
-    position: absolute;
-    right: -65px;
-    top: 24px;
-    background: white;
-    padding: 8px;
-    font-weight: bold;
-    font-size: .9em;
-}
-
-#jobs {
+#job-reqs {
     margin: 0 10px;
 }
 
-#jobs p {
+#job-reqs p {
     text-indent: 0 !important;
     line-height: 1.6em !important;
     border-bottom: 1px solid #eee;
@@ -2212,7 +1734,7 @@ div.adminarea ul.menu li {
     width: 96%;
 }
 
-#jobs p.description {
+#job-reqs p.description {
     font: 18px Georgia, serif;
     color: #777;
     line-height: 1.2em !important;
@@ -2220,11 +1742,11 @@ div.adminarea ul.menu li {
     margin-bottom: 18px;
 }
 
-#jobs p.last {
+#job-reqs p.last {
     border-bottom: 0;
 }
 
-#jobs h1 {
+#job-reqs h1 {
     clear: both;
     display: block;
     font: 36px Georgia, serif;
@@ -2233,7 +1755,7 @@ div.adminarea ul.menu li {
     letter-spacing: -1px;
 }
 
-#jobs h2 {
+#job-reqs h2 {
     clear: both;
     display: block;
     font: 24px Georgia, serif;
@@ -2241,29 +1763,29 @@ div.adminarea ul.menu li {
     width: 100%;
 }
 
-#jobs .images {
+#job-reqs .images {
     margin: 0 !important;
     border: none;
 }
 
-#jobs .images img {
+#job-reqs .images img {
     float: left;
     margin: 0;
 }
 
-#jobs .images .a {
+#job-reqs .images .a {
     margin-right: 5px;
 }
 
-#jobs .images .b {
+#job-reqs .images .b {
     margin-bottom: 5px;
 }
 
-#jobs .images .c {
+#job-reqs .images .c {
     margin-right: 5px;
 }
 
-#jobs .image-credit {
+#job-reqs .image-credit {
     color: #666;
     text-align: right;
     font-size: 10px;
@@ -2273,20 +1795,6 @@ div.adminarea ul.menu li {
     padding-bottom: 0;
 }
 
-#jobs .image-credit a {
+#job-reqs .image-credit a {
     color: #666;
-}
-
-div.steps {
-    float: right;
-    vertical-align: middle;
-}
-
-div.steps span {
-    display: inline;
-    padding-left: 2px;
-}
-
-div.steps img {
-    vertical-align: middle;
 }
