@@ -2,10 +2,17 @@ require 'net/http'
 
 namespace :utils do
   task(:download_images => :environment) do
-      twitterers = ['rob_nielsen', 'pat', 'radarlistener', 'i2w', 'ryan_allen', 'notahat', 'glenmaddern',
+      twitterers = [
+              # Railscamp
+              'rob_nielsen', 'pat', 'radarlistener', 'i2w', 'ryan_allen', 'notahat', 'glenmaddern',
               'nigel_rausch', 'chendo', 'toolmantim', 'ben_h', 'bjeanes', 'nkpart', 'gegster', 'aussiegeek', 'drnic',
               'paul_okeeffe','lachie','mattallen','benj72','lachlanhardy','keithpitty','robertpostill','lindsayevans',
-              'dylanfm','philoye','yob_au','nullobject','gnoll110','snapperwolf','benschwarz','andrewjgrimm']
+              'dylanfm','philoye','yob_au','nullobject','gnoll110','snapperwolf','benschwarz','andrewjgrimm',
+
+              # Barcamp GC
+              'barcampgc', 'spidie', 'Pixieguts', 'gmccane', 'sdiddy', 'aussietechhead', 'bmn', 'mrees',
+              'amuir_netecol','jms_','DoctorWkt','SaschaV', 'nikokot', 'deswalsh'
+      ]
       Net::HTTP.start('twitter.com') {|http|
         twitterers.each do |twitterer|
           puts "#{twitterer}"
