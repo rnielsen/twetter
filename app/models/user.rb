@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
     has_many :direct_messages_sent, :class_name=>'Tweet', :conditions=>"tweet_type='direct'", :order => "tweets.created_at DESC"
     has_many :public_tweets, :class_name=>'Tweet', :conditions=>"tweet_type!='direct'", :order=>"tweets.created_at DESC"
 
-  has_and_belongs_to_many :favorites, :class_name=>'Tweet', :join_table=>'favorites', :order=>"created_at DESC"
+    has_many :favorites
+    has_many :favorite_tweets, :source=>:tweet, :through=>:favorites, :order => "created_at DESC"
 
   validates_presence_of     :username
   validates_length_of       :username,    :within => 3..40

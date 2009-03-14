@@ -6,7 +6,7 @@ class UserController < ApplicationController
   end
 
   def favourites
-    @tweets = @duser.favorites
+    @tweets = @duser.favorite_tweets
   end
 
   def friends
