@@ -1,3 +1,4 @@
+mkdir /tmp/lighttpd
 killall bootpd
 killall lighttpd
 /sbin/ifconfig en1 10.0.2.1 netmask 255.255.255.0 broadcast 10.0.2.255
