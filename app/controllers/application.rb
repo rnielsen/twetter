@@ -4,6 +4,8 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
 
+  filter_parameter_logging :password  
+
   helper :all # include all helpers, all the time
 
   # See ActionController::RequestForgeryProtection for details
