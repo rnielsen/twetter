@@ -8,6 +8,7 @@ namespace :utils do
               'nigel_rausch', 'chendo', 'toolmantim', 'ben_h', 'bjeanes', 'nkpart', 'gegster', 'aussiegeek', 'drnic',
               'paul_okeeffe','lachie','mattallen','benj72','lachlanhardy','keithpitty','robertpostill','lindsayevans',
               'dylanfm','philoye','yob_au','nullobject','gnoll110','snapperwolf','benschwarz','andrewjgrimm',
+              'mitchellriley',    
 
               # Barcamp GC
               'barcampgc', 'spidie', 'Pixieguts', 'gmccane', 'sdiddy', 'aussietechhead', 'bmn', 'mrees',

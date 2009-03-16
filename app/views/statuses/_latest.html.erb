@@ -5,7 +5,7 @@
 
 <span id="latest_text_full">
     <span class="status-text">
-      <%= h latest.tweet %>
+      <%= link_users(latest.tweet) %>
     </span>
 
     <span class="entry-meta"><a href="/<%= h latest.user.username %>/status/<%= h latest.id %>" class="entry-date" rel="bookmark"><span class="published" title="<%= latest.created_at_formatted %>"><%= time_ago_in_words(latest.created_at) %>
