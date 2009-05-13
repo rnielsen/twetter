@@ -9,11 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090226213219) do
+ActiveRecord::Schema.define(:version => 20090513063838) do
 
   create_table "favorites", :id => false, :force => true do |t|
     t.integer "user_id",  :null => false
     t.integer "tweet_id", :null => false
+  end
+
+  create_table "oauth_requests", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "request_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tweets", :force => true do |t|

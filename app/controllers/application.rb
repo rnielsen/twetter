@@ -21,13 +21,28 @@ class ApplicationController < ActionController::Base
     return true
   end
 
-  def authenticate
+  def authenticateUser
+    login_via_oauth()
     x = login_required
     @user = current_user
     x
   end
 
   private
+
+  def login_via_oauth
+    auth = request.headers['Authorization']
+    if (auth)
+      if (auth=~/^OAuth.*oauth_token="(\d+)-(.*?)"/)
+        user_id = $1;
+        crypted_password = $2;
+        user = User.find_by_id(user_id)
+        if (user && user.crypted_password == crypted_password)
+          @current_user = user
+        end  
+      end
+    end
+  end
 
   def render_tweets(root="statuses")
     respond_to do |format|
