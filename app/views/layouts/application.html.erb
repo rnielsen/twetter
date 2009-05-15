@@ -212,9 +212,9 @@
             <% if (flash[:notice]||flash[:error]) %>
                 setTimeout(function() { $('#flash').slideUp(); }, 3000);
             <% end %>
-            <%= yield :javascript %>
         });
         //]]>
+       <%= yield :javascript %>
     </script>
 
 </body>
