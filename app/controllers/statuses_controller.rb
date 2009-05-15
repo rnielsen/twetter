@@ -11,7 +11,7 @@ class StatusesController < ApplicationController
   end
 
   def friends_timeline
-    puts "request=#{@user}"
+    logger.info "request=#{@user}"
     limit = params[:all] ? 100000000000 : 25
     @tweets = Tweet.find(:all,:order => "tweets.created_at DESC",:conditions => "tweets.tweet_type!='direct'",:include => :user,:limit => limit)
     render_tweets
