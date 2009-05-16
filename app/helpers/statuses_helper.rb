@@ -12,7 +12,7 @@ module StatusesHelper
     end
 
     def link_hashtags(tweet)
-      tweet.gsub(/([^\S]|^)#(\w+)/, '\1#<a href="/search?search_query=\2">\2</a>')                 
+      tweet.gsub(/([^\S]|^)#(\w+)/, '\1#<a href="/search?keyword=\2">\2</a>')                 
     end
     
     # Turn URLs into a link
