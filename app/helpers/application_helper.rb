@@ -5,6 +5,5 @@ module ApplicationHelper
         @body_id = options[:body_id] || "body"
         @body_classes = options[:body_classes] || "account"
         @css = options[:css] || []
-        @refresh = options[:refresh] || ''
     end
 end
