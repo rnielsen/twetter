@@ -34,18 +34,27 @@ class StatusesController < ApplicationController
 
   def search
     @tweets = []
-    @search_query = params[:search_query].nil? ? '' : params[:search_query].strip
+    @keyword = params[:keyword].nil? ? '' : params[:keyword].strip
 
-    if (@search_query.length > 0)
+    if (@keyword.length > 0)
       @tweets = Tweet.find(
               :all,
               :order => "tweets.created_at DESC",
-              :conditions => ["tweets.tweet_type!='direct' AND tweets.tweet LIKE ?", "%#{@search_query}%"],
+              :conditions => ["tweets.tweet_type!='direct' AND tweets.tweet LIKE ?", "%#{@keyword}%"],
               :include => :user,
               :limit => TWEETS_PER_PAGE
       )
+      if(@tweets.length == TWEETS_PER_PAGE)
+        @max_results = TWEETS_PER_PAGE
+      end
     end
     render_tweets
+  end
+
+  def statistics
+    @top_ten_twats = Tweet.top_ten_updaters
+
+    @twats_per_hour = Tweet.updates_per_hour
   end
 
   def user_timeline

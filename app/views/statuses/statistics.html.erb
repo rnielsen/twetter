@@ -1,0 +1,17 @@
+<% setup(:title=>"Statistics", :body_id=>"replies", :body_classes=>"status replyable", :css=>['timeline']) %>
+
+<h2 class="timeline-header">Statistics and Graphs</h2>
+<h3 class="timeline-subheader">Top Ten Twats</h3>
+<ol>
+    <% @top_ten_twats.each do |twat|%>
+        <li><%= twat[:name] %>: <%= twat[:updates] %> updates
+    <% end %>
+</ol>
+<h3 class="timeline-subheader">Twats Per Hour</h3>
+<ol>
+    <% @twats_per_hour.keys.sort.each do |hour|%>
+        <li><%= hour %>: <%= @twats_per_hour[hour] %> updates
+    <% end %>
+</ol>
+
+<%= render :partial => "statuses/sidebar" %>

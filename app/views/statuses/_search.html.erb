@@ -1,4 +1,4 @@
-<form action="/search" id="doingForm" method="post">
+<form action="/search" id="doingForm" method="get">
     <div style="margin:0;padding:0">
         <input name="authenticity_token" type="hidden" value="35b185be716b1d76607e18b2fc154509ac055063"/></div>
     <input id="tab_action" name="tab" type="hidden" value="home"/>
@@ -15,8 +15,7 @@
       </span>
         </div>
         <div class="info">
-            <input id="search" name="search_query" value="<%= @search_query %>" />
-
+            <input id="search" name="keyword" value="<%= @keyword %>" />
             <div class="status-btn">
                 <input type="submit" name="update" value="search" id="update-submit" class="status-btn round-btn"/>
             </div>
