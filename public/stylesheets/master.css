@@ -358,7 +358,7 @@ ul#tabMenu a, #side .section h1 {
     padding: 0 0 .25em 0;
 }
 
-body#home ul#tabMenu a#home_tab, body#profile ul#tabMenu a#updates_tab, body#replies ul#tabMenu a#replies_tab, body.direct_messages ul#tabMenu a#direct_messages_tab, body#favourings ul#tabMenu a#favorites_tab, body#public_timeline ul#tabMenu a#public_timeline_tab {
+body#home ul#tabMenu a#home_tab, body#profile ul#tabMenu a#updates_tab, body#replies ul#tabMenu a#replies_tab, body.direct_messages ul#tabMenu a#direct_messages_tab, body#favourings ul#tabMenu a#favorites_tab a#search_tab body#public_timeline ul#tabMenu a#public_timeline_tab {
     background: #fff;
     margin-left: -1px;
     padding-left: 14px;

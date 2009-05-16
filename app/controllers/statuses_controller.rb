@@ -32,6 +32,22 @@ class StatusesController < ApplicationController
     render_tweets
   end
 
+  def search
+    @tweets = []
+    @search_query = params[:search_query].nil? ? '' : params[:search_query].strip
+
+    if (@search_query.length > 0)
+      @tweets = Tweet.find(
+              :all,
+              :order => "tweets.created_at DESC",
+              :conditions => ["tweets.tweet_type!='direct' AND tweets.tweet LIKE ?", "%#{@search_query}%"],
+              :include => :user,
+              :limit => TWEETS_PER_PAGE
+      )
+    end
+    render_tweets
+  end
+
   def user_timeline
     limit = params[:all] ? 100000000000 : 25
     @tweets = @user.public_tweets.find(:all,:include => :user,:limit => limit)

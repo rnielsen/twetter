@@ -1,0 +1,15 @@
+<% setup(:title=>"Replies", :body_id=>"replies", :body_classes=>"status replyable", :css=>['timeline']) %>
+<%= render :partial => "statuses/search" %>
+
+<%if !@search_query.nil? && @search_query.length > 0 %>
+    <h2 class="timeline-header">Search Results</h2>
+    <%if @tweets.length > 0 %>
+
+        <h3 class="timeline-subheader">Updates containing '<%= @search_query %>'</h3>
+
+        <%= render :partial => "statuses/tweets" %>
+    <% else %>
+        <h3 class="timeline-subheader">No updates found containing '<%= @search_query %>'</h3>
+    <% end %>
+<% end %>
+<%= render :partial => "statuses/sidebar" %>
