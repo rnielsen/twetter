@@ -1,11 +1,18 @@
 <ol class="statuses" id="timeline">
     <%= render :partial=>'statuses/tweet', :collection=>@tweets, :locals=>{:type=>'friends'} %>
 </ol>
-<!--<div class="bottom-nav">-->
-    <!--<div id="pagination" class="pagination">-->
-        <!--<a href="/home?page=2" class="section_links" rel="prev">Older &#187;</a>-->
-    <!--</div>-->
-<!--</div>-->
+<% unless @page.nil? %>
+<div class="bottom-nav">
+    <div id="pagination" class="pagination">
+      <% if @more_pages %>
+          <a href="/home?page=<%= @page + 1 %>" class="section_links" rel="prev">Older &raquo;</a>
+      <% end %>
+      <% if @page > 1 %>
+          <a href="/home?page=<%= @page - 1 %>" class="section_links" rel="prev">&laquo; Newer</a>
+      <% end %>
+    </div>
+</div>
+<% end %>
 
 <% content_for :javascript do %>
   $('#latest_status').isCurrentStatus();
