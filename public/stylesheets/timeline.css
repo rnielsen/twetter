@@ -81,6 +81,10 @@ fieldset th, td {
     overflow: auto;
     resize: none;
 }
+#doingForm input#search {
+		width: 508px;
+    font: 1.15em / 1.1 'Lucida Grande', sans-serif;
+}
 
 div.direct-message-box fieldset {
     width: 548px;
