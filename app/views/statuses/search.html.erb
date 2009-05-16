@@ -1,4 +1,4 @@
-<% setup(:title=>"Search", :body_id=>"replies", :body_classes=>"status replyable", :css=>['timeline']) %>
+<% setup(:title=>"Search", :body_id=>"search", :body_classes=>"status replyable", :css=>['timeline']) %>
 <%= render :partial => "statuses/search" %>
 
 <%if !@keyword.nil? && @keyword.length > 0 %>
