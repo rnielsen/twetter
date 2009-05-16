@@ -13,9 +13,5 @@ test:
   timeout: 5000
 
 production:
-  adapter: mysql
+  adapter: postgresql
   database: twetter
-  host: 127.0.0.1
-  username: twetter
-  password: tweetme
-  port: 3306

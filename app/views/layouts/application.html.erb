@@ -12,6 +12,9 @@
     <meta content="1" name="page"/>
     <meta content="IE=EmulateIE7" name="X-UA-Compatible"/>
     <meta content="<%= @user ? "y" : "n" %>" name="session-loggedin"/>
+    <% if (@refresh) %>
+        <meta http-equiv="refresh" content="<%= @refresh %>"/>
+    <% end %>
     <% if (@user) %>
         <meta content="<%= @user.id %>" name="session-userid"/>
         <meta content="<%= @user.username %>" name="session-user-screen_name"/>
@@ -212,9 +215,9 @@
             <% if (flash[:notice]||flash[:error]) %>
                 setTimeout(function() { $('#flash').slideUp(); }, 3000);
             <% end %>
-            <%= yield :javascript %>
         });
         //]]>
+       <%= yield :javascript %>
     </script>
 
 </body>

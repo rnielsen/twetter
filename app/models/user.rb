@@ -63,10 +63,10 @@ class User < ActiveRecord::Base
     upload_image = "#{RAILS_ROOT}/tmp/upload/#{username}"
     File.open(upload_image, "wb") { |f| f.write(image) }
     cmd = "convert -resize 200x200 #{upload_image} #{RAILS_ROOT}/public/images/profile/full/#{username}.png"
-    puts cmd
+    logger.info cmd
     `#{cmd}`
     cmd = "convert -resize 48x48! #{upload_image} #{RAILS_ROOT}/public/images/profile/#{username}.png"
-    puts cmd
+    logger.info cmd
     `#{cmd}`
   end
 

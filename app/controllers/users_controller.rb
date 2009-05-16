@@ -8,6 +8,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
  
+  def show
+    logger.info "unimplemented: #{request.request_uri}"
+    render :nothing => true
+  end
+
   def create
     logout_keeping_session!
     @user = User.new(params[:user])
