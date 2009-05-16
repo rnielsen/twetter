@@ -1,5 +1,5 @@
 class StatusesController < ApplicationController
-  before_filter :authenticate, :except => [:show]
+  before_filter :authenticateUser, :except => [:show]
   TWEETS_PER_PAGE = 50
 
   def replies

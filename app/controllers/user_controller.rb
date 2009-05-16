@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  before_filter :authenticate, :lookup_duser
+  before_filter :authenticateUser, :lookup_duser
   
   def index
     @tweets = @duser.public_tweets.find(:all,:include => :user,:limit => 20  )

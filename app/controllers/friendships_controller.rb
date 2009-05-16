@@ -1,5 +1,5 @@
 class FriendshipsController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticateUser
 
   def exists
     respond_to do |format|
