@@ -1,6 +1,9 @@
 class StatusesController < ApplicationController
   TWEETS_PER_PAGE = 50
   before_filter :authenticateUser, :except => [:show]
+  
+  # We don't want to protect search from forgery, cos, well, it's not that important
+  protect_from_forgery :except => :search
 
   def replies
     @tweets = @user.replies.find(:all, :include => :user,:limit => 25)
@@ -37,10 +40,22 @@ class StatusesController < ApplicationController
     @keyword = params[:keyword].nil? ? '' : params[:keyword].strip
 
     if (@keyword.length > 0)
+      conditions=["tweets.tweet_type!='direct'"]
+      key_conditions=[]
+            
+      # Run over each of our keywords and construct an array we'll use to
+      # generate the SQL snippet.
+      params[:keyword].split(/\s/).each do |term|
+        key_conditions << 'tweets.tweet LIKE ?'
+        conditions << "%#{term}%"
+      end
+
+      conditions[0] << " AND (#{key_conditions.join(' AND ')})"
+          
       @tweets = Tweet.find(
               :all,
               :order => "tweets.created_at DESC",
-              :conditions => ["tweets.tweet_type!='direct' AND tweets.tweet LIKE ?", "%#{@keyword}%"],
+              :conditions => conditions,
               :include => :user,
               :limit => TWEETS_PER_PAGE
       )
