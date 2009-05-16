@@ -44,6 +44,9 @@ class StatusesController < ApplicationController
               :include => :user,
               :limit => TWEETS_PER_PAGE
       )
+      if(@tweets.length == TWEETS_PER_PAGE)
+        @max_results = TWEETS_PER_PAGE
+      end
     end
     render_tweets
   end

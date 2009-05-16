@@ -5,7 +5,10 @@
     <h2 class="timeline-header">Search Results</h2>
     <%if @tweets.length > 0 %>
 
-        <h3 class="timeline-subheader">Updates containing '<%= @search_query %>'</h3>
+        <h3 class="timeline-subheader">Updates containing: '<%= @search_query %>'</h3>
+        <%if @max_results %>
+            <h3 class="timeline-subheader"><em>Note: Results capped at <%=@max_results %> updates.</em></h3>
+        <% end %>
 
         <%= render :partial => "statuses/tweets" %>
     <% else %>
