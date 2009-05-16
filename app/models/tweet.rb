@@ -30,4 +30,24 @@ class Tweet < ActiveRecord::Base
      end
      ret
   end
+
+  def self.top_ten_updaters
+    find_by_sql(<<-EOF)
+      SELECT count(tweets.tweet) AS updates, users.username AS name
+      FROM tweets
+      INNER JOIN users ON tweets.user_id = users.id
+      WHERE tweets.tweet_type != 'direct'
+      GROUP BY user_id ORDER BY updates DESC LIMIT 10
+    EOF
+  end
+
+  def self.updates_per_hour
+    hours = {}
+    all(:conditions => "tweet_type != 'direct'").each do |tweet|
+      hours[tweet.created_at.hour] ||= 1
+      hours[tweet.created_at.hour] += 1
+    end
+    hours
+  end
+
 end

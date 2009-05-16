@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect "/friends", :controller => "statuses",:action => "friends"
   map.connect "/followers", :controller => "statuses",:action => "followers"
   map.connect "/search", :controller => "statuses",:action => "search"
+  map.connect "/statistics", :controller => "statuses",:action => "statistics"
   map.connect "/public_timeline", :controller => "statuses",:action => "public_timeline"
 
   map.connect "/statuses/public_timeline.:format", :controller => "statuses", :action => "friends_timeline"

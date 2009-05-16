@@ -51,6 +51,12 @@ class StatusesController < ApplicationController
     render_tweets
   end
 
+  def statistics
+    @top_ten_twats = Tweet.top_ten_updaters
+
+    @twats_per_hour = Tweet.updates_per_hour
+  end
+
   def user_timeline
     limit = params[:all] ? 100000000000 : 25
     @tweets = @user.public_tweets.find(:all,:include => :user,:limit => limit)
