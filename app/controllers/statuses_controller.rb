@@ -1,6 +1,6 @@
 class StatusesController < ApplicationController
-  before_filter :authenticate, :except => [:show]
   TWEETS_PER_PAGE = 50
+  before_filter :authenticateUser, :except => [:show]
 
   def replies
     @tweets = @user.replies.find(:all, :include => :user,:limit => 25)

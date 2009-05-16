@@ -1,5 +1,5 @@
 class HelpController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticateUser
 
   def test
     respond_to do |format|
