@@ -10,7 +10,7 @@ class OauthController < ApplicationController
     token = params['oauth_token']
     callback = params['oauth_callback']
     OauthRequest.new('user_id'=>@user.id, 'request_token'=>token).save!
-    redirect_to "http://localhost.com:3001/oauth_callback?oauth_token=#{token}"
+    redirect_to "#{callback}?oauth_token=#{token}"
   end
 
   def access_token
